@@ -1,7 +1,7 @@
 # SITREP // DAILY: KWGT widget build (S25 Ultra + Z Fold 7)
 
-Feed:  https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json
-App:   https://rpr0m3th3us6-a11y.github.io/sitrep_daily/
+Feed:  https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json
+App:   https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/
 
 The feed is rebuilt daily at 1645 CT. The widget reads pre-formatted lines from `.widget.*`, so you only build one text module.
 
@@ -22,12 +22,12 @@ Items → **+** → **Shape** (rectangle)
 Items → **+** → **Text** → tap the Text field → formula editor → paste:
 
 ```
-[b][c=#C9A227]SITREP // DAILY[/c][/b]   [c=#9B968A]$wg("https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json", json, ".widget.head")$[/c]
-[c=#C9A227]NEXT[/c]  $wg("https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json", json, ".widget.next")$
-[c=#C9A227]FOCUS[/c] $wg("https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json", json, ".widget.focus")$
-[c=#C9A227]PT[/c]    $wg("https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json", json, ".widget.pt")$
-[c=#C9A227]DRY[/c]   $wg("https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json", json, ".widget.dry")$
-[c=#C9A227]COMMS[/c] $wg("https://rpr0m3th3us6-a11y.github.io/sitrep_daily/sitrep.json", json, ".widget.comms")$
+[b][c=#C9A227]SITREP // DAILY[/c][/b]   [c=#9B968A]$wg("https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json", json, ".widget.head")$[/c]
+[c=#C9A227]NEXT[/c]  $wg("https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json", json, ".widget.next")$
+[c=#C9A227]FOCUS[/c] $wg("https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json", json, ".widget.focus")$
+[c=#C9A227]PT[/c]    $wg("https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json", json, ".widget.pt")$
+[c=#C9A227]DRY[/c]   $wg("https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json", json, ".widget.dry")$
+[c=#C9A227]COMMS[/c] $wg("https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/sitrep.json", json, ".widget.comms")$
 ```
 
 Text settings:
@@ -36,12 +36,12 @@ Text settings:
 - Padding: 14 on all sides
 
 ## 4. Tap actions
-Select the text → **Touch** → **+** → Action **Open Link** → `https://rpr0m3th3us6-a11y.github.io/sitrep_daily/`
+Select the text → **Touch** → **+** → Action **Open Link** → `https://rpr0m3th3us6-a11y.github.io/SITREP_Daily/`
 
 Optional deep links if you split the text into separate modules per line:
-- PT line → `…/sitrep_daily/#pt`
-- DRY line → `…/sitrep_daily/#dry`
-- FOCUS line → `…/sitrep_daily/#mission`
+- PT line → `…/SITREP_Daily/#pt`
+- DRY line → `…/SITREP_Daily/#dry`
+- FOCUS line → `…/SITREP_Daily/#mission`
 
 ## 5. Save and copy to the other phone
 Tap 💾 to save. To reuse it, go to the KWGT main screen → Exported → share the `.kwgt` file to the other phone, then import it there and only adjust the font size.
