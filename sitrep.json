@@ -1,0 +1,68 @@
+{
+  "v": 1,
+  "date": "2026-10-06",
+  "dow": "TUE",
+  "label": "TUE 06 OCT 2026",
+  "generated": "2026-10-06T09:15:00-05:00",
+  "wake": "1700",
+  "board": [
+    {"t": "1900", "what": "Eat a snack"},
+    {"t": "2330", "what": "Overnight food order"},
+    {"t": "0000", "what": "Homework block (3 hr)"},
+    {"t": "WED 0900", "what": "Appointment"},
+    {"t": "ONGOING", "what": "Inspect mycelium growth"}
+  ],
+  "comms": [
+    {"what": "Four Seasons Pulse Survey", "note": "open now, closes Sun 18 Oct"},
+    {"what": "Insurance EOB", "note": "claim processed, review when convenient"},
+    {"what": "Inbox noise", "note": "~200 threads, mostly job alerts and retail. 10-min unsubscribe sweep"}
+  ],
+  "focus": [
+    "SDVOSB / VetCert registration: one concrete step",
+    "90-day sales sprint: one asset turned into one offer",
+    "Four Seasons Pulse Survey (10 min)"
+  ],
+  "standing": [
+    "SDVOSB / VetCert registration",
+    "Clearance reinstatement",
+    "90-day sales sprint: one asset, one offer",
+    "TEEX UXO200: VA funding paperwork",
+    "Notion → Obsidian vault migration",
+    "Fiverr profile / gig listing"
+  ],
+  "projects": [
+    {"name": "DFT Dry Fire Trainer", "kind": "PWA"},
+    {"name": "FSA-DIB", "kind": "daily brief pipeline"},
+    {"name": "DRAGNET", "kind": "OSINT ingestion"},
+    {"name": "BLACKSITE", "kind": "tradecraft app"},
+    {"name": "Firearms instructor", "kind": "TTP track"},
+    {"name": "Personal cloud", "kind": "data infra"},
+    {"name": "Pilgrim sequel", "kind": "novel"}
+  ],
+  "pt": {"title": "Engine + Trunk", "time": "40", "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
+    "blocks": [
+      ["W", "Warm-up", "5:00 easy row · glute bridge ×10 · bird dog ×6/side"],
+      ["A", "Barbell RDL", "4×6 moderate, crisp hinge"],
+      ["B", "4 rounds", "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"],
+      ["C", "McGill Big 3", "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"],
+      ["D", "Cooldown", "5 min walk · couch stretch 60s/side"]
+    ]},
+  "dry": {"title": "Draw & Transition", "time": "20", "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
+    "drills": [
+      ["1", "Concealed draw → 1 on dual circle", "×10"],
+      ["2", "Draw → 2 shots on circle", "×5"],
+      ["3", "9-grid: call 2 random numbers", "3 strings of 5"],
+      ["4", "Stress block: 10 air squats → draw → 2", "×5"],
+      ["5", "Slow-perfect finish, 50% speed", "×5"]
+    ]},
+  "quote": "Slow is smooth, smooth is fast. The calendar is not a suggestion; it's a firing schedule.",
+  "widget": {
+    "head": "TUE 06 OCT",
+    "next": "1900  Eat a snack\n2330  Overnight food order",
+    "focus": "VetCert step · 1 sales offer · Pulse survey",
+    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4",
+    "dry": "Draw & Transition · Draw→1 ×10 · 9-grid ×3",
+    "comms": "Pulse Survey (closes 18 Oct) · EOB to review",
+    "updated": "upd 0915"
+  }
+}
