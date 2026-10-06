@@ -1,112 +1,718 @@
 {
-  "_about": "Weekly rotation for SITREP // DAILY. Keyed by weekday (MON..SUN). Garage: DB 10-45#, barbell to 325#, Concept2, treadmill, KB 20/40#, box. Back-aware: core/mobility always included, hinge loads moderate. Dry fire: SIRT 107, AIWB concealed. Edit freely; the daily feed reads this file.",
-  "MON": {
-    "pt": {"title": "Lower Strength", "time": "45", "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
-      "blocks": [
-        ["W", "Warm-up", "5:00 row easy · glute bridge ×10 · bird dog ×6/side"],
-        ["A", "Barbell RDL", "4×6 moderate, stop 2 reps shy, brace every rep"],
-        ["B", "DB goblet squat", "3×10, 3-sec lower"],
-        ["C", "DB split squat", "3×8/side"],
-        ["D", "McGill Big 3", "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"]
-      ]},
-    "dry": {"title": "Draw Fundamentals", "time": "20", "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
-      "drills": [
-        ["1", "Grip + index from holster, no press", "×10"],
-        ["2", "Concealed draw → 1 on dual circle", "×10"],
-        ["3", "Draw → 1, par 1.75s", "×10"],
-        ["4", "Slow-perfect draws at 50%", "×5"]
-      ]}
+ "_about": "Weekly rotation for SITREP // DAILY. Keyed by weekday (MON..SUN). Garage: DB 10-45#, barbell to 325#, Concept2, treadmill, KB 20/40#, box. Back-aware: core/mobility always included, hinge loads moderate. Dry fire: SIRT 107, AIWB concealed. Edit freely; the daily feed reads this file.",
+ "MON": {
+  "pt": {
+   "title": "Lower Strength",
+   "time": "45",
+   "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
+   "blocks": [
+    [
+     "W",
+     "Warm-up",
+     "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+    ],
+    [
+     "A",
+     "Barbell RDL",
+     "4×6 moderate, stop 2 reps shy, brace every rep"
+    ],
+    [
+     "B",
+     "DB goblet squat",
+     "3×10, 3-sec lower"
+    ],
+    [
+     "C",
+     "DB split squat",
+     "3×8/side"
+    ],
+    [
+     "D",
+     "McGill Big 3",
+     "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+    ]
+   ]
   },
-  "TUE": {
-    "pt": {"title": "Engine + Trunk", "time": "40", "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
-      "blocks": [
-        ["W", "Warm-up", "5:00 easy row · glute bridge ×10 · bird dog ×6/side"],
-        ["A", "Barbell RDL", "4×6 moderate, crisp hinge"],
-        ["B", "4 rounds", "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"],
-        ["C", "McGill Big 3", "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"],
-        ["D", "Cooldown", "5 min walk · couch stretch 60s/side"]
-      ]},
-    "dry": {"title": "Draw & Transition", "time": "20", "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
-      "drills": [
-        ["1", "Concealed draw → 1 on dual circle", "×10"],
-        ["2", "Draw → 2 shots on circle", "×5"],
-        ["3", "9-grid: call 2 random numbers", "3 strings of 5"],
-        ["4", "Stress block: 10 air squats → draw → 2", "×5"],
-        ["5", "Slow-perfect finish, 50% speed", "×5"]
-      ]}
-  },
-  "WED": {
-    "pt": {"title": "Upper Push/Pull", "time": "45", "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
-      "blocks": [
-        ["W", "Warm-up", "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"],
-        ["A", "DB bench press", "4×8"],
-        ["B", "1-arm DB row", "4×10/side, braced on bench"],
-        ["C", "Half-kneeling KB press", "3×8/side"],
-        ["D", "Suitcase carry 40#", "4×40m/side (anti-lean core)"],
-        ["E", "Dead bug + side plank", "3 rounds"]
-      ]},
-    "dry": {"title": "Reloads & Malfunctions", "time": "20", "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
-      "drills": [
-        ["1", "Emergency reload with SIRT mag", "×10"],
-        ["2", "Tap-rack-assess (simulated)", "×10"],
-        ["3", "Draw → 1 → reload → 1", "×5"],
-        ["4", "Slow-perfect reloads, eyes on threat", "×5"]
-      ]}
-  },
-  "THU": {
-    "pt": {"title": "Recovery + Zone 2", "time": "40", "line": "30:00 Z2 row · Mobility flow · Big 3",
-      "blocks": [
-        ["A", "Zone 2 row", "30:00 conversational pace"],
-        ["B", "Mobility flow", "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"],
-        ["C", "McGill Big 3", "standard sets"]
-      ]},
-    "dry": {"title": "Trigger Control", "time": "15", "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
-      "drills": [
-        ["1", "Wall drill, front sight focus", "×20"],
-        ["2", "Dot-on-dot press, no disturbance", "×10"],
-        ["3", "Slow fire on small circle", "×10"]
-      ]}
-  },
-  "FRI": {
-    "pt": {"title": "Power + Carry", "time": "45", "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
-      "blocks": [
-        ["W", "Warm-up", "5:00 row · hip hinge drill ×10 · glute bridge ×10"],
-        ["A", "Barbell deadlift", "5×3 at ~70%, perfect reps only"],
-        ["B", "EMOM 10", "odd: 10 KB swing 40# · even: 5 box jump (step down)"],
-        ["C", "Farmer carry", "4×40m heavy DBs"],
-        ["D", "McGill Big 3", "standard sets"]
-      ]},
-    "dry": {"title": "Movement", "time": "20", "line": "Step-off draws ×10 · Moving 9-grid ×3",
-      "drills": [
-        ["1", "Lateral step + draw → 1", "×10 each way"],
-        ["2", "Walk-and-shoot, heel-toe, small circle", "×10"],
-        ["3", "9-grid while moving", "3 strings of 5"],
-        ["4", "Slow-perfect finish", "×5"]
-      ]}
-  },
-  "SAT": {
-    "pt": {"title": "Long Ruck / Z2", "time": "50", "line": "45:00 incline walk · Core circuit",
-      "blocks": [
-        ["A", "Incline treadmill walk", "45:00 Z2 (add light pack if back allows)"],
-        ["B", "Core circuit ×3", "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"]
-      ]},
-    "dry": {"title": "One-Handed", "time": "15", "line": "SHO ×10 · WHO ×10 · Transfer ×5",
-      "drills": [
-        ["1", "Strong-hand only on circle", "×10"],
-        ["2", "Weak-hand only on circle", "×10"],
-        ["3", "Hand transfer → WHO 1 shot", "×5"]
-      ]}
-  },
-  "SUN": {
-    "pt": {"title": "Rest + Reset", "time": "15", "line": "Walk the dogs · 15 min mobility",
-      "blocks": [
-        ["A", "Easy walk", "20-30 min, no watch"],
-        ["B", "Mobility", "15 min, whatever's tight"]
-      ]},
-    "dry": {"title": "Mental Rehearsal", "time": "10", "line": "Visualize 10 perfect draws · Weekly AAR",
-      "drills": [
-        ["1", "Eyes-closed visualization, full draw stroke", "×10"],
-        ["2", "Review the week's par times, set next week's goal", "5 min"]
-      ]}
+  "dry": {
+   "title": "Draw Fundamentals",
+   "time": "20",
+   "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
+   "drills": [
+    [
+     "1",
+     "Grip + index from holster, no press",
+     "×10"
+    ],
+    [
+     "2",
+     "Concealed draw → 1 on dual circle",
+     "×10"
+    ],
+    [
+     "3",
+     "Draw → 1, par 1.75s",
+     "×10"
+    ],
+    [
+     "4",
+     "Slow-perfect draws at 50%",
+     "×5"
+    ]
+   ]
   }
+ },
+ "TUE": {
+  "pt": {
+   "title": "Engine + Trunk",
+   "time": "40",
+   "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
+   "blocks": [
+    [
+     "W",
+     "Warm-up",
+     "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
+    ],
+    [
+     "A",
+     "Barbell RDL",
+     "4×6 moderate, crisp hinge"
+    ],
+    [
+     "B",
+     "4 rounds",
+     "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
+    ],
+    [
+     "C",
+     "McGill Big 3",
+     "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+    ],
+    [
+     "D",
+     "Cooldown",
+     "5 min walk · couch stretch 60s/side"
+    ]
+   ]
+  },
+  "dry": {
+   "title": "Draw & Transition",
+   "time": "20",
+   "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
+   "drills": [
+    [
+     "1",
+     "Concealed draw → 1 on dual circle",
+     "×10"
+    ],
+    [
+     "2",
+     "Draw → 2 shots on circle",
+     "×5"
+    ],
+    [
+     "3",
+     "9-grid: call 2 random numbers",
+     "3 strings of 5"
+    ],
+    [
+     "4",
+     "Stress block: 10 air squats → draw → 2",
+     "×5"
+    ],
+    [
+     "5",
+     "Slow-perfect finish, 50% speed",
+     "×5"
+    ]
+   ]
+  }
+ },
+ "WED": {
+  "pt": {
+   "title": "Upper Push/Pull",
+   "time": "45",
+   "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+   "blocks": [
+    [
+     "W",
+     "Warm-up",
+     "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
+    ],
+    [
+     "A",
+     "DB bench press",
+     "4×8"
+    ],
+    [
+     "B",
+     "1-arm DB row",
+     "4×10/side, braced on bench"
+    ],
+    [
+     "C",
+     "Half-kneeling KB press",
+     "3×8/side"
+    ],
+    [
+     "D",
+     "Suitcase carry 40#",
+     "4×40m/side (anti-lean core)"
+    ],
+    [
+     "E",
+     "Dead bug + side plank",
+     "3 rounds"
+    ]
+   ]
+  },
+  "dry": {
+   "title": "Reloads & Malfunctions",
+   "time": "20",
+   "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+   "drills": [
+    [
+     "1",
+     "Emergency reload with SIRT mag",
+     "×10"
+    ],
+    [
+     "2",
+     "Tap-rack-assess (simulated)",
+     "×10"
+    ],
+    [
+     "3",
+     "Draw → 1 → reload → 1",
+     "×5"
+    ],
+    [
+     "4",
+     "Slow-perfect reloads, eyes on threat",
+     "×5"
+    ]
+   ]
+  }
+ },
+ "THU": {
+  "pt": {
+   "title": "Recovery + Zone 2",
+   "time": "40",
+   "line": "30:00 Z2 row · Mobility flow · Big 3",
+   "blocks": [
+    [
+     "A",
+     "Zone 2 row",
+     "30:00 conversational pace"
+    ],
+    [
+     "B",
+     "Mobility flow",
+     "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
+    ],
+    [
+     "C",
+     "McGill Big 3",
+     "standard sets"
+    ]
+   ]
+  },
+  "dry": {
+   "title": "Trigger Control",
+   "time": "15",
+   "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
+   "drills": [
+    [
+     "1",
+     "Wall drill, front sight focus",
+     "×20"
+    ],
+    [
+     "2",
+     "Dot-on-dot press, no disturbance",
+     "×10"
+    ],
+    [
+     "3",
+     "Slow fire on small circle",
+     "×10"
+    ]
+   ]
+  }
+ },
+ "FRI": {
+  "pt": {
+   "title": "Power + Carry",
+   "time": "45",
+   "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
+   "blocks": [
+    [
+     "W",
+     "Warm-up",
+     "5:00 row · hip hinge drill ×10 · glute bridge ×10"
+    ],
+    [
+     "A",
+     "Barbell deadlift",
+     "5×3 at ~70%, perfect reps only"
+    ],
+    [
+     "B",
+     "EMOM 10",
+     "odd: 10 KB swing 40# · even: 5 box jump (step down)"
+    ],
+    [
+     "C",
+     "Farmer carry",
+     "4×40m heavy DBs"
+    ],
+    [
+     "D",
+     "McGill Big 3",
+     "standard sets"
+    ]
+   ]
+  },
+  "dry": {
+   "title": "Movement",
+   "time": "20",
+   "line": "Step-off draws ×10 · Moving 9-grid ×3",
+   "drills": [
+    [
+     "1",
+     "Lateral step + draw → 1",
+     "×10 each way"
+    ],
+    [
+     "2",
+     "Walk-and-shoot, heel-toe, small circle",
+     "×10"
+    ],
+    [
+     "3",
+     "9-grid while moving",
+     "3 strings of 5"
+    ],
+    [
+     "4",
+     "Slow-perfect finish",
+     "×5"
+    ]
+   ]
+  }
+ },
+ "SAT": {
+  "pt": {
+   "title": "Long Ruck / Z2",
+   "time": "50",
+   "line": "45:00 incline walk · Core circuit",
+   "blocks": [
+    [
+     "A",
+     "Incline treadmill walk",
+     "45:00 Z2 (add light pack if back allows)"
+    ],
+    [
+     "B",
+     "Core circuit ×3",
+     "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
+    ]
+   ]
+  },
+  "dry": {
+   "title": "One-Handed",
+   "time": "15",
+   "line": "SHO ×10 · WHO ×10 · Transfer ×5",
+   "drills": [
+    [
+     "1",
+     "Strong-hand only on circle",
+     "×10"
+    ],
+    [
+     "2",
+     "Weak-hand only on circle",
+     "×10"
+    ],
+    [
+     "3",
+     "Hand transfer → WHO 1 shot",
+     "×5"
+    ]
+   ]
+  }
+ },
+ "SUN": {
+  "pt": {
+   "title": "Rest + Reset",
+   "time": "15",
+   "line": "Walk the dogs · 15 min mobility",
+   "blocks": [
+    [
+     "A",
+     "Easy walk",
+     "20-30 min, no watch"
+    ],
+    [
+     "B",
+     "Mobility",
+     "15 min, whatever's tight"
+    ]
+   ]
+  },
+  "dry": {
+   "title": "Mental Rehearsal",
+   "time": "10",
+   "line": "Visualize 10 perfect draws · Weekly AAR",
+   "drills": [
+    [
+     "1",
+     "Eyes-closed visualization, full draw stroke",
+     "×10"
+    ],
+    [
+     "2",
+     "Review the week's par times, set next week's goal",
+     "5 min"
+    ]
+   ]
+  }
+ },
+ "SHIFT": {
+  "_about": "Work-day PT. Use when there's no garage session. Business casual, no gym, no floor work. Tags: GHOST = invisible, works anywhere on post · STAIRWELL = out of guest view · BOH = back of house/office/locker, kit optional. Rotate A→B→C→D on work days.",
+  "rules": [
+   "Readiness first: stay at RPE 6 or below. Never be gassed or pumped on post. If a call drops, you're done; no make-ups.",
+   "Sweat budget: hard blocks only in the stairwell or BOH, and finish 15+ min before guest contact. Nasal breathing only; if you need your mouth, slow down.",
+   "No floor, no kneeling in slacks. Everything is standing, wall, desk or rail.",
+   "Back: brace before every rep, neutral spine, no rounding to pick up the KB. Pain that's sharp or radiating = stop that move.",
+   "Dry fire stays home. At work the tradecraft rep is observation (see Always-on)."
+  ],
+  "kit": [
+   "Mini loop band (pocket)",
+   "Hand gripper (pocket)",
+   "Moisture-wicking undershirt + a spare shirt in the locker",
+   "Optional: one 25–35# DB or the 20# KB in a duffel in the locker or office"
+  ],
+  "always": [
+   [
+    "Every flight up: 2 steps at a time, glutes on",
+    "GHOST"
+   ],
+   [
+    "Standing post: alternate glute squeezes 10s on / 10s off, heels-up calf holds",
+    "GHOST"
+   ],
+   [
+    "On the hour: posture reset (chin tuck ×5, shoulders down and back, 3 slow nasal breaths)",
+    "GHOST"
+   ],
+   [
+    "Observation rep each round: clock 3 details (exits, a face, a plate or bag); recall them 10 min later",
+    "GHOST"
+   ]
+  ],
+  "A": {
+   "title": "Legs + Stairs",
+   "line": "Stair ladder · Split squats · Goblet/carry",
+   "time": "~35",
+   "windows": [
+    {
+     "slot": "W1",
+     "label": "First hour",
+     "items": [
+      [
+       "Stair climb, 3 floors brisk + walk down",
+       "×3",
+       "STAIRWELL"
+      ],
+      [
+       "Stair-edge calf raise, slow down",
+       "3×12",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W2",
+     "label": "Mid-shift",
+     "items": [
+      [
+       "Rear-foot split squat, back foot on a step",
+       "3×8/side",
+       "STAIRWELL"
+      ],
+      [
+       "Wall sit (jacket off)",
+       "3×40s",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W3",
+     "label": "Meal break",
+     "items": [
+      [
+       "Goblet squat, KB/DB · no kit: tempo air squat 3-1-1",
+       "3×10",
+       "BOH"
+      ],
+      [
+       "Suitcase carry, duffel or DB",
+       "2×40m/side",
+       "BOH"
+      ]
+     ]
+    },
+    {
+     "slot": "W4",
+     "label": "Last 2 hrs",
+     "items": [
+      [
+       "Standing hip-flexor stretch (split stance, tuck pelvis)",
+       "45s/side",
+       "GHOST"
+      ],
+      [
+       "Wall hip hinge, butt to wall",
+       "×10",
+       "GHOST"
+      ]
+     ]
+    }
+   ]
+  },
+  "B": {
+   "title": "Push/Pull Isometrics",
+   "line": "Desk/door isos · Incline push · 1-arm row",
+   "time": "~30",
+   "windows": [
+    {
+     "slot": "W1",
+     "label": "First hour",
+     "items": [
+      [
+       "Stairs, 2 at a time, 3 floors",
+       "×3",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W2",
+     "label": "Mid-shift",
+     "items": [
+      [
+       "Desk press-down (hands flat, push hard, 80%)",
+       "3×20s",
+       "GHOST"
+      ],
+      [
+       "Door-frame pull hold, lean back",
+       "3×20s",
+       "STAIRWELL"
+      ],
+      [
+       "Palm-press chest squeeze",
+       "3×20s",
+       "GHOST"
+      ],
+      [
+       "Band or belt pull-apart",
+       "3×15",
+       "GHOST"
+      ]
+     ]
+    },
+    {
+     "slot": "W3",
+     "label": "Meal break",
+     "items": [
+      [
+       "Incline push-up on desk or rail",
+       "3×12",
+       "BOH"
+      ],
+      [
+       "1-arm DB/KB row braced on desk · no kit: door-frame row",
+       "3×10/side",
+       "BOH"
+      ],
+      [
+       "Standing 1-arm KB/DB press",
+       "3×8/side",
+       "BOH"
+      ]
+     ]
+    },
+    {
+     "slot": "W4",
+     "label": "Last 2 hrs",
+     "items": [
+      [
+       "Gripper, crush and hold",
+       "3×max",
+       "GHOST"
+      ],
+      [
+       "Doorway pec stretch",
+       "30s/side",
+       "GHOST"
+      ],
+      [
+       "Chin tucks",
+       "×10",
+       "GHOST"
+      ]
+     ]
+    }
+   ]
+  },
+  "C": {
+   "title": "Trunk + Carries",
+   "line": "Standing core · Carries · Brace reps",
+   "time": "~30",
+   "windows": [
+    {
+     "slot": "W1",
+     "label": "First hour",
+     "items": [
+      [
+       "Continuous stairs, steady, nasal only",
+       "10 min",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W2",
+     "label": "Mid-shift",
+     "items": [
+      [
+       "Pallof press, band on a door handle",
+       "3×10/side",
+       "STAIRWELL"
+      ],
+      [
+       "Incline plank on desk or rail",
+       "3×30s",
+       "STAIRWELL"
+      ],
+      [
+       "Wall side plank (forearm on wall, lean)",
+       "3×20s/side",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W3",
+     "label": "Meal break",
+     "items": [
+      [
+       "Suitcase carry, KB/DB or duffel",
+       "4×40m/side",
+       "BOH"
+      ],
+      [
+       "Farmer carry up one flight",
+       "×3",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W4",
+     "label": "Last 2 hrs",
+     "items": [
+      [
+       "Brace reps at desk (full 360° brace)",
+       "10×10s",
+       "GHOST"
+      ],
+      [
+       "Standing bird-dog hold (hand on wall, opposite leg back)",
+       "3×6/side",
+       "GHOST"
+      ],
+      [
+       "Glute bridge alt: standing glute squeeze + posterior tilt",
+       "×15",
+       "GHOST"
+      ]
+     ]
+    }
+   ]
+  },
+  "D": {
+   "title": "Stair Conditioning",
+   "line": "Stair intervals · Step-ups · KB hinge",
+   "time": "~30",
+   "windows": [
+    {
+     "slot": "W1",
+     "label": "First hour",
+     "items": [
+      [
+       "Stair intervals: 2 floors fast up, walk down",
+       "×6",
+       "STAIRWELL"
+      ]
+     ]
+    },
+    {
+     "slot": "W2",
+     "label": "Mid-shift",
+     "items": [
+      [
+       "Step-up on stair, drive through heel",
+       "3×10/side",
+       "STAIRWELL"
+      ],
+      [
+       "Reverse lunge on landing",
+       "3×8/side",
+       "STAIRWELL"
+      ],
+      [
+       "Isometric calf raise hold",
+       "3×30s",
+       "GHOST"
+      ]
+     ]
+    },
+    {
+     "slot": "W3",
+     "label": "Meal break",
+     "items": [
+      [
+       "KB deadlift or DB RDL · no kit: single-leg RDL, hand on wall",
+       "3×8",
+       "BOH"
+      ],
+      [
+       "KB swing, BOH only (skip if back is talking)",
+       "3×10",
+       "BOH"
+      ]
+     ]
+    },
+    {
+     "slot": "W4",
+     "label": "Last 2 hrs",
+     "items": [
+      [
+       "Thoracic rotation, standing, hands on chest",
+       "×8/side",
+       "GHOST"
+      ],
+      [
+       "Calf stretch on stair edge",
+       "45s/side",
+       "GHOST"
+      ]
+     ]
+    }
+   ]
+  }
+ }
 }

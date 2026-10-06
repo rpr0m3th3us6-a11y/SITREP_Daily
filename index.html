@@ -28,7 +28,7 @@ h1 span{color:var(--gold)}
 @media (min-width:720px){.grid{grid-template-columns:1fr 1fr}.span2{grid-column:1/-1}}
 @media (min-width:1100px){.grid{grid-template-columns:1fr 1fr 1fr}}
 section{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px 14px;scroll-margin-top:12px}
-h2{margin:0 0 8px;display:flex;align-items:center;gap:8px;font:700 17px 'Barlow Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+h2{margin:0 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font:700 17px 'Barlow Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase}
 h2 .n{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:13px}
 h2 .t{margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.04em}
 h3{margin:12px 0 6px;font:600 11.5px 'IBM Plex Mono',monospace;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
@@ -80,6 +80,17 @@ footer{margin-top:18px;border-top:1px solid var(--line);padding-top:10px;color:v
 .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:4px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
 .stale{color:var(--red)}
+.win{margin:10px 0 4px;display:flex;align-items:baseline;gap:8px;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
+.win .slot{background:var(--gold);color:var(--gold-ink);padding:1px 6px;border-radius:3px}
+.tag{flex:none;margin-left:auto;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:2px 6px;border-radius:3px;border:1px solid var(--line2);color:var(--dim);align-self:center}
+.tag.GHOST{color:#8fc1a9;border-color:#3d5a4c}
+.tag.STAIRWELL{color:#c9a227;border-color:#5a4a1c}
+.tag.BOH{color:#d0907a;border-color:#5e3a2f}
+label.ck .dose{display:block;color:var(--dim);font-size:13px}
+details.more{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+details.more summary{cursor:pointer;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.05em;color:var(--ink);min-height:32px;display:flex;align-items:center}
+details.more ul{margin:6px 0 0;padding-left:18px;color:var(--dim);font-size:13.5px}
+details.more li{margin:4px 0}
 </style>
 </head>
 <body>
@@ -128,8 +139,18 @@ footer{margin-top:18px;border-top:1px solid var(--line);padding-top:10px;color:v
 </section>
 
 <section id="pt">
-  <h2><span class="n">05</span>PT · <span id="ptTitle"></span><span class="t" id="ptTime"></span></h2>
+  <h2><span class="n">05</span><span>PT · <span id="ptTitle"></span></span><span class="t" id="ptTime"></span></h2>
+  <div class="seg" id="ptMode" style="margin-bottom:8px">
+    <button data-mode="garage" aria-pressed="true">Garage</button>
+    <button data-mode="shift" aria-pressed="false">Work shift</button>
+  </div>
   <div id="ptList"></div>
+  <div id="shiftBox" hidden>
+    <div class="seg" id="shiftDay" style="margin-bottom:4px"></div>
+    <div id="shiftWins"></div>
+    <details class="more"><summary>Always-on · every shift</summary><div id="shiftAlways"></div></details>
+    <details class="more"><summary>Rules of engagement · kit</summary><div id="shiftRules"></div></details>
+  </div>
   <div class="row2">
     <label class="field"><span>RPE 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="rpe"></label>
     <label class="field"><span>Back check 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="back"></label>
@@ -137,7 +158,7 @@ footer{margin-top:18px;border-top:1px solid var(--line);padding-top:10px;color:v
 </section>
 
 <section id="dry">
-  <h2><span class="n">06</span>Dry Fire · <span id="dryTitle"></span><span class="t" id="dryTime"></span></h2>
+  <h2><span class="n">06</span><span>Dry Fire · <span id="dryTitle"></span></span><span class="t" id="dryTime"></span></h2>
   <div class="safety"><label class="ck"><input type="checkbox" data-k="safety"><span><b>Safety:</b> no live ammo in the room. SIRT only. AIWB, cover garment on.</span></label></div>
   <div id="dryList"></div>
   <div class="timer">
@@ -232,7 +253,7 @@ const store={
   get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
 };
-let feed=null, day={}, glob=store.get('sitrep:global',{}), dayKey='';
+let feed=null, prog=null, day={}, glob=store.get('sitrep:global',{}), dayKey='';
 function save(){store.set(dayKey,day)}
 function saveG(){store.set('sitrep:global',glob)}
 function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1600)}
@@ -257,8 +278,8 @@ function render(){
   const P=glob.proj||{};
   $('#projList').innerHTML=f.projects.map((p,i)=>{const st=P[p.name]||{};const lv=st.lv||0;
     return `<div class="proj"><div class="top"><span><b>${esc(p.name)}</b> <span class="dim" style="font-size:12px">${esc(p.kind)}</span></span><span class="pips" data-proj="${esc(p.name)}">${[1,2,3,4,5].map(n=>`<button aria-label="${n*20}%" class="${n<=lv?'on':''}" data-lv="${n}"></button>`).join('')}</span></div><input type="text" data-pn="${esc(p.name)}" placeholder="Next action" value="${esc(st.next||'')}"></div>`}).join('');
-  $('#ptTitle').textContent=f.pt.title; $('#ptTime').textContent='~'+f.pt.time+' MIN · GARAGE';
   $('#ptList').innerHTML=f.pt.blocks.map((b,i)=>`<div class="wk"><span class="k">${esc(b[0])}</span><span><b>${esc(b[1])}</b><span class="dim">${esc(b[2])}</span></span><input type="text" data-k="pt${i}" placeholder="log" aria-label="Log for ${esc(b[1])}"></div>`).join('');
+  renderPT();
   $('#dryTitle').textContent=f.dry.title; $('#dryTime').textContent='~'+f.dry.time+' MIN · SIRT 107';
   $('#dryList').innerHTML=f.dry.drills.map((d,i)=>`<div class="wk"><span class="k">${esc(d[0])}</span><span><b>${esc(d[1])}</b><span class="dim">${esc(d[2])}</span></span><input type="text" data-k="dr${i}" placeholder="par/hits" aria-label="Par and hits for drill ${esc(d[0])}"></div>`).join('');
   $('#discList').innerHTML=DISC.map((x,i)=>ck('d'+i,esc(x))).join('');
@@ -270,6 +291,29 @@ function render(){
   document.querySelectorAll('input[data-k],textarea[data-k]').forEach(el=>{if(el.type==='checkbox')el.checked=!!day[el.dataset.k];else el.value=day[el.dataset.k]??''});
   document.querySelectorAll('[data-g]').forEach(el=>el.value=glob[el.dataset.g]??'');
 }
+// ---- PT mode: garage vs work shift ----
+const TAGTXT={GHOST:'GHOST',STAIRWELL:'STAIRWELL',BOH:'BACK OF HOUSE'};
+function shiftLetter(){
+  if(day.shiftDay)return day.shiftDay;
+  const L=glob.lastShift; if(!L)return 'A';
+  if(L.date===feed.date)return L.letter;
+  return 'ABCD'[('ABCD'.indexOf(L.letter)+1)%4];
+}
+function renderPT(){
+  const f=feed, S=prog&&prog.SHIFT, mode=(day.ptmode==='shift'&&S)?'shift':'garage';
+  $('#ptMode').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
+  $('#ptMode').querySelector('[data-mode=shift]').disabled=!S;
+  $('#ptList').hidden=mode!=='garage'; $('#shiftBox').hidden=mode!=='shift';
+  if(mode==='garage'){$('#ptTitle').textContent=f.pt.title;$('#ptTime').textContent='~'+f.pt.time+' MIN · GARAGE';return}
+  const L=shiftLetter(), D=S[L];
+  $('#ptTitle').textContent=`Shift ${L} · ${D.title}`; $('#ptTime').textContent=D.time+' MIN · SPLIT';
+  $('#shiftDay').innerHTML='ABCD'.split('').map(x=>`<button data-sday="${x}" aria-pressed="${x===L}">${x}</button>`).join('')+`<span class="dim" style="font-size:12px;align-self:center;margin-left:6px">rotates on work days</span>`;
+  $('#shiftWins').innerHTML=D.windows.map((w,wi)=>`<div class="win"><span class="slot">${esc(w.slot)}</span>${esc(w.label)}</div>`+
+    w.items.map((it,ii)=>`<label class="ck"><input type="checkbox" data-k="sh${L}_${wi}_${ii}"${day[`sh${L}_${wi}_${ii}`]?' checked':''}><span>${esc(it[0])}<span class="dose">${esc(it[1])}</span></span><span class="tag ${it[2]}">${TAGTXT[it[2]]||it[2]}</span></label>`).join('')).join('');
+  $('#shiftAlways').innerHTML=S.always.map((a,i)=>`<label class="ck"><input type="checkbox" data-k="aw${i}"${day['aw'+i]?' checked':''}><span>${esc(a[0])}</span><span class="tag ${a[1]}">${TAGTXT[a[1]]}</span></label>`).join('');
+  $('#shiftRules').innerHTML=`<ul>${S.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ul><h3>Kit</h3><ul>${S.kit.map(k=>`<li>${esc(k)}</li>`).join('')}</ul>`;
+}
+function markShiftUsed(){if(day.ptmode==='shift'){glob.lastShift={date:feed.date,letter:shiftLetter()};saveG()}}
 function iso(d){return d.toISOString().slice(0,10)}
 function renderStreak(){
   const base=new Date(feed.date+'T12:00:00'); const S=glob.streak||{}; let html='';
@@ -289,6 +333,8 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
   if(b.dataset.dist!==undefined){const i=+b.dataset.dist;day.dist=day.dist||[];const j=day.dist.indexOf(i);j<0?day.dist.push(i):day.dist.splice(j,1);save();b.setAttribute('aria-pressed',j<0);return}
   if(b.dataset.lv){const pn=b.parentElement.dataset.proj;glob.proj=glob.proj||{};const st=glob.proj[pn]=glob.proj[pn]||{};const n=+b.dataset.lv;st.lv=st.lv===n?n-1:n;saveG();
     b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',+x.dataset.lv<=st.lv));return}
+  if(b.dataset.mode){day.ptmode=b.dataset.mode;save();markShiftUsed();renderPT();return}
+  if(b.dataset.sday){day.shiftDay=b.dataset.sday;save();markShiftUsed();renderPT();return}
   if(b.dataset.sd){glob.streak=glob.streak||{};glob.streak[b.dataset.sd]=!glob.streak[b.dataset.sd];saveG();renderStreak();return}
 });
 
@@ -307,7 +353,10 @@ $('#copyMd').addEventListener('click',async()=>{const f=feed,d=day,L=[];
   L.push(`**Slept** ${d.slept||'-'} · **Energy** ${d.energy||'-'} · **Mood** ${d.mood||'-'}`,'');
   L.push('## Big 3');[0,1,2].forEach(i=>L.push(`- [${d['b3d'+i]?'x':' '}] ${d['b3_'+i]||''}`));
   if(d.revenue)L.push('',`Revenue move: ${d.revenue}`);
-  L.push('',`## PT: ${f.pt.title}`);f.pt.blocks.forEach((b,i)=>L.push(`- ${b[1]}: ${d['pt'+i]||'-'}`));L.push(`- RPE ${d.rpe||'-'} · Back ${d.back||'-'}`);
+  if(d.ptmode==='shift'&&prog&&prog.SHIFT){const Ls=shiftLetter(),D=prog.SHIFT[Ls];L.push('',`## PT: Shift ${Ls} · ${D.title}`);
+    D.windows.forEach((w,wi)=>w.items.forEach((it,ii)=>L.push(`- [${d[`sh${Ls}_${wi}_${ii}`]?'x':' '}] ${w.slot} ${it[0]} (${it[1]})`)));}
+  else{L.push('',`## PT: ${f.pt.title}`);f.pt.blocks.forEach((b,i)=>L.push(`- ${b[1]}: ${d['pt'+i]||'-'}`));}
+  L.push(`- RPE ${d.rpe||'-'} · Back ${d.back||'-'}`);
   L.push('',`## Dry fire: ${f.dry.title}`);f.dry.drills.forEach((x,i)=>L.push(`- ${x[1]}: ${d['dr'+i]||'-'}`));if(d.dryfix)L.push(`- Fix: ${d.dryfix}`);
   L.push('','## Self-mastery',`- Task: ${d.mtask||'-'}`,`- Habit: ${glob.habit||'-'} (${glob.streak&&glob.streak[f.date]?'done':'not done'})`,`- If ${d.ifx||'…'} then ${d.theny||'…'}`,`- Identity: ${d.identity||'-'}`);
   L.push('','## Gratitude',`1. ${d.g1||''}`,`2. ${d.g2||''}`,`3. ${d.g3||''}`);
@@ -321,6 +370,8 @@ $('#copyMd').addEventListener('click',async()=>{const f=feed,d=day,L=[];
 async function load(){
   try{const r=await fetch('sitrep.json?ts='+Date.now(),{cache:'no-store'});feed=await r.json();store.set('sitrep:lastfeed',feed)}
   catch(e){feed=store.get('sitrep:lastfeed',null);if(!feed){$('#dateLabel').textContent='OFFLINE · NO FEED YET';return}toast('Offline: showing last feed')}
+  try{const r=await fetch('program.json?ts='+Date.now(),{cache:'no-store'});prog=await r.json();store.set('sitrep:prog',prog)}
+  catch(e){prog=store.get('sitrep:prog',null)}
   dayKey='sitrep:day:'+feed.date; day=store.get(dayKey,{}); render();
   if(location.hash){const el=document.querySelector(location.hash);if(el)el.scrollIntoView()}
 }
