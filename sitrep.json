@@ -3,24 +3,24 @@
   "date": "2026-10-06",
   "dow": "TUE",
   "label": "TUE 06 OCT 2026",
-  "generated": "2026-10-06T09:15:00-05:00",
+  "generated": "2026-10-06T20:33:14-05:00",
   "wake": "1700",
   "board": [
     {"t": "1900", "what": "Eat a snack"},
     {"t": "2330", "what": "Overnight food order"},
-    {"t": "0000", "what": "Homework block (3 hr)"},
+    {"t": "WED 0000", "what": "Homework block (3 hr)"},
     {"t": "WED 0900", "what": "Appointment"},
     {"t": "ONGOING", "what": "Inspect mycelium growth"}
   ],
   "comms": [
     {"what": "Four Seasons Pulse Survey", "note": "open now, closes Sun 18 Oct"},
-    {"what": "Insurance EOB", "note": "claim processed, review when convenient"},
-    {"what": "Inbox noise", "note": "~200 threads, mostly job alerts and retail. 10-min unsubscribe sweep"}
+    {"what": "Bill due", "note": "insurance bill posted, review and schedule payment"},
+    {"what": "Inbox noise", "note": "~49 threads in 2 days, mostly retail, job alerts, records-site promos. 10-min unsubscribe sweep; confirm that subscription charge is wanted"}
   ],
   "focus": [
-    "SDVOSB / VetCert registration: one concrete step",
-    "90-day sales sprint: one asset turned into one offer",
-    "Four Seasons Pulse Survey (10 min)"
+    "Bill due: review and schedule payment",
+    "Four Seasons Pulse Survey (10 min)",
+    "TEEX UXO200: one paperwork step"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -55,14 +55,14 @@
       ["4", "Stress block: 10 air squats → draw → 2", "×5"],
       ["5", "Slow-perfect finish, 50% speed", "×5"]
     ]},
-  "quote": "Slow is smooth, smooth is fast. The calendar is not a suggestion; it's a firing schedule.",
+  "quote": "Discipline is doing it tired, at 0300, with nobody watching. Motivation called in sick again.",
   "widget": {
     "head": "TUE 06 OCT",
-    "next": "1900  Eat a snack\n2330  Overnight food order",
-    "focus": "VetCert step · 1 sales offer · Pulse survey",
+    "next": "2330  Overnight food order\n0000  Homework block (3 hr)",
+    "focus": "Pay bill · Pulse survey · UXO200 paperwork",
     "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4",
     "dry": "Draw & Transition · Draw→1 ×10 · 9-grid ×3",
-    "comms": "Pulse Survey (closes 18 Oct) · EOB to review",
-    "updated": "upd 0915"
+    "comms": "Pulse Survey (closes 18 Oct) · Bill due",
+    "updated": "upd 2033"
   }
 }
