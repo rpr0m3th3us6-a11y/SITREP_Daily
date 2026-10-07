@@ -3,7 +3,7 @@
   "date": "2026-10-06",
   "dow": "TUE",
   "label": "TUE 06 OCT 2026",
-  "generated": "2026-10-06T20:33:14-05:00",
+  "generated": "2026-10-06T20:33:52-05:00",
   "wake": "1700",
   "board": [
     {"t": "1900", "what": "Eat a snack"},
@@ -55,7 +55,7 @@
       ["4", "Stress block: 10 air squats → draw → 2", "×5"],
       ["5", "Slow-perfect finish, 50% speed", "×5"]
     ]},
-  "quote": "Discipline is doing it tired, at 0300, with nobody watching. Motivation called in sick again.",
+  "quote": "The mission doesn't care how you feel. Neither does the inbox. Square away the one you can win.",
   "widget": {
     "head": "TUE 06 OCT",
     "next": "2330  Overnight food order\n0000  Homework block (3 hr)",
