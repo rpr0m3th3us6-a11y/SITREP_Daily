@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-07",
-  "dow": "WED",
-  "label": "WED 07 OCT 2026",
-  "generated": "2026-10-07T16:46:38-05:00",
+  "date": "2026-10-08",
+  "dow": "THU",
+  "label": "THU 08 OCT 2026",
+  "generated": "2026-10-08T16:46:58-05:00",
   "wake": "1700",
   "board": [
     {
@@ -21,26 +21,26 @@
   ],
   "comms": [
     {
-      "what": "Form to complete",
-      "note": "marked action required; knock it out this shift"
+      "what": "Bill due",
+      "note": "due Sun 11 Oct; confirm funds"
     },
     {
       "what": "Four Seasons Pulse Survey",
       "note": "open now, closes Sun 18 Oct"
     },
     {
-      "what": "Bill due",
-      "note": "auto-charge posts next business day; confirm funds"
+      "what": "Work follow-up: DBB auto-post",
+      "note": "you flagged a SharePoint page for auto-posting the DBB; raise it with the team"
     },
     {
       "what": "Inbox noise",
-      "note": "~200 threads in 2 days, mostly retail, job alerts, deal bundles. 10-min unsubscribe sweep"
+      "note": "~47 threads in 2 days, mostly retail, job alerts, deal bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Complete pending form (10 min)",
+    "Confirm funds: bill due Sun 11 Oct",
     "Four Seasons Pulse Survey (closes 18 Oct)",
-    "Notion → Obsidian: migrate one folder"
+    "Fiverr profile / gig listing"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -81,77 +81,57 @@
     }
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
-      ],
-      [
         "A",
-        "DB bench press",
-        "4×8"
+        "Zone 2 row",
+        "30:00 conversational pace"
       ],
       [
         "B",
-        "1-arm DB row",
-        "4×10/side, braced on bench"
+        "Mobility flow",
+        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
       ],
       [
         "C",
-        "Half-kneeling KB press",
-        "3×8/side"
-      ],
-      [
-        "D",
-        "Suitcase carry 40#",
-        "4×40m/side (anti-lean core)"
-      ],
-      [
-        "E",
-        "Dead bug + side plank",
-        "3 rounds"
+        "McGill Big 3",
+        "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
       [
         "1",
-        "Emergency reload with SIRT mag",
-        "×10"
+        "Wall drill, front sight focus",
+        "×20"
       ],
       [
         "2",
-        "Tap-rack-assess (simulated)",
+        "Dot-on-dot press, no disturbance",
         "×10"
       ],
       [
         "3",
-        "Draw → 1 → reload → 1",
-        "×5"
-      ],
-      [
-        "4",
-        "Slow-perfect reloads, eyes on threat",
-        "×5"
+        "Slow fire on small circle",
+        "×10"
       ]
     ]
   },
-  "quote": "Motivation is a rumor started by people who sleep at night. Discipline clocks in anyway.",
+  "quote": "Discipline is doing it right at 0300 when the only witness is the camera. And the camera is always recording.",
   "widget": {
-    "head": "WED 07 OCT",
+    "head": "THU 08 OCT",
     "next": "1900  Eat a snack\n2330  Homework block (1 hr)",
-    "focus": "Form · Pulse survey · Obsidian migration",
-    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
-    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack",
-    "comms": "Form due · Pulse Survey (closes 18 Oct)",
+    "focus": "Bill 11 Oct · Pulse survey · Fiverr gig",
+    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Bill due 11 Oct · Pulse Survey (closes 18 Oct)",
     "updated": "upd 1646"
   }
 }
