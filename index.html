@@ -12,286 +12,460 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0b0b0b; --panel:#141414; --line:#2a2a2a; --line2:#3a3a3a;
-  --ink:#ece9e1; --dim:#9b968a; --gold:#c9a227; --gold-ink:#0b0b0b; --red:#d0644a;
+  --bg:#0b0b0b; --panel:#141414; --panel2:#1b1b1b; --line:#2a2a2a; --line2:#3a3a3a;
+  --ink:#ece9e1; --dim:#9b968a; --gold:#c9a227; --gold-ink:#0b0b0b; --red:#d0644a; --green:#8fc1a9;
+  --top:52px; --bot:64px;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
-body{font:15px/1.45 'IBM Plex Sans',system-ui,sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);-webkit-tap-highlight-color:transparent}
-.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px}
-header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;border-bottom:4px solid var(--gold);padding-bottom:10px;margin-bottom:14px;flex-wrap:wrap}
-h1{margin:0;font:800 40px/0.95 'Barlow Condensed',sans-serif;letter-spacing:.02em}
-h1 span{color:var(--gold)}
-.meta{font:600 13px 'IBM Plex Mono',monospace;color:var(--dim);text-align:right}
-.meta b{display:block;color:var(--ink);font-size:18px}
-.grid{display:grid;grid-template-columns:1fr;gap:12px}
-@media (min-width:720px){.grid{grid-template-columns:1fr 1fr}.span2{grid-column:1/-1}}
-@media (min-width:1100px){.grid{grid-template-columns:1fr 1fr 1fr}}
-section{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px 14px;scroll-margin-top:12px}
-h2{margin:0 0 8px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font:700 17px 'Barlow Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase}
-h2 .n{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:13px}
-h2 .t{margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.04em}
-h3{margin:12px 0 6px;font:600 11.5px 'IBM Plex Mono',monospace;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+body{font:15px/1.45 'IBM Plex Sans',system-ui,sans-serif;-webkit-tap-highlight-color:transparent;overscroll-behavior-y:contain}
+button{font:inherit;color:inherit}
 .mono{font-family:'IBM Plex Mono',monospace}
 .dim{color:var(--dim)}
-label.ck{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--line);cursor:pointer;min-height:44px}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:20;height:calc(var(--top) + env(safe-area-inset-top));padding:env(safe-area-inset-top) 12px 0;display:flex;align-items:center;gap:10px;background:rgba(11,11,11,.96);border-bottom:2px solid var(--gold);backdrop-filter:blur(6px)}
+.brand{font:800 20px 'Barlow Condensed',sans-serif;letter-spacing:.04em;background:none;border:0;padding:0;cursor:pointer;min-height:44px}
+.brand span{color:var(--gold)}
+.topbar .date{margin-left:auto;font:600 13px 'IBM Plex Mono',monospace;text-align:right;line-height:1.2}
+.topbar .date small{display:block;color:var(--dim);font-size:10.5px;font-weight:400}
+.iconbtn{width:44px;height:44px;border-radius:6px;border:1px solid var(--line2);background:var(--panel);display:grid;place-items:center;cursor:pointer;flex:none}
+.iconbtn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.wrap{max-width:1100px;margin:0 auto;padding:12px 14px calc(var(--bot) + 24px + env(safe-area-inset-bottom))}
+.view[hidden]{display:none!important}
+body.home .wrap{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+
+/* HOME */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 6px 7px;text-align:center}
+.stat b{display:block;font:700 26px/1 'Barlow Condensed',sans-serif;color:var(--ink)}
+.stat b.ok{color:var(--gold)}
+.stat span{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:var(--dim)}
+.nextline{margin:8px 0 0;display:flex;gap:8px;align-items:center;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;width:100%;text-align:left}
+.nextline .k{font:600 11px 'IBM Plex Mono',monospace;color:var(--gold);letter-spacing:.08em}
+.nextline .t{font:600 13px 'IBM Plex Mono',monospace}
+.quote{margin:10px 0 0;padding:12px 14px;border-left:4px solid var(--gold);background:var(--panel2);border-radius:0 8px 8px 0}
+.quote p{margin:0;font:600 19px/1.3 'Barlow Condensed',sans-serif;letter-spacing:.01em}
+.prov{margin-top:10px;display:flex;gap:10px;align-items:flex-start;background:none;border:0;padding:0;text-align:left;cursor:pointer;width:100%}
+.prov .k{flex:none;font:600 10.5px 'IBM Plex Mono',monospace;color:var(--gold);letter-spacing:.08em;margin-top:3px}
+.prov .q{font-size:15px;color:var(--ink)}
+.prov .r{margin-left:auto;flex:none;color:var(--dim);font:600 11px 'IBM Plex Mono',monospace;margin-top:3px}
+
+.h3{margin:14px 0 6px;display:flex;align-items:center;gap:8px;font:700 15px 'Barlow Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.h3 .r{margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.04em;text-transform:none}
+.big3 .row{display:flex;gap:10px;align-items:center;margin:0 0 6px}
+.bigck{appearance:none;flex:none;width:34px;height:34px;margin:0;border:2.5px solid var(--dim);border-radius:6px;display:grid;place-content:center;cursor:pointer;background:transparent}
+.bigck:checked{background:var(--gold);border-color:var(--gold)}
+.bigck:checked::after{content:"";width:14px;height:8px;border:solid var(--gold-ink);border-width:0 0 3px 3px;transform:rotate(-45deg) translate(1px,-2px)}
+.big3 input[type=text]{font-size:17px;font-weight:500;min-height:46px}
+.big3 .row.done input[type=text]{color:var(--dim);text-decoration:line-through}
+.chips{display:flex;gap:6px;margin:2px -14px 4px;padding:0 14px;overflow-x:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chip{flex:none;white-space:nowrap}
+.chip{background:#0e0e0e;color:var(--ink);border:1px dashed var(--line2);border-radius:16px;min-height:36px;padding:6px 12px;font-size:13px;cursor:pointer}
+.chip b{color:var(--gold);font-family:'IBM Plex Mono',monospace;margin-right:4px}
+
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+@media (min-width:720px){.tiles{gap:8px}.tile{min-height:92px;padding:10px}.tile .nm{font-size:17px}.homegrid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:start}}
+.tile{position:relative;min-height:78px;padding:8px 8px 8px;border-radius:8px;border:1px solid var(--line);background:var(--panel);text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;gap:6px;overflow:hidden}
+.tile:active{background:var(--panel2);border-color:var(--gold)}
+.tile .n{font:600 12px 'IBM Plex Mono',monospace;color:var(--gold)}
+.tile .nm{font:700 15.5px/1.05 'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.tile .pg{font:600 10.5px 'IBM Plex Mono',monospace;color:var(--dim)}
+.tile .bar{position:absolute;left:0;bottom:0;height:3px;background:var(--gold);transition:width .25s}
+.tile.full{border-color:#5a4a1c}
+.tile.full .pg{color:var(--gold)}
+
+/* PAGES */
+.page{max-width:760px;margin:0 auto}
+.phead{display:flex;align-items:center;gap:10px;margin:2px 0 12px}
+.phead .n{font:600 13px 'IBM Plex Mono',monospace;color:var(--gold)}
+.phead h2{margin:0;font:700 26px/1 'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.phead .sub{display:block;font:600 11px 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.04em;margin-top:3px}
+.phead .edit{margin-left:auto}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px 12px;margin-bottom:10px}
+h3{margin:12px 0 6px;font:600 11.5px 'IBM Plex Mono',monospace;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+.card > h3:first-child{margin-top:4px}
+
+label.ck{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);cursor:pointer;min-height:48px}
 label.ck:last-child{border-bottom:0}
-label.ck input{appearance:none;flex:none;width:20px;height:20px;margin:1px 0 0;border:2px solid var(--dim);border-radius:3px;display:grid;place-content:center;cursor:pointer}
+label.ck input{appearance:none;flex:none;width:24px;height:24px;margin:0;border:2px solid var(--dim);border-radius:4px;display:grid;place-content:center;cursor:pointer}
 label.ck input:checked{background:var(--gold);border-color:var(--gold)}
-label.ck input:checked::after{content:"";width:10px;height:6px;border:solid var(--gold-ink);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg) translate(1px,-1px)}
-label.ck input:checked + span{color:var(--dim);text-decoration:line-through;text-decoration-color:var(--line2)}
+label.ck input:checked::after{content:"";width:11px;height:6px;border:solid var(--gold-ink);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg) translate(1px,-1px)}
+label.ck input:checked ~ span{color:var(--dim);text-decoration:line-through;text-decoration-color:var(--line2)}
 label.ck .tm{color:var(--gold);font-family:'IBM Plex Mono',monospace;font-size:13px;min-width:44px;display:inline-block}
+label.ck .dose{display:block;color:var(--dim);font-size:13px;text-decoration:none}
 .field{display:flex;flex-direction:column;gap:3px;margin:8px 0}
 .field > span{font:600 11px 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.05em;text-transform:uppercase}
-input[type=text],input[type=number],textarea{width:100%;background:#0e0e0e;color:var(--ink);border:1px solid var(--line2);border-radius:4px;padding:9px 10px;font:inherit;min-height:42px}
-textarea{min-height:64px;resize:vertical}
+input[type=text],input[type=number],textarea{width:100%;background:#0e0e0e;color:var(--ink);border:1px solid var(--line2);border-radius:5px;padding:10px 11px;font:inherit;min-height:44px}
+textarea{min-height:72px;resize:vertical}
 input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:transparent}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .seg{display:flex;gap:6px;flex-wrap:wrap}
-.seg button,.chip{background:#0e0e0e;color:var(--ink);border:1px solid var(--line2);border-radius:4px;min-width:44px;min-height:40px;padding:6px 10px;font:600 14px 'IBM Plex Mono',monospace;cursor:pointer}
-.seg button[aria-pressed=true],.chip[aria-pressed=true]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
-.chip{font:500 13px 'IBM Plex Sans',sans-serif;min-height:36px}
-.board{display:grid;grid-template-columns:auto 1fr;gap:6px 12px}
-.board .tm{font:600 13px 'IBM Plex Mono',monospace;color:var(--gold);white-space:nowrap}
-.wk{display:grid;grid-template-columns:24px 1fr 92px;gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--line)}
-.wk:last-of-type{border-bottom:0}
+.seg button,.dchip{background:#0e0e0e;border:1px solid var(--line2);border-radius:5px;min-width:44px;min-height:44px;padding:6px 12px;font:600 14px 'IBM Plex Mono',monospace;cursor:pointer}
+.seg button[aria-pressed=true],.dchip[aria-pressed=true]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.seg button:disabled{opacity:.4}
+.dchip{font:500 13px 'IBM Plex Sans',sans-serif;min-height:38px;border-radius:19px}
+.board{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:16px}
+.board .tm{font:600 14px 'IBM Plex Mono',monospace;color:var(--gold);white-space:nowrap}
+.wk{display:grid;grid-template-columns:24px 1fr 96px;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--line)}
+.wk:last-child{border-bottom:0}
 .wk .k{font:600 14px 'IBM Plex Mono',monospace;color:var(--gold)}
 .wk b{display:block}
-.wk input{min-height:36px;padding:6px 8px;font-size:13px}
-.proj{display:grid;grid-template-columns:1fr;gap:4px;padding:8px 0;border-bottom:1px solid var(--line)}
+.wk input{min-height:40px;padding:6px 8px;font-size:13px}
+.proj{padding:10px 0;border-bottom:1px solid var(--line)}
 .proj:last-child{border-bottom:0}
-.proj .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.pips{display:flex;gap:6px}
-.pips button{width:24px;height:24px;border-radius:50%;border:2px solid var(--dim);background:transparent;cursor:pointer;padding:0}
+.proj .top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.pips{display:flex;gap:4px}
+.pips button{width:30px;height:30px;border-radius:50%;border:2px solid var(--dim);background:transparent;cursor:pointer;padding:0}
 .pips button.on{background:var(--gold);border-color:var(--gold)}
-.pips{padding:8px 0}
 .streak{display:flex;gap:6px;margin:6px 0}
-.streak button{flex:1;min-height:52px;border:1px solid var(--line2);border-radius:4px;background:#0e0e0e;color:var(--dim);font:600 12px 'IBM Plex Mono',monospace;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.streak button{flex:1;min-height:56px;border:1px solid var(--line2);border-radius:5px;background:#0e0e0e;color:var(--dim);font:600 12px 'IBM Plex Mono',monospace;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
 .streak button.on{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
 .streak button.today{outline:2px solid var(--ink);outline-offset:1px}
-.safety{background:#2a2312;border:1px solid #5a4a1c;border-radius:4px;padding:2px 10px;margin-bottom:6px}
-.timer{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 2px;padding:10px;border:1px dashed var(--line2);border-radius:4px}
-.timer .big{font:600 26px 'IBM Plex Mono',monospace;min-width:84px}
-.btn{background:var(--gold);color:var(--gold-ink);border:0;border-radius:4px;min-height:44px;padding:8px 16px;font:700 15px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.safety{background:#2a2312;border:1px solid #5a4a1c;border-radius:6px;padding:0 10px;margin-bottom:10px}
+.timer{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.timer .big{font:600 34px 'IBM Plex Mono',monospace;min-width:100px}
+.btn{background:var(--gold);color:var(--gold-ink);border:0;border-radius:5px;min-height:46px;padding:8px 18px;font:700 16px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line2)}
-.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-footer{margin-top:18px;border-top:1px solid var(--line);padding-top:10px;color:var(--dim);font-style:italic;font-size:13px}
-.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:4px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none}
-.toast.show{opacity:1}
-.stale{color:var(--red)}
-.win{margin:10px 0 4px;display:flex;align-items:baseline;gap:8px;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
+.btn.sm{min-height:40px;font-size:14px;padding:6px 14px}
+
+/* list editor */
+.edrow{display:flex;gap:6px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.edrow input.t{flex:0 0 64px}
+.edrow input.kd{flex:0 0 38%}
+.del{flex:none;width:44px;height:44px;border-radius:5px;border:1px solid #5e3a2f;background:transparent;color:var(--red);font:600 18px 'IBM Plex Mono',monospace;cursor:pointer}
+.add{margin-top:8px;width:100%;min-height:46px;border:1px dashed var(--line2);border-radius:6px;background:transparent;color:var(--gold);font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;cursor:pointer}
+
+.win{margin:12px 0 4px;display:flex;align-items:baseline;gap:8px;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
 .win .slot{background:var(--gold);color:var(--gold-ink);padding:1px 6px;border-radius:3px}
 .tag{flex:none;margin-left:auto;font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.06em;padding:2px 6px;border-radius:3px;border:1px solid var(--line2);color:var(--dim);align-self:center}
 .tag.GHOST{color:#8fc1a9;border-color:#3d5a4c}
 .tag.STAIRWELL{color:#c9a227;border-color:#5a4a1c}
 .tag.BOH{color:#d0907a;border-color:#5e3a2f}
-label.ck .dose{display:block;color:var(--dim);font-size:13px}
-details.more{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
-details.more summary{cursor:pointer;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.05em;color:var(--ink);min-height:32px;display:flex;align-items:center}
-details.more ul{margin:6px 0 0;padding-left:18px;color:var(--dim);font-size:13.5px}
+details.more{margin-top:10px;border-top:1px solid var(--line);padding-top:6px}
+details.more summary{cursor:pointer;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.05em;min-height:40px;display:flex;align-items:center}
+details.more ul{margin:4px 0 0;padding-left:18px;color:var(--dim);font-size:14px}
 details.more li{margin:4px 0}
+
+/* bottom nav */
+.botnav{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(11,11,11,.97);border-top:1px solid var(--line2);display:grid;grid-template-columns:56px 1fr 1fr;gap:8px}
+.botnav[hidden]{display:none}
+.botnav button{min-height:48px;border-radius:6px;border:1px solid var(--line2);background:var(--panel);cursor:pointer;font:700 15px 'Barlow Condensed',sans-serif;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 8px;overflow:hidden;white-space:nowrap}
+.botnav .home{color:var(--gold)}
+.botnav .nx{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.botnav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.botnav .lbl{overflow:hidden;text-overflow:ellipsis}
+
+.toast{position:fixed;left:50%;bottom:calc(var(--bot) + 20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:5px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30}
+.toast.show{opacity:1}
+.stale{color:var(--red)}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <div>
-    <div class="mono dim" style="font-size:11px;letter-spacing:.08em">ROWAN RISK SOLUTIONS // PERSONAL OPS</div>
-    <h1>SITREP <span>// DAILY</span></h1>
-  </div>
-  <div class="meta"><b id="dateLabel">LOADING…</b><span id="upd"></span></div>
+<header class="topbar">
+  <button class="brand" id="goHome" aria-label="Home">SITREP <span>//</span></button>
+  <div class="date"><span id="dateLabel">LOADING…</span><small id="upd"></small></div>
+  <button class="iconbtn" id="reload" aria-label="Refresh feed"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/></svg></button>
 </header>
 
-<div class="grid">
+<main class="wrap" id="main">
 
-<section id="reveille">
-  <h2><span class="n">01</span>Reveille<span class="t">WAKE +30</span></h2>
-  <div id="revList"></div>
-  <div class="row2">
-    <label class="field"><span>Slept (hrs)</span><input type="number" step="0.5" inputmode="decimal" data-k="slept"></label>
-    <label class="field"><span>Mood word</span><input type="text" data-k="mood"></label>
+<!-- HOME -->
+<section class="view" id="v-home">
+  <div class="homegrid">
+    <div>
+      <div class="stats" id="stats"></div>
+      <button class="nextline" id="nextLine" data-go="board"></button>
+      <div class="quote">
+        <p id="quote"></p>
+        <button class="prov" id="prov" aria-label="Next question"><span class="k">ASK</span><span class="q" id="provQ"></span><span class="r">NEXT ›</span></button>
+      </div>
+      <div class="h3">Big 3<span class="r" id="b3count"></span></div>
+      <div class="big3" id="big3home"></div>
+      <div class="chips" id="focusChips"></div>
+    </div>
+    <div>
+      <div class="h3">Sections<span class="r">swipe between pages</span></div>
+      <div class="tiles" id="tiles"></div>
+    </div>
   </div>
-  <div class="field"><span>Energy</span><div class="seg" data-seg="energy"></div></div>
 </section>
 
-<section id="board">
-  <h2><span class="n">02</span>Today's Board<span class="t">CALENDAR</span></h2>
-  <div class="board" id="boardList"></div>
-  <h3>Comms watch</h3>
-  <div id="commsList"></div>
+<!-- PAGES -->
+<section class="view page" id="v-reveille" hidden>
+  <div class="phead"><div><span class="n">01</span><h2>Reveille</h2><span class="sub">WAKE +30 MIN</span></div><button class="btn ghost sm edit" data-edit="rev">Edit</button></div>
+  <div class="card"><div id="revList"></div></div>
+  <div class="card">
+    <div class="row2">
+      <label class="field"><span>Slept (hrs)</span><input type="number" step="0.5" inputmode="decimal" data-k="slept"></label>
+      <label class="field"><span>Mood word</span><input type="text" data-k="mood"></label>
+    </div>
+    <div class="field"><span>Energy</span><div class="seg" data-seg="energy"></div></div>
+  </div>
 </section>
 
-<section id="mission">
-  <h2><span class="n">03</span>Mission<span class="t">BIG 3</span></h2>
-  <h3>Suggested focus</h3>
-  <div id="focusList"></div>
-  <h3>Your Big 3</h3>
-  <div id="big3"></div>
-  <label class="field"><span>Revenue move</span><input type="text" data-k="revenue"></label>
-  <h3>Standing open actions</h3>
-  <div id="standingList"></div>
+<section class="view page" id="v-board" hidden>
+  <div class="phead"><div><span class="n">02</span><h2>Board</h2><span class="sub">CALENDAR · COMMS</span></div></div>
+  <div class="card"><h3>Calendar</h3><div class="board" id="boardList"></div></div>
+  <div class="card"><h3>Comms watch</h3><div id="commsList"></div></div>
 </section>
 
-<section id="projects">
-  <h2><span class="n">04</span>Project Tracker<span class="t">PIPS = % TO MILESTONE</span></h2>
-  <div id="projList"></div>
+<section class="view page" id="v-mission" hidden>
+  <div class="phead"><div><span class="n">03</span><h2>Mission</h2><span class="sub">BIG 3 · OPEN ACTIONS</span></div><button class="btn ghost sm edit" data-edit="standing">Edit</button></div>
+  <div class="card"><h3>Big 3</h3><div class="big3" id="big3page"></div>
+    <label class="field"><span>Revenue move</span><input type="text" data-k="revenue"></label></div>
+  <div class="card"><h3>Standing open actions</h3><div id="standingList"></div></div>
 </section>
 
-<section id="pt">
-  <h2><span class="n">05</span><span>PT · <span id="ptTitle"></span></span><span class="t" id="ptTime"></span></h2>
-  <div class="seg" id="ptMode" style="margin-bottom:8px">
+<section class="view page" id="v-projects" hidden>
+  <div class="phead"><div><span class="n">04</span><h2>Projects</h2><span class="sub">PIPS = % TO NEXT MILESTONE</span></div><button class="btn ghost sm edit" data-edit="proj">Edit</button></div>
+  <div class="card"><div id="projList"></div></div>
+</section>
+
+<section class="view page" id="v-pt" hidden>
+  <div class="phead"><div><span class="n">05</span><h2 id="ptTitle">PT</h2><span class="sub" id="ptTime"></span></div></div>
+  <div class="seg" id="ptMode" style="margin-bottom:10px">
     <button data-mode="garage" aria-pressed="true">Garage</button>
     <button data-mode="shift" aria-pressed="false">Work shift</button>
   </div>
-  <div id="ptList"></div>
+  <div class="card" id="ptList"></div>
   <div id="shiftBox" hidden>
-    <div class="seg" id="shiftDay" style="margin-bottom:4px"></div>
-    <div id="shiftWins"></div>
-    <details class="more"><summary>Always-on · every shift</summary><div id="shiftAlways"></div></details>
-    <details class="more"><summary>Rules of engagement · kit</summary><div id="shiftRules"></div></details>
+    <div class="seg" id="shiftDay" style="margin-bottom:8px"></div>
+    <div class="card"><div id="shiftWins"></div>
+      <details class="more"><summary>Always-on · every shift</summary><div id="shiftAlways"></div></details>
+      <details class="more"><summary>Rules of engagement · kit</summary><div id="shiftRules"></div></details>
+    </div>
   </div>
-  <div class="row2">
+  <div class="card row2">
     <label class="field"><span>RPE 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="rpe"></label>
     <label class="field"><span>Back check 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="back"></label>
   </div>
 </section>
 
-<section id="dry">
-  <h2><span class="n">06</span><span>Dry Fire · <span id="dryTitle"></span></span><span class="t" id="dryTime"></span></h2>
+<section class="view page" id="v-dry" hidden>
+  <div class="phead"><div><span class="n">06</span><h2 id="dryTitle">Dry Fire</h2><span class="sub" id="dryTime"></span></div></div>
   <div class="safety"><label class="ck"><input type="checkbox" data-k="safety"><span><b>Safety:</b> no live ammo in the room. SIRT only. AIWB, cover garment on.</span></label></div>
-  <div id="dryList"></div>
-  <div class="timer">
-    <span class="mono dim" style="font-size:12px">PAR</span>
-    <input type="number" id="par" step="0.05" value="1.75" inputmode="decimal" style="width:84px" aria-label="Par time in seconds">
-    <button class="btn" id="parGo">Start</button>
-    <span class="big" id="parOut">--</span>
-    <span class="dim" style="font-size:12px">Random 2–4s delay, beep, second beep at par.</span>
+  <div class="card" id="dryList"></div>
+  <div class="card">
+    <h3>Par timer</h3>
+    <div class="timer">
+      <input type="number" id="par" step="0.05" value="1.75" inputmode="decimal" style="width:92px" aria-label="Par time in seconds">
+      <button class="btn" id="parGo">Start</button>
+      <span class="big" id="parOut">--</span>
+    </div>
+    <div class="dim" style="font-size:12.5px;margin-top:6px">Random 2–4s delay → beep → second beep at par.</div>
+    <label class="field"><span>Fix next session</span><input type="text" data-k="dryfix"></label>
   </div>
-  <label class="field"><span>Fix next session</span><input type="text" data-k="dryfix"></label>
 </section>
 
-<section id="ledger">
-  <h2><span class="n">07</span>Ledger Check-In<span class="t">STAYS ON THIS PHONE</span></h2>
-  <div class="row2">
-    <label class="field"><span>Available $</span><input type="number" inputmode="decimal" data-k="bal"></label>
-    <label class="field"><span>Spent yesterday $</span><input type="number" inputmode="decimal" data-k="spent"></label>
-    <label class="field"><span>Bills due ≤7 days</span><input type="text" data-k="bills"></label>
-    <label class="field"><span>Discretionary left $</span><input type="number" inputmode="decimal" data-k="disc"></label>
+<section class="view page" id="v-ledger" hidden>
+  <div class="phead"><div><span class="n">07</span><h2>Ledger</h2><span class="sub">STAYS ON THIS PHONE</span></div></div>
+  <div class="card">
+    <div class="row2">
+      <label class="field"><span>Available $</span><input type="number" inputmode="decimal" data-k="bal"></label>
+      <label class="field"><span>Spent yesterday $</span><input type="number" inputmode="decimal" data-k="spent"></label>
+      <label class="field"><span>Bills due ≤7 days</span><input type="text" data-k="bills"></label>
+      <label class="field"><span>Discretionary left $</span><input type="number" inputmode="decimal" data-k="disc"></label>
+    </div>
+    <label class="ck"><input type="checkbox" data-k="nospend"><span>No-spend day</span></label>
+    <label class="ck"><input type="checkbox" data-k="rrsin"><span>RRS income landed</span></label>
+    <label class="field"><span>One money move today</span><input type="text" data-k="moneymove"></label>
   </div>
-  <label class="ck"><input type="checkbox" data-k="nospend"><span>No-spend day</span></label>
-  <label class="ck"><input type="checkbox" data-k="rrsin"><span>RRS income landed</span></label>
-  <label class="field"><span>One money move today</span><input type="text" data-k="moneymove"></label>
 </section>
 
-<section id="mastery">
-  <h2><span class="n">08</span>Self-Mastery</h2>
-  <label class="field"><span>Today's mastery task</span><input type="text" data-k="mtask"></label>
-  <label class="field"><span>Habit in build</span><input type="text" data-g="habit"></label>
-  <div class="field"><span>Streak · tap today when done</span><div class="streak" id="streak"></div></div>
-  <div class="row2">
-    <label class="field"><span>If…</span><input type="text" data-k="ifx"></label>
-    <label class="field"><span>…then I will</span><input type="text" data-k="theny"></label>
+<section class="view page" id="v-mastery" hidden>
+  <div class="phead"><div><span class="n">08</span><h2>Self-Mastery</h2><span class="sub">TASK · HABIT · IDENTITY</span></div></div>
+  <div class="card">
+    <label class="field"><span>Today's mastery task</span><input type="text" data-k="mtask"></label>
+    <label class="field"><span>Habit in build</span><input type="text" data-g="habit"></label>
+    <div class="field"><span>Streak · tap today when done</span><div class="streak" id="streak"></div></div>
   </div>
-  <label class="field"><span>Identity vote: I'm the kind of man who…</span><input type="text" data-k="identity"></label>
+  <div class="card">
+    <div class="row2">
+      <label class="field"><span>If…</span><input type="text" data-k="ifx"></label>
+      <label class="field"><span>…then I will</span><input type="text" data-k="theny"></label>
+    </div>
+    <label class="field"><span>Identity vote: I'm the kind of man who…</span><input type="text" data-k="identity"></label>
+  </div>
 </section>
 
-<section id="gratitude">
-  <h2><span class="n">09</span>Gratitude<span class="t">PERSON · THING · WIN</span></h2>
-  <label class="field"><span>1 · A person</span><input type="text" data-k="g1"></label>
-  <label class="field"><span>2 · A thing</span><input type="text" data-k="g2"></label>
-  <label class="field"><span>3 · A small win</span><input type="text" data-k="g3"></label>
-  <label class="field"><span>Who gets a thank-you text</span><input type="text" data-k="thanks"></label>
+<section class="view page" id="v-gratitude" hidden>
+  <div class="phead"><div><span class="n">09</span><h2>Gratitude</h2><span class="sub">PERSON · THING · WIN</span></div></div>
+  <div class="card">
+    <label class="field"><span>1 · A person</span><input type="text" data-k="g1"></label>
+    <label class="field"><span>2 · A thing</span><input type="text" data-k="g2"></label>
+    <label class="field"><span>3 · A small win</span><input type="text" data-k="g3"></label>
+    <label class="field"><span>Who gets a thank-you text</span><input type="text" data-k="thanks"></label>
+  </div>
 </section>
 
-<section id="cbt">
-  <h2><span class="n">10</span>CBT Thought Record<span class="t">WHEN SOMETHING SPIKES</span></h2>
-  <label class="field"><span>Situation</span><input type="text" data-k="sit"></label>
-  <div class="row2" style="grid-template-columns:1fr 92px">
-    <label class="field"><span>Hot thought</span><input type="text" data-k="hot"></label>
-    <label class="field"><span>Intensity %</span><input type="number" inputmode="numeric" data-k="hotpct"></label>
+<section class="view page" id="v-cbt" hidden>
+  <div class="phead"><div><span class="n">10</span><h2>Thought Record</h2><span class="sub">WHEN SOMETHING SPIKES</span></div></div>
+  <div class="card">
+    <label class="field"><span>Situation</span><input type="text" data-k="sit"></label>
+    <div class="row2" style="grid-template-columns:1fr 96px">
+      <label class="field"><span>Hot thought</span><input type="text" data-k="hot"></label>
+      <label class="field"><span>Intensity %</span><input type="number" inputmode="numeric" data-k="hotpct"></label>
+    </div>
+    <div class="field"><span>Distortions</span><div class="seg" id="dist"></div></div>
   </div>
-  <div class="field"><span>Distortions</span><div class="seg" id="dist"></div></div>
-  <div class="row2">
+  <div class="card">
     <label class="field"><span>Evidence for</span><textarea data-k="evfor"></textarea></label>
     <label class="field"><span>Evidence against</span><textarea data-k="evagainst"></textarea></label>
-  </div>
-  <div class="row2" style="grid-template-columns:1fr 92px">
-    <label class="field"><span>Balanced thought</span><input type="text" data-k="balanced"></label>
-    <label class="field"><span>Now %</span><input type="number" inputmode="numeric" data-k="nowpct"></label>
-  </div>
-</section>
-
-<section id="discipline">
-  <h2><span class="n">11</span>Discipline Rep</h2>
-  <label class="field"><span>Today's hard thing (chosen, not assigned)</span><input type="text" data-k="hard"></label>
-  <div id="discList"></div>
-</section>
-
-<section id="aar">
-  <h2><span class="n">12</span>AAR · End of Shift</h2>
-  <label class="field"><span>Sustain</span><input type="text" data-k="sustain"></label>
-  <label class="field"><span>Improve</span><input type="text" data-k="improve"></label>
-  <label class="field"><span>Tomorrow's first move</span><input type="text" data-k="firstmove"></label>
-  <div class="field"><span>Day grade · no inflation</span><div class="seg" data-seg="grade"></div></div>
-  <div class="bar">
-    <button class="btn" id="copyMd">Copy to Obsidian</button>
-    <button class="btn ghost" id="reload">Refresh feed</button>
+    <div class="row2" style="grid-template-columns:1fr 96px">
+      <label class="field"><span>Balanced thought</span><input type="text" data-k="balanced"></label>
+      <label class="field"><span>Now %</span><input type="number" inputmode="numeric" data-k="nowpct"></label>
+    </div>
   </div>
 </section>
 
-</div>
-<footer id="quote"></footer>
-</div>
+<section class="view page" id="v-discipline" hidden>
+  <div class="phead"><div><span class="n">11</span><h2>Discipline</h2><span class="sub">CHOSEN, NOT ASSIGNED</span></div><button class="btn ghost sm edit" data-edit="disc">Edit</button></div>
+  <div class="card">
+    <label class="field"><span>Today's hard thing</span><input type="text" data-k="hard"></label>
+    <div id="discList"></div>
+  </div>
+</section>
+
+<section class="view page" id="v-aar" hidden>
+  <div class="phead"><div><span class="n">12</span><h2>AAR</h2><span class="sub">END OF SHIFT</span></div></div>
+  <div class="card">
+    <label class="field"><span>Sustain</span><input type="text" data-k="sustain"></label>
+    <label class="field"><span>Improve</span><input type="text" data-k="improve"></label>
+    <label class="field"><span>Tomorrow's first move</span><input type="text" data-k="firstmove"></label>
+    <div class="field"><span>Day grade · no inflation</span><div class="seg" data-seg="grade"></div></div>
+  </div>
+  <button class="btn" id="copyMd" style="width:100%">Copy day to Obsidian</button>
+</section>
+
+</main>
+
+<nav class="botnav" id="botnav" hidden>
+  <button class="home" id="navHome" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></button>
+  <button id="navPrev"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg><span class="lbl" id="prevLbl"></span></button>
+  <button class="nx" id="navNext"><span class="lbl" id="nextLbl"></span><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+</nav>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
-const $=s=>document.querySelector(s);
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const store={
   get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},
   set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
 };
-let feed=null, prog=null, day={}, glob=store.get('sitrep:global',{}), dayKey='';
-function save(){store.set(dayKey,day)}
-function saveG(){store.set('sitrep:global',glob)}
+let feed=null, prog=null, day={}, glob=store.get('sitrep:global',{}), dayKey='', editing={};
+const save=()=>store.set(dayKey,day), saveG=()=>store.set('sitrep:global',glob);
 function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1600)}
+const uid=()=>'i'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 
-const REV=[['+00','Feet on floor. 500 ml water + electrolytes'],['+03','Outside 5 min, daylight before it\'s gone'],['+08','Box breathing 4-4-4-4 × 2 min'],['+10','Mobility: cat-cow ×10, 90/90 ×5/side, dead bug ×10'],['+18','Make the bed. Phone face-down'],['+20','Read this brief. Set the Big 3']];
-const DISC=['First hour awake: no feeds, no news','Trained before screens','Did the avoided thing first, not last','Kept one promise to myself on time'];
+const PAGES=[['reveille','Reveille'],['board','Board'],['mission','Mission'],['projects','Projects'],['pt','PT'],['dry','Dry Fire'],['ledger','Ledger'],['mastery','Mastery'],['gratitude','Gratitude'],['cbt','Thought Rec'],['discipline','Discipline'],['aar','AAR']];
 const DIST=['All-or-nothing','Catastrophizing','Mind reading','Fortune telling','Should statements','Labeling','Discounting positives','Emotional reasoning'];
+const PROV=["What would make tonight a win even if nothing else goes right?","What am I avoiding, and what is the smallest first step?","Which commitment am I keeping only out of habit?","If a client saw how I spent yesterday, what would they buy from me?","What's one thing I'm tolerating that I could fix in 10 minutes?","What would the Marine I was at 22 say about today's plan?","Where am I busy instead of effective?","What story am I telling myself about money right now? Is it true?","Who deserves a call I keep putting off?","What did I learn last shift that I haven't written down?","What's the one decision that makes the next three easier?","Am I training for the threat I expect, or the one I enjoy?","What would I cut if I had half the hours?","What is fear quietly deciding for me?","What would 'done' look like for my oldest open project?","Whose standard am I living by today?","What did I promise someone this week, and where does it stand?","If I only shipped one thing this week, which one pays?","What's the cost of not starting today?","What would I tell a junior officer in my exact position?"];
 
-function ck(key,html,extra){return `<label class="ck"><input type="checkbox" data-k="${key}"${day[key]?' checked':''}><span>${extra||''}${html}</span></label>`}
+// ---- editable lists ----
+const DEF={
+  rev:()=>[['+00','Feet on floor. 500 ml water + electrolytes'],['+03','Outside 5 min, daylight before it\'s gone'],['+08','Box breathing 4-4-4-4 × 2 min'],['+10','Mobility: cat-cow ×10, 90/90 ×5/side, dead bug ×10'],['+18','Make the bed. Phone face-down'],['+20','Open SITREP. Set the Big 3']].map((r,i)=>({id:'r'+i,t:r[0],text:r[1]})),
+  standing:()=>(feed.standing||[]).map((x,i)=>({id:'s'+i,text:x})),
+  proj:()=>(feed.projects||[]).map(p=>({id:p.name,text:p.name,kind:p.kind})),
+  disc:()=>['First hour awake: no feeds, no news','Trained before screens','Did the avoided thing first, not last','Kept one promise to myself on time'].map((x,i)=>({id:'d'+i,text:x}))
+};
+glob.lists=glob.lists||{};
+const getList=n=>glob.lists[n]||DEF[n]();
+function setList(n,arr){glob.lists[n]=arr;saveG()}
 
-function render(){
+function listView(n,body){ // body(item) returns html for normal mode
+  const L=getList(n);
+  if(!editing[n])return L.map(body).join('')||'<div class="dim" style="padding:8px 0">Empty. Tap Edit to add.</div>';
+  return L.map(it=>`<div class="edrow">${n==='rev'?`<input type="text" class="t" data-le="${n}" data-id="${esc(it.id)}" data-f="t" value="${esc(it.t||'')}" aria-label="Time">`:''}<input type="text" data-le="${n}" data-id="${esc(it.id)}" data-f="text" value="${esc(it.text)}" aria-label="Item">${n==='proj'?`<input type="text" class="kd" data-le="${n}" data-id="${esc(it.id)}" data-f="kind" value="${esc(it.kind||'')}" placeholder="type" aria-label="Type">`:''}<button class="del" data-ldel="${n}" data-id="${esc(it.id)}" aria-label="Delete">×</button></div>`).join('')+
+    `<button class="add" data-ladd="${n}">+ ADD ITEM</button>`+(glob.lists[n]?`<button class="add" data-lreset="${n}" style="color:var(--dim)">RESET TO DEFAULT</button>`:'');
+}
+const ck=(key,html,pre='')=>`<label class="ck"><input type="checkbox" data-k="${key}"${day[key]?' checked':''}><span>${pre}${html}</span></label>`;
+
+// ---- renderers ----
+function rStats(){
+  const b3=[0,1,2].filter(i=>day['b3d'+i]).length;
+  const S=glob.streak||{}; let n=0; const d=new Date(feed.date+'T12:00:00'); if(!S[feed.date])d.setDate(d.getDate()-1);
+  while(S[iso(d)]){n++;d.setDate(d.getDate()-1)}
+  const pt=prog2('pt'), all=PAGES.map(p=>prog2(p[0])).filter(x=>x&&x[1]), tot=all.reduce((a,x)=>a+x[1],0), dn=all.reduce((a,x)=>a+Math.min(x[0],x[1]),0);
+  const pct=tot?Math.round(dn/tot*100):0;
+  const cells=[[`${b3}/3`,'BIG 3',b3===3],[n,'STREAK',n>0],[pt&&pt[1]?`${pt[0]}/${pt[1]}`:'—','PT',pt&&pt[0]>=pt[1]],[pct+'%','DAY',pct>=80]];
+  $('#stats').innerHTML=cells.map(c=>`<div class="stat"><b class="${c[2]?'ok':''}">${c[0]}</b><span>${c[1]}</span></div>`).join('');
+  $('#b3count').textContent=`${b3}/3 done`;
+}
+function rNext(){
+  const nb=(feed.board||[]).find(b=>/^\d{4}$/.test(b.t))||feed.board[0];
+  $('#nextLine').innerHTML=nb?`<span class="k">NEXT</span><span class="t">${esc(nb.t)}</span><span>${esc(nb.what)}</span><span class="dim" style="margin-left:auto">›</span>`:`<span class="k">BOARD</span><span>Clear</span>`;
+}
+function rQuote(){
+  $('#quote').textContent=feed.quote||'';
+  const doy=Math.floor((new Date(feed.date)-new Date(feed.date.slice(0,4)+'-01-01'))/864e5);
+  const i=((day.provI??doy)%PROV.length+PROV.length)%PROV.length; $('#provQ').textContent=PROV[i];
+}
+function rBig3(){
+  const row=i=>`<div class="row${day['b3d'+i]?' done':''}"><input type="checkbox" class="bigck" data-k="b3d${i}"${day['b3d'+i]?' checked':''} aria-label="Big 3 item ${i+1} done"><input type="text" data-k="b3_${i}" placeholder="${['Main effort','Second','Third'][i]}" value="${esc(day['b3_'+i]||'')}"></div>`;
+  const h=[0,1,2].map(row).join(''); $('#big3home').innerHTML=h; $('#big3page').innerHTML=h;
+  const used=[0,1,2].map(i=>(day['b3_'+i]||'').trim());
+  const sug=(feed.focus||[]).filter(f=>!used.includes(f));
+  $('#focusChips').innerHTML=used.every(Boolean)?'':sug.map(f=>`<button class="chip" data-fill="${esc(f)}"><b>+</b>${esc(f)}</button>`).join('');
+}
+function rTiles(){
+  $('#tiles').innerHTML=PAGES.map(([id,nm],i)=>{const p=prog2(id);const txt=p?(p[2]||`${p[0]}/${p[1]}`):'';const full=p&&p[1]&&p[0]>=p[1];
+    return `<button class="tile${full?' full':''}" data-go="${id}"><span class="n">${String(i+1).padStart(2,'0')}</span><span class="nm">${nm}</span><span class="pg">${esc(txt)}</span>${p&&p[1]?`<span class="bar" style="width:${Math.min(100,p[0]/p[1]*100)}%"></span>`:''}</button>`}).join('');
+}
+// progress: [done,total,label?]
+function prog2(id){
+  const c=keys=>keys.filter(k=>day[k]).length;
+  switch(id){
+    case 'reveille':{const L=getList('rev');return [c(L.map(x=>'L_rev_'+x.id)),L.length]}
+    case 'board':return [c(feed.comms.map((_,i)=>'c'+i)),feed.comms.length,`${feed.comms.length} comms`];
+    case 'mission':return [c(['b3d0','b3d1','b3d2']),3];
+    case 'projects':{const L=getList('proj');const P=glob.proj||{};const n=L.filter(x=>(P[x.id]||{}).next).length;return [0,0,`${n}/${L.length} set`]}
+    case 'pt':{if(day.ptmode==='shift'&&prog&&prog.SHIFT){const Ls=shiftLetter(),D=prog.SHIFT[Ls];const ks=[];D.windows.forEach((w,wi)=>w.items.forEach((_,ii)=>ks.push(`sh${Ls}_${wi}_${ii}`)));return [c(ks),ks.length,`Shift ${Ls} · ${c(ks)}/${ks.length}`]}
+      return [c(feed.pt.blocks.map((_,i)=>'pt'+i)),feed.pt.blocks.length]}
+    case 'dry':return [c(feed.dry.drills.map((_,i)=>'dr'+i)),feed.dry.drills.length];
+    case 'ledger':{const n=c(['bal','spent','bills','disc','moneymove']);return [n,5]}
+    case 'mastery':{const on=!!(glob.streak||{})[feed.date];return [on?1:0,1,on?'habit ✓':'habit open']}
+    case 'gratitude':return [c(['g1','g2','g3']),3];
+    case 'cbt':return [0,0,day.hot?'logged':'as needed'];
+    case 'discipline':{const L=getList('disc');return [c(L.map(x=>'L_disc_'+x.id)),L.length]}
+    case 'aar':return [day.grade?1:0,1,day.grade?'grade '+day.grade:'end of shift'];
+  }
+}
+function rPages(){
   const f=feed;
-  $('#dateLabel').textContent=f.label;
-  const gen=new Date(f.generated); const hrs=(Date.now()-gen)/36e5;
-  $('#upd').innerHTML=`feed ${esc(f.widget&&f.widget.updated||'')}${hrs>30?' · <span class="stale">STALE</span>':''}`;
-  $('#revList').innerHTML=REV.map((r,i)=>ck('rev'+i,esc(r[1]),`<span class="tm">${r[0]}</span>`)).join('');
+  $('#revList').innerHTML=listView('rev',it=>ck('L_rev_'+it.id,esc(it.text),`<span class="tm">${esc(it.t||'')}</span>`));
   $('#boardList').innerHTML=f.board.map(b=>`<span class="tm">${esc(b.t)}</span><span>${esc(b.what)}</span>`).join('');
-  $('#commsList').innerHTML=f.comms.map((c,i)=>ck('c'+i,`<b>${esc(c.what)}</b> <span class="dim">· ${esc(c.note)}</span>`)).join('');
-  $('#focusList').innerHTML=f.focus.map((x,i)=>ck('f'+i,esc(x))).join('');
-  $('#big3').innerHTML=[0,1,2].map(i=>`<div style="display:flex;gap:10px;align-items:center;margin:6px 0"><label class="ck" style="border:0;padding:0;min-height:0"><input type="checkbox" data-k="b3d${i}"${day['b3d'+i]?' checked':''} aria-label="Big 3 item ${i+1} done"></label><input type="text" data-k="b3_${i}" placeholder="${i+1}"></div>`).join('');
-  $('#standingList').innerHTML=f.standing.map((x,i)=>ck('s'+i,esc(x))).join('');
+  $('#commsList').innerHTML=f.comms.map((c,i)=>ck('c'+i,`<b>${esc(c.what)}</b><span class="dose">${esc(c.note)}</span>`)).join('');
+  $('#standingList').innerHTML=listView('standing',it=>ck('L_standing_'+it.id,esc(it.text)));
   const P=glob.proj||{};
-  $('#projList').innerHTML=f.projects.map((p,i)=>{const st=P[p.name]||{};const lv=st.lv||0;
-    return `<div class="proj"><div class="top"><span><b>${esc(p.name)}</b> <span class="dim" style="font-size:12px">${esc(p.kind)}</span></span><span class="pips" data-proj="${esc(p.name)}">${[1,2,3,4,5].map(n=>`<button aria-label="${n*20}%" class="${n<=lv?'on':''}" data-lv="${n}"></button>`).join('')}</span></div><input type="text" data-pn="${esc(p.name)}" placeholder="Next action" value="${esc(st.next||'')}"></div>`}).join('');
+  $('#projList').innerHTML=listView('proj',p=>{const st=P[p.id]||{};const lv=st.lv||0;
+    return `<div class="proj"><div class="top"><span><b>${esc(p.text)}</b> <span class="dim" style="font-size:12px">${esc(p.kind||'')}</span></span><span class="pips" data-proj="${esc(p.id)}">${[1,2,3,4,5].map(n=>`<button aria-label="${n*20}%" class="${n<=lv?'on':''}" data-lv="${n}"></button>`).join('')}</span></div><input type="text" data-pn="${esc(p.id)}" placeholder="Next action" value="${esc(st.next||'')}"></div>`});
   $('#ptList').innerHTML=f.pt.blocks.map((b,i)=>`<div class="wk"><span class="k">${esc(b[0])}</span><span><b>${esc(b[1])}</b><span class="dim">${esc(b[2])}</span></span><input type="text" data-k="pt${i}" placeholder="log" aria-label="Log for ${esc(b[1])}"></div>`).join('');
   renderPT();
   $('#dryTitle').textContent=f.dry.title; $('#dryTime').textContent='~'+f.dry.time+' MIN · SIRT 107';
   $('#dryList').innerHTML=f.dry.drills.map((d,i)=>`<div class="wk"><span class="k">${esc(d[0])}</span><span><b>${esc(d[1])}</b><span class="dim">${esc(d[2])}</span></span><input type="text" data-k="dr${i}" placeholder="par/hits" aria-label="Par and hits for drill ${esc(d[0])}"></div>`).join('');
-  $('#discList').innerHTML=DISC.map((x,i)=>ck('d'+i,esc(x))).join('');
-  $('#dist').innerHTML=DIST.map((x,i)=>`<button class="chip" data-dist="${i}" aria-pressed="${!!(day.dist||[]).includes(i)}">${x}</button>`).join('');
-  document.querySelectorAll('[data-seg]').forEach(el=>{const k=el.dataset.seg;const opts=k==='energy'?['1','2','3','4','5']:['A','B','C','D','F'];
+  $('#discList').innerHTML=listView('disc',it=>ck('L_disc_'+it.id,esc(it.text)));
+  $('#dist').innerHTML=DIST.map((x,i)=>`<button class="dchip" data-dist="${i}" aria-pressed="${(day.dist||[]).includes(i)}">${x}</button>`).join('');
+  $$('[data-seg]').forEach(el=>{const k=el.dataset.seg;const opts=k==='energy'?['1','2','3','4','5']:['A','B','C','D','F'];
     el.innerHTML=opts.map(o=>`<button aria-pressed="${day[k]===o}" data-v="${o}">${o}</button>`).join('')});
+  $$('[data-edit]').forEach(b=>{b.textContent=editing[b.dataset.edit]?'Done':'Edit';b.setAttribute('aria-pressed',!!editing[b.dataset.edit])});
   renderStreak();
-  $('#quote').textContent=f.quote||'';
-  document.querySelectorAll('input[data-k],textarea[data-k]').forEach(el=>{if(el.type==='checkbox')el.checked=!!day[el.dataset.k];else el.value=day[el.dataset.k]??''});
-  document.querySelectorAll('[data-g]').forEach(el=>el.value=glob[el.dataset.g]??'');
 }
-// ---- PT mode: garage vs work shift ----
+function syncInputs(){
+  $$('input[data-k],textarea[data-k]').forEach(el=>{if(document.activeElement===el)return;if(el.type==='checkbox')el.checked=!!day[el.dataset.k];else el.value=day[el.dataset.k]??''});
+  $$('[data-g]').forEach(el=>{if(document.activeElement!==el)el.value=glob[el.dataset.g]??''});
+}
+function rHome(){rStats();rNext();rQuote();rBig3();rTiles()}
+function renderAll(){
+  $('#dateLabel').textContent=feed.label.replace(/ \d{4}$/,'');
+  const hrs=(Date.now()-new Date(feed.generated))/36e5;
+  $('#upd').innerHTML=`feed ${esc((feed.widget&&feed.widget.updated||'').replace('upd ',''))}${hrs>30?' · <span class="stale">STALE</span>':''}`;
+  rHome(); rPages(); syncInputs();
+}
+
+// ---- PT mode ----
 const TAGTXT={GHOST:'GHOST',STAIRWELL:'STAIRWELL',BOH:'BACK OF HOUSE'};
 function shiftLetter(){
   if(day.shiftDay)return day.shiftDay;
@@ -301,12 +475,12 @@ function shiftLetter(){
 }
 function renderPT(){
   const f=feed, S=prog&&prog.SHIFT, mode=(day.ptmode==='shift'&&S)?'shift':'garage';
-  $('#ptMode').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
-  $('#ptMode').querySelector('[data-mode=shift]').disabled=!S;
+  $$('#ptMode button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
+  $('#ptMode [data-mode=shift]').disabled=!S;
   $('#ptList').hidden=mode!=='garage'; $('#shiftBox').hidden=mode!=='shift';
   if(mode==='garage'){$('#ptTitle').textContent=f.pt.title;$('#ptTime').textContent='~'+f.pt.time+' MIN · GARAGE';return}
   const L=shiftLetter(), D=S[L];
-  $('#ptTitle').textContent=`Shift ${L} · ${D.title}`; $('#ptTime').textContent=D.time+' MIN · SPLIT';
+  $('#ptTitle').textContent=D.title; $('#ptTime').textContent=`WORK SHIFT ${L} · ${D.time} MIN · SPLIT`;
   $('#shiftDay').innerHTML='ABCD'.split('').map(x=>`<button data-sday="${x}" aria-pressed="${x===L}">${x}</button>`).join('')+`<span class="dim" style="font-size:12px;align-self:center;margin-left:6px">rotates on work days</span>`;
   $('#shiftWins').innerHTML=D.windows.map((w,wi)=>`<div class="win"><span class="slot">${esc(w.slot)}</span>${esc(w.label)}</div>`+
     w.items.map((it,ii)=>`<label class="ck"><input type="checkbox" data-k="sh${L}_${wi}_${ii}"${day[`sh${L}_${wi}_${ii}`]?' checked':''}><span>${esc(it[0])}<span class="dose">${esc(it[1])}</span></span><span class="tag ${it[2]}">${TAGTXT[it[2]]||it[2]}</span></label>`).join('')).join('');
@@ -314,31 +488,68 @@ function renderPT(){
   $('#shiftRules').innerHTML=`<ul>${S.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ul><h3>Kit</h3><ul>${S.kit.map(k=>`<li>${esc(k)}</li>`).join('')}</ul>`;
 }
 function markShiftUsed(){if(day.ptmode==='shift'){glob.lastShift={date:feed.date,letter:shiftLetter()};saveG()}}
-function iso(d){return d.toISOString().slice(0,10)}
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function renderStreak(){
   const base=new Date(feed.date+'T12:00:00'); const S=glob.streak||{}; let html='';
   for(let i=6;i>=0;i--){const d=new Date(base);d.setDate(d.getDate()-i);const k=iso(d);
     html+=`<button data-sd="${k}" class="${S[k]?'on':''} ${i===0?'today':''}" aria-pressed="${!!S[k]}"><span>${'SMTWTFS'[d.getDay()]}</span><span>${d.getDate()}</span></button>`}
   $('#streak').innerHTML=html;
 }
+
+// ---- router ----
+let cur='home';
+function go(id,replace){const h=id==='home'?'#home':'#'+id;if(replace)history.replaceState(null,'',h);else if(location.hash!==h)history.pushState(null,'',h);show(id)}
+function show(id){
+  if(!PAGES.some(p=>p[0]===id))id='home';
+  cur=id;
+  $$('.view').forEach(v=>v.hidden=v.id!=='v-'+id);
+  const i=PAGES.findIndex(p=>p[0]===id);
+  $('#botnav').hidden=id==='home'; document.body.classList.toggle('home',id==='home');
+  if(i>=0){const pv=PAGES[(i+PAGES.length-1)%PAGES.length],nx=PAGES[(i+1)%PAGES.length];
+    $('#prevLbl').textContent=pv[1];$('#nextLbl').textContent=nx[1];}
+  if(id==='home')rHome(); else rPages();
+  syncInputs(); window.scrollTo(0,0);
+}
+function step(d){const i=PAGES.findIndex(p=>p[0]===cur);if(i<0)return;go(PAGES[(i+d+PAGES.length)%PAGES.length][0])}
+window.addEventListener('popstate',()=>show((location.hash||'#home').slice(1)));
+$('#navHome').onclick=$('#goHome').onclick=()=>go('home');
+$('#navPrev').onclick=()=>step(-1); $('#navNext').onclick=()=>step(1);
+// swipe
+let sx=0,sy=0,st=0;
+document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;sx=e.touches[0].clientX;sy=e.touches[0].clientY;st=Date.now()},{passive:true});
+document.addEventListener('touchend',e=>{if(cur==='home'||!sx)return;const t=e.target;if(t.closest('input,textarea,.seg,.pips,.streak,.timer'))return;
+  const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;sx=0;
+  if(Date.now()-st<600&&Math.abs(dx)>70&&Math.abs(dy)<50)step(dx<0?1:-1)},{passive:true});
+
+// ---- events ----
 document.addEventListener('change',e=>{const t=e.target;
-  if(t.dataset.k){day[t.dataset.k]=t.type==='checkbox'?t.checked:t.value;save()}
+  if(t.dataset.k){day[t.dataset.k]=t.type==='checkbox'?t.checked:t.value;save();
+    if(t.dataset.k.startsWith('b3'))rBig3(); if(cur==='home')rStats();}
   else if(t.dataset.g){glob[t.dataset.g]=t.value;saveG()}
   else if(t.dataset.pn){glob.proj=glob.proj||{};(glob.proj[t.dataset.pn]=glob.proj[t.dataset.pn]||{}).next=t.value;saveG()}
+  else if(t.dataset.le){const n=t.dataset.le,L=getList(n).map(x=>({...x}));const it=L.find(x=>x.id===t.dataset.id);if(it){it[t.dataset.f]=t.value;setList(n,L)}}
 });
 document.addEventListener('input',e=>{const t=e.target;if(t.dataset.k&&t.type!=='checkbox'){day[t.dataset.k]=t.value;save()}});
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.go){go(b.dataset.go);return}
+  if(b.id==='prov'){const doy=Math.floor((new Date(feed.date)-new Date(feed.date.slice(0,4)+'-01-01'))/864e5);day.provI=(day.provI??doy)+1;save();rQuote();return}
+  if(b.dataset.fill){const i=[0,1,2].find(i=>!(day['b3_'+i]||'').trim());if(i!==undefined){day['b3_'+i]=b.dataset.fill;save();rBig3()}return}
+  if(b.dataset.edit){const n=b.dataset.edit;editing[n]=!editing[n];rPages();syncInputs();return}
+  if(b.dataset.ladd){const n=b.dataset.ladd,L=getList(n).map(x=>({...x}));L.push(n==='rev'?{id:uid(),t:'',text:''}:n==='proj'?{id:uid(),text:'',kind:''}:{id:uid(),text:''});setList(n,L);rPages();syncInputs();
+    const ins=$$(`[data-le="${n}"][data-f="text"]`);ins[ins.length-1]&&ins[ins.length-1].focus();return}
+  if(b.dataset.ldel){const n=b.dataset.ldel;setList(n,getList(n).filter(x=>x.id!==b.dataset.id));rPages();syncInputs();return}
+  if(b.dataset.lreset){delete glob.lists[b.dataset.lreset];saveG();rPages();syncInputs();toast('Reset');return}
   const seg=b.closest('[data-seg]');
   if(seg){const k=seg.dataset.seg;day[k]=day[k]===b.dataset.v?'':b.dataset.v;save();seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===day[k]));return}
   if(b.dataset.dist!==undefined){const i=+b.dataset.dist;day.dist=day.dist||[];const j=day.dist.indexOf(i);j<0?day.dist.push(i):day.dist.splice(j,1);save();b.setAttribute('aria-pressed',j<0);return}
   if(b.dataset.lv){const pn=b.parentElement.dataset.proj;glob.proj=glob.proj||{};const st=glob.proj[pn]=glob.proj[pn]||{};const n=+b.dataset.lv;st.lv=st.lv===n?n-1:n;saveG();
     b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',+x.dataset.lv<=st.lv));return}
-  if(b.dataset.mode){day.ptmode=b.dataset.mode;save();markShiftUsed();renderPT();return}
-  if(b.dataset.sday){day.shiftDay=b.dataset.sday;save();markShiftUsed();renderPT();return}
   if(b.dataset.sd){glob.streak=glob.streak||{};glob.streak[b.dataset.sd]=!glob.streak[b.dataset.sd];saveG();renderStreak();return}
+  if(b.dataset.mode){day.ptmode=b.dataset.mode;save();markShiftUsed();renderPT();syncInputs();return}
+  if(b.dataset.sday){day.shiftDay=b.dataset.sday;save();markShiftUsed();renderPT();syncInputs();return}
 });
 
-// Par timer
+// ---- par timer ----
 let ac=null,running=false;
 function beep(f){ac=ac||new (window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;o.type='square';g.gain.value=.25;o.connect(g);g.connect(ac.destination);o.start();o.stop(ac.currentTime+.18);if(navigator.vibrate)navigator.vibrate(80)}
 $('#parGo').addEventListener('click',()=>{if(running)return;running=true;const par=parseFloat($('#par').value)||1.75;const out=$('#parOut');out.textContent='STBY';
@@ -347,33 +558,36 @@ $('#parGo').addEventListener('click',()=>{if(running)return;running=true;const p
     const iv=setInterval(()=>{out.textContent=((performance.now()-t0)/1000).toFixed(2)},50);
     setTimeout(()=>{clearInterval(iv);beep(1200);out.textContent=par.toFixed(2);running=false},par*1000)},2000+Math.random()*2000)});
 
-// Obsidian export
-$('#copyMd').addEventListener('click',async()=>{const f=feed,d=day,L=[];
+// ---- Obsidian export ----
+$('#copyMd').addEventListener('click',async()=>{const f=feed,d=day,L=[];const x=k=>d[k]?'x':' ';
   L.push(`# SITREP ${f.date}`,'',`tags: #sitrep #daily`,'');
   L.push(`**Slept** ${d.slept||'-'} · **Energy** ${d.energy||'-'} · **Mood** ${d.mood||'-'}`,'');
-  L.push('## Big 3');[0,1,2].forEach(i=>L.push(`- [${d['b3d'+i]?'x':' '}] ${d['b3_'+i]||''}`));
+  L.push('## Big 3');[0,1,2].forEach(i=>L.push(`- [${x('b3d'+i)}] ${d['b3_'+i]||''}`));
   if(d.revenue)L.push('',`Revenue move: ${d.revenue}`);
-  if(d.ptmode==='shift'&&prog&&prog.SHIFT){const Ls=shiftLetter(),D=prog.SHIFT[Ls];L.push('',`## PT: Shift ${Ls} · ${D.title}`);
-    D.windows.forEach((w,wi)=>w.items.forEach((it,ii)=>L.push(`- [${d[`sh${Ls}_${wi}_${ii}`]?'x':' '}] ${w.slot} ${it[0]} (${it[1]})`)));}
+  if(d.ptmode==='shift'&&prog&&prog.SHIFT){const Ls=shiftLetter(),D=prog.SHIFT[Ls];L.push('',`## PT: Work shift ${Ls} · ${D.title}`);
+    D.windows.forEach((w,wi)=>w.items.forEach((it,ii)=>L.push(`- [${x(`sh${Ls}_${wi}_${ii}`)}] ${w.slot} ${it[0]} (${it[1]})`)));}
   else{L.push('',`## PT: ${f.pt.title}`);f.pt.blocks.forEach((b,i)=>L.push(`- ${b[1]}: ${d['pt'+i]||'-'}`));}
   L.push(`- RPE ${d.rpe||'-'} · Back ${d.back||'-'}`);
-  L.push('',`## Dry fire: ${f.dry.title}`);f.dry.drills.forEach((x,i)=>L.push(`- ${x[1]}: ${d['dr'+i]||'-'}`));if(d.dryfix)L.push(`- Fix: ${d.dryfix}`);
+  L.push('',`## Dry fire: ${f.dry.title}`);f.dry.drills.forEach((q,i)=>L.push(`- ${q[1]}: ${d['dr'+i]||'-'}`));if(d.dryfix)L.push(`- Fix: ${d.dryfix}`);
   L.push('','## Self-mastery',`- Task: ${d.mtask||'-'}`,`- Habit: ${glob.habit||'-'} (${glob.streak&&glob.streak[f.date]?'done':'not done'})`,`- If ${d.ifx||'…'} then ${d.theny||'…'}`,`- Identity: ${d.identity||'-'}`);
   L.push('','## Gratitude',`1. ${d.g1||''}`,`2. ${d.g2||''}`,`3. ${d.g3||''}`);
   if(d.sit||d.hot){L.push('','## Thought record',`- Situation: ${d.sit||''}`,`- Hot thought: ${d.hot||''} (${d.hotpct||'?'}%)`,`- Distortions: ${(d.dist||[]).map(i=>DIST[i]).join(', ')||'-'}`,`- For: ${d.evfor||''}`,`- Against: ${d.evagainst||''}`,`- Balanced: ${d.balanced||''} (${d.nowpct||'?'}%)`)}
-  L.push('','## Discipline',`- Hard thing: ${d.hard||'-'}`);DISC.forEach((x,i)=>L.push(`- [${d['d'+i]?'x':' '}] ${x}`));
+  L.push('','## Discipline',`- Hard thing: ${d.hard||'-'}`);getList('disc').forEach(it=>L.push(`- [${x('L_disc_'+it.id)}] ${it.text}`));
   L.push('','## AAR',`- Sustain: ${d.sustain||''}`,`- Improve: ${d.improve||''}`,`- Tomorrow first move: ${d.firstmove||''}`,`- Grade: ${d.grade||'-'}`);
   const md=L.join('\n');
   try{await navigator.clipboard.writeText(md);toast('Copied. Paste into today\'s note')}catch(e){const ta=document.createElement('textarea');ta.value=md;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Copied')}
 });
 
+// ---- load ----
 async function load(){
   try{const r=await fetch('sitrep.json?ts='+Date.now(),{cache:'no-store'});feed=await r.json();store.set('sitrep:lastfeed',feed)}
-  catch(e){feed=store.get('sitrep:lastfeed',null);if(!feed){$('#dateLabel').textContent='OFFLINE · NO FEED YET';return}toast('Offline: showing last feed')}
+  catch(e){feed=store.get('sitrep:lastfeed',null);if(!feed){$('#dateLabel').textContent='OFFLINE';return}toast('Offline: last feed')}
   try{const r=await fetch('program.json?ts='+Date.now(),{cache:'no-store'});prog=await r.json();store.set('sitrep:prog',prog)}
   catch(e){prog=store.get('sitrep:prog',null)}
-  dayKey='sitrep:day:'+feed.date; day=store.get(dayKey,{}); render();
-  if(location.hash){const el=document.querySelector(location.hash);if(el)el.scrollIntoView()}
+  dayKey='sitrep:day:'+feed.date;day=store.get(dayKey,{});
+  // migrate v1 checkbox keys (rev0.., s0.., d0..) to list keys once
+  ['rev','s','d'].forEach((p,ix)=>{const n=['rev','standing','disc'][ix];for(let i=0;i<10;i++){const ok=p+i;if(day[ok]!==undefined){day[`L_${n}_${(n==='rev'?'r':p)+i}`]=day[ok];delete day[ok]}}});save();
+  renderAll(); show((location.hash||'#home').slice(1));
 }
 $('#reload').addEventListener('click',()=>load().then(()=>toast('Feed refreshed')));
 load();
