@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-11",
-  "dow": "SUN",
-  "label": "SUN 11 OCT 2026",
-  "generated": "2026-10-11T16:46:50-05:00",
+  "date": "2026-10-12",
+  "dow": "MON",
+  "label": "MON 12 OCT 2026",
+  "generated": "2026-10-12T16:46:25-05:00",
   "wake": "1700",
   "board": [
     {
@@ -15,8 +15,20 @@
       "what": "Work (to 0700)"
     },
     {
+      "t": "2300",
+      "what": "Check work schedule (10/20)"
+    },
+    {
       "t": "2330",
       "what": "Overnight food order"
+    },
+    {
+      "t": "2330",
+      "what": "Homework block"
+    },
+    {
+      "t": "TUE 0900",
+      "what": "Appointment"
     },
     {
       "t": "ONGOING",
@@ -25,26 +37,26 @@
   ],
   "comms": [
     {
-      "what": "Appointment",
-      "note": "Tue 13 Oct, virtual; confirmation still requested, confirm before then"
+      "what": "Online form (action required)",
+      "note": "requested today; complete this week"
     },
     {
-      "what": "Four Seasons dept schedule, wk of 12 Oct",
-      "note": "review for coverage changes before Mon"
+      "what": "Insurance EOB",
+      "note": "claim processed; review when convenient"
     },
     {
-      "what": "Four Seasons Pulse Survey",
-      "note": "open now, closes Sun 18 Oct"
+      "what": "State career workshop (TVC)",
+      "note": "Thu 30 Oct; register if attending"
     },
     {
       "what": "Inbox noise",
-      "note": "~27 threads in 2 days, mostly retail, job alerts, course bundles. 10-min unsubscribe sweep"
+      "note": "~39 threads in 2 days, mostly retail, job alerts, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Confirm Tue appointment",
-    "Review dept schedule (wk of 12 Oct)",
-    "90-day sales sprint: one asset, one offer"
+    "Complete action-required form",
+    "Check work schedule for 10/20",
+    "TEEX UXO200: VA funding paperwork"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -85,47 +97,72 @@
     }
   ],
   "pt": {
-    "title": "Rest + Reset",
-    "time": "15",
-    "line": "Walk the dogs · 15 min mobility",
+    "title": "Lower Strength",
+    "time": "45",
+    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+      ],
+      [
         "A",
-        "Easy walk",
-        "20-30 min, no watch"
+        "Barbell RDL",
+        "4×6 moderate, stop 2 reps shy, brace every rep"
       ],
       [
         "B",
-        "Mobility",
-        "15 min, whatever's tight"
+        "DB goblet squat",
+        "3×10, 3-sec lower"
+      ],
+      [
+        "C",
+        "DB split squat",
+        "3×8/side"
+      ],
+      [
+        "D",
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Mental Rehearsal",
-    "time": "10",
-    "line": "Visualize 10 perfect draws · Weekly AAR",
+    "title": "Draw Fundamentals",
+    "time": "20",
+    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
     "drills": [
       [
         "1",
-        "Eyes-closed visualization, full draw stroke",
+        "Grip + index from holster, no press",
         "×10"
       ],
       [
         "2",
-        "Review the week's par times, set next week's goal",
-        "5 min"
+        "Concealed draw → 1 on dual circle",
+        "×10"
+      ],
+      [
+        "3",
+        "Draw → 1, par 1.75s",
+        "×10"
+      ],
+      [
+        "4",
+        "Slow-perfect draws at 50%",
+        "×5"
       ]
     ]
   },
-  "quote": "Rest day doesn't mean the standard is off duty. It's just sitting in the truck, watching to see if you notice.",
+  "quote": "The standard doesn't care that you're tired. It clocked in before you did, and it isn't leaving early either.",
   "widget": {
-    "head": "SUN 11 OCT",
+    "head": "MON 12 OCT",
     "next": "1900  Eat a snack\n2300  Work (to 0700)",
-    "focus": "Confirm appt · Review sched · Sales sprint",
-    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
-    "dry": "Mental Rehearsal · 10 perfect draws · AAR",
-    "comms": "Confirm Tue appt · Review dept sched",
+    "focus": "Finish form · Check 10/20 sched · TEEX paperwork",
+    "pt": "Lower Strength · RDL 4×6 · Goblet · Split squat",
+    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10",
+    "comms": "Finish action form · Review insurance EOB",
     "updated": "upd 1646"
   }
 }
