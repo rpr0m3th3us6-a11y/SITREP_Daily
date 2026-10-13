@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-12",
-  "dow": "MON",
-  "label": "MON 12 OCT 2026",
-  "generated": "2026-10-12T16:46:25-05:00",
+  "date": "2026-10-13",
+  "dow": "TUE",
+  "label": "TUE 13 OCT 2026",
+  "generated": "2026-10-13T16:46:43-05:00",
   "wake": "1700",
   "board": [
     {
@@ -15,19 +15,19 @@
       "what": "Work (to 0700)"
     },
     {
-      "t": "2300",
-      "what": "Check work schedule (10/20)"
-    },
-    {
       "t": "2330",
       "what": "Overnight food order"
     },
     {
-      "t": "2330",
+      "t": "WED 0000",
       "what": "Homework block"
     },
     {
-      "t": "TUE 0900",
+      "t": "WED 0700",
+      "what": "Weekend block (to FRI 2300)"
+    },
+    {
+      "t": "WED 0900",
       "what": "Appointment"
     },
     {
@@ -38,11 +38,11 @@
   "comms": [
     {
       "what": "Online form (action required)",
-      "note": "requested today; complete this week"
+      "note": "pending since Mon; complete this week"
     },
     {
-      "what": "Insurance EOB",
-      "note": "claim processed; review when convenient"
+      "what": "Appointment follow-up",
+      "note": "new document in portal; save a copy"
     },
     {
       "what": "State career workshop (TVC)",
@@ -50,13 +50,13 @@
     },
     {
       "what": "Inbox noise",
-      "note": "~39 threads in 2 days, mostly retail, job alerts, course bundles. 10-min unsubscribe sweep"
+      "note": "~45 threads in 2 days, mostly job alerts, retail, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
     "Complete action-required form",
-    "Check work schedule for 10/20",
-    "TEEX UXO200: VA funding paperwork"
+    "Save portal document",
+    "Notion → Obsidian vault migration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -97,72 +97,77 @@
     }
   ],
   "pt": {
-    "title": "Lower Strength",
-    "time": "45",
-    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
+    "title": "Engine + Trunk",
+    "time": "40",
+    "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
     "blocks": [
       [
         "W",
         "Warm-up",
-        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+        "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
       ],
       [
         "A",
         "Barbell RDL",
-        "4×6 moderate, stop 2 reps shy, brace every rep"
+        "4×6 moderate, crisp hinge"
       ],
       [
         "B",
-        "DB goblet squat",
-        "3×10, 3-sec lower"
+        "4 rounds",
+        "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
       ],
       [
         "C",
-        "DB split squat",
-        "3×8/side"
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ],
       [
         "D",
-        "McGill Big 3",
-        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+        "Cooldown",
+        "5 min walk · couch stretch 60s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Draw Fundamentals",
+    "title": "Draw & Transition",
     "time": "20",
-    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
+    "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
     "drills": [
       [
         "1",
-        "Grip + index from holster, no press",
-        "×10"
-      ],
-      [
-        "2",
         "Concealed draw → 1 on dual circle",
         "×10"
       ],
       [
+        "2",
+        "Draw → 2 shots on circle",
+        "×5"
+      ],
+      [
         "3",
-        "Draw → 1, par 1.75s",
-        "×10"
+        "9-grid: call 2 random numbers",
+        "3 strings of 5"
       ],
       [
         "4",
-        "Slow-perfect draws at 50%",
+        "Stress block: 10 air squats → draw → 2",
+        "×5"
+      ],
+      [
+        "5",
+        "Slow-perfect finish, 50% speed",
         "×5"
       ]
     ]
   },
-  "quote": "The standard doesn't care that you're tired. It clocked in before you did, and it isn't leaving early either.",
+  "quote": "Motivation is a rumor. Discipline is the guy who showed up anyway, signed the log, and didn't bring it up.",
   "widget": {
-    "head": "MON 12 OCT",
+    "head": "TUE 13 OCT",
     "next": "1900  Eat a snack\n2300  Work (to 0700)",
-    "focus": "Finish form · Check 10/20 sched · TEEX paperwork",
-    "pt": "Lower Strength · RDL 4×6 · Goblet · Split squat",
-    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10",
-    "comms": "Finish action form · Review insurance EOB",
+    "focus": "Finish form · Save portal doc · Vault migration",
+    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4",
+    "dry": "Draw & Transition · Draw→1 ×10 · Draw→2 ×5",
+    "comms": "Finish action form · Save portal document",
     "updated": "upd 1646"
   }
 }
