@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-14",
-  "dow": "WED",
-  "label": "WED 14 OCT 2026",
-  "generated": "2026-10-14T16:46:28-05:00",
+  "date": "2026-10-15",
+  "dow": "THU",
+  "label": "THU 15 OCT 2026",
+  "generated": "2026-10-15T16:46:47-05:00",
   "wake": "1700",
   "board": [
     {
@@ -13,6 +13,14 @@
     {
       "t": "2330",
       "what": "Homework block"
+    },
+    {
+      "t": "FRI 1100",
+      "what": "Appointment"
+    },
+    {
+      "t": "ALL DAY",
+      "what": "Payday (FRI)"
     },
     {
       "t": "ONGOING",
@@ -25,25 +33,25 @@
   ],
   "comms": [
     {
-      "what": "Card statement ready",
-      "note": "important notices attached; review and pay by due date"
+      "what": "Business service payment declined",
+      "note": "update payment method now to avoid a lapse"
     },
     {
-      "what": "Bill due",
-      "note": "auto-charge next business day; confirm funds"
+      "what": "Benefits notice",
+      "note": "Open Season: family-member eligibility docs now verified; gather before election"
     },
     {
-      "what": "Appointment follow-up",
-      "note": "resource link + portal document to review"
+      "what": "Card statements ready (2)",
+      "note": "plus low-balance alert; review and pay after payday"
     },
     {
       "what": "Inbox noise",
-      "note": "~47 threads in 2 days, mostly job alerts, retail, course bundles. 10-min unsubscribe sweep"
+      "note": "~200 threads in 2 days, mostly job alerts, retail, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Review card statement notices",
-    "Fiverr profile / gig listing",
+    "Fix declined business payment",
+    "Review benefits Open Season notice",
     "SDVOSB / VetCert registration"
   ],
   "standing": [
@@ -85,77 +93,57 @@
     }
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
-      ],
-      [
         "A",
-        "DB bench press",
-        "4×8"
+        "Zone 2 row",
+        "30:00 conversational pace"
       ],
       [
         "B",
-        "1-arm DB row",
-        "4×10/side, braced on bench"
+        "Mobility flow",
+        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
       ],
       [
         "C",
-        "Half-kneeling KB press",
-        "3×8/side"
-      ],
-      [
-        "D",
-        "Suitcase carry 40#",
-        "4×40m/side (anti-lean core)"
-      ],
-      [
-        "E",
-        "Dead bug + side plank",
-        "3 rounds"
+        "McGill Big 3",
+        "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
       [
         "1",
-        "Emergency reload with SIRT mag",
-        "×10"
+        "Wall drill, front sight focus",
+        "×20"
       ],
       [
         "2",
-        "Tap-rack-assess (simulated)",
+        "Dot-on-dot press, no disturbance",
         "×10"
       ],
       [
         "3",
-        "Draw → 1 → reload → 1",
-        "×5"
-      ],
-      [
-        "4",
-        "Slow-perfect reloads, eyes on threat",
-        "×5"
+        "Slow fire on small circle",
+        "×10"
       ]
     ]
   },
-  "quote": "Nobody's coming to save you. Good. They'd only want you to fill out their paperwork too.",
+  "quote": "Discipline is doing it right when nobody's watching. Paperwork is doing it twice because somebody was.",
   "widget": {
-    "head": "WED 14 OCT",
+    "head": "THU 15 OCT",
     "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Card stmt notices · Fiverr gig · VetCert reg",
-    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
-    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack",
-    "comms": "Review card statement · Bill auto-pay tomorrow",
+    "focus": "Fix biz payment · Benefits notice · VetCert reg",
+    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Biz payment declined · Benefits notice",
     "updated": "upd 1646"
   }
 }
