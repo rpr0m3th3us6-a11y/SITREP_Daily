@@ -1,30 +1,34 @@
 {
   "v": 1,
-  "date": "2026-10-15",
-  "dow": "THU",
-  "label": "THU 15 OCT 2026",
-  "generated": "2026-10-15T16:46:47-05:00",
+  "date": "2026-10-16",
+  "dow": "FRI",
+  "label": "FRI 16 OCT 2026",
+  "generated": "2026-10-16T16:46:43-05:00",
   "wake": "1700",
   "board": [
     {
+      "t": "1730",
+      "what": "Movie night / volunteer HH"
+    },
+    {
       "t": "1900",
       "what": "Eat a snack"
+    },
+    {
+      "t": "2300",
+      "what": "Work (to SAT 0700)"
+    },
+    {
+      "t": "2330",
+      "what": "Overnight food order"
     },
     {
       "t": "2330",
       "what": "Homework block"
     },
     {
-      "t": "FRI 1100",
-      "what": "Appointment"
-    },
-    {
       "t": "ALL DAY",
       "what": "Payday (FRI)"
-    },
-    {
-      "t": "ONGOING",
-      "what": "Weekend block (to FRI 2300)"
     },
     {
       "t": "ONGOING",
@@ -33,16 +37,16 @@
   ],
   "comms": [
     {
-      "what": "Business service payment declined",
-      "note": "update payment method now to avoid a lapse"
+      "what": "Four Seasons Pulse Survey",
+      "note": "3 days left; today is last day for the Training Room station"
     },
     {
-      "what": "Benefits notice",
-      "note": "Open Season: family-member eligibility docs now verified; gather before election"
+      "what": "Dept schedule, week of 19 OCT",
+      "note": "posted; check for coverage changes before next week"
     },
     {
-      "what": "Card statements ready (2)",
-      "note": "plus low-balance alert; review and pay after payday"
+      "what": "Bill due",
+      "note": "card statement ready; pay now that payday landed"
     },
     {
       "what": "Inbox noise",
@@ -50,9 +54,9 @@
     }
   ],
   "focus": [
-    "Fix declined business payment",
-    "Review benefits Open Season notice",
-    "SDVOSB / VetCert registration"
+    "Complete Four Seasons Pulse Survey",
+    "Pay card statement (payday landed)",
+    "Clearance reinstatement"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -93,57 +97,72 @@
     }
   ],
   "pt": {
-    "title": "Recovery + Zone 2",
-    "time": "40",
-    "line": "30:00 Z2 row · Mobility flow · Big 3",
+    "title": "Power + Carry",
+    "time": "45",
+    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row · hip hinge drill ×10 · glute bridge ×10"
+      ],
+      [
         "A",
-        "Zone 2 row",
-        "30:00 conversational pace"
+        "Barbell deadlift",
+        "5×3 at ~70%, perfect reps only"
       ],
       [
         "B",
-        "Mobility flow",
-        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
+        "EMOM 10",
+        "odd: 10 KB swing 40# · even: 5 box jump (step down)"
       ],
       [
         "C",
+        "Farmer carry",
+        "4×40m heavy DBs"
+      ],
+      [
+        "D",
         "McGill Big 3",
         "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Trigger Control",
-    "time": "15",
-    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
+    "title": "Movement",
+    "time": "20",
+    "line": "Step-off draws ×10 · Moving 9-grid ×3",
     "drills": [
       [
         "1",
-        "Wall drill, front sight focus",
-        "×20"
+        "Lateral step + draw → 1",
+        "×10 each way"
       ],
       [
         "2",
-        "Dot-on-dot press, no disturbance",
+        "Walk-and-shoot, heel-toe, small circle",
         "×10"
       ],
       [
         "3",
-        "Slow fire on small circle",
-        "×10"
+        "9-grid while moving",
+        "3 strings of 5"
+      ],
+      [
+        "4",
+        "Slow-perfect finish",
+        "×5"
       ]
     ]
   },
-  "quote": "Discipline is doing it right when nobody's watching. Paperwork is doing it twice because somebody was.",
+  "quote": "The plan rarely survives contact. Neither does the coffee. Bring both anyway.",
   "widget": {
-    "head": "THU 15 OCT",
-    "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Fix biz payment · Benefits notice · VetCert reg",
-    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
-    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
-    "comms": "Biz payment declined · Benefits notice",
+    "head": "FRI 16 OCT",
+    "next": "1730  Movie night / volunteer HH\n1900  Eat a snack",
+    "focus": "Pulse Survey · Pay card stmt · Clearance reinst",
+    "pt": "Power + Carry · Deadlift 5×3 · Swing/Box EMOM",
+    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
+    "comms": "Pulse Survey 3d left · Wk-19 schedule",
     "updated": "upd 1646"
   }
 }
