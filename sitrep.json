@@ -1,62 +1,26 @@
 {
   "v": 1,
-  "date": "2026-10-16",
-  "dow": "FRI",
-  "label": "FRI 16 OCT 2026",
-  "generated": "2026-10-16T16:46:43-05:00",
+  "date": "2026-10-17",
+  "dow": "SAT",
+  "label": "SAT 17 OCT 2026",
+  "generated": "2026-10-17T16:46:00-05:00",
   "wake": "1700",
   "board": [
-    {
-      "t": "1730",
-      "what": "Movie night / volunteer HH"
-    },
-    {
-      "t": "1900",
-      "what": "Eat a snack"
-    },
-    {
-      "t": "2300",
-      "what": "Work (to SAT 0700)"
-    },
-    {
-      "t": "2330",
-      "what": "Overnight food order"
-    },
-    {
-      "t": "2330",
-      "what": "Homework block"
-    },
-    {
-      "t": "ALL DAY",
-      "what": "Payday (FRI)"
-    },
-    {
-      "t": "ONGOING",
-      "what": "Inspect mycelium growth"
-    }
+    {"t": "1900", "what": "Eat a snack"},
+    {"t": "2300", "what": "Work (to SUN 0700)"},
+    {"t": "2330", "what": "Overnight food order"},
+    {"t": "ONGOING", "what": "Inspect mycelium growth"}
   ],
   "comms": [
-    {
-      "what": "Four Seasons Pulse Survey",
-      "note": "3 days left; today is last day for the Training Room station"
-    },
-    {
-      "what": "Dept schedule, week of 19 OCT",
-      "note": "posted; check for coverage changes before next week"
-    },
-    {
-      "what": "Bill due",
-      "note": "card statement ready; pay now that payday landed"
-    },
-    {
-      "what": "Inbox noise",
-      "note": "~200 threads in 2 days, mostly job alerts, retail, course bundles. 10-min unsubscribe sweep"
-    }
+    {"what": "Four Seasons Pulse Survey", "note": "~2 days left; window closes early next week"},
+    {"what": "Appointment", "note": "missed consult needs rescheduling; follow-up form also pending"},
+    {"what": "Bill due", "note": "card statements ready; next due 14 NOV, autopay on"},
+    {"what": "Inbox noise", "note": "~40 threads in 2 days, mostly job alerts, retail, course bundles. 10-min unsubscribe sweep"}
   ],
   "focus": [
     "Complete Four Seasons Pulse Survey",
-    "Pay card statement (payday landed)",
-    "Clearance reinstatement"
+    "Reschedule missed appointment",
+    "90-day sales sprint: one asset, one offer"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -67,102 +31,41 @@
     "Fiverr profile / gig listing"
   ],
   "projects": [
-    {
-      "name": "DFT Dry Fire Trainer",
-      "kind": "PWA"
-    },
-    {
-      "name": "FSA-DIB",
-      "kind": "daily brief pipeline"
-    },
-    {
-      "name": "DRAGNET",
-      "kind": "OSINT ingestion"
-    },
-    {
-      "name": "BLACKSITE",
-      "kind": "tradecraft app"
-    },
-    {
-      "name": "Firearms instructor",
-      "kind": "TTP track"
-    },
-    {
-      "name": "Personal cloud",
-      "kind": "data infra"
-    },
-    {
-      "name": "Pilgrim sequel",
-      "kind": "novel"
-    }
+    {"name": "DFT Dry Fire Trainer", "kind": "PWA"},
+    {"name": "FSA-DIB", "kind": "daily brief pipeline"},
+    {"name": "DRAGNET", "kind": "OSINT ingestion"},
+    {"name": "BLACKSITE", "kind": "tradecraft app"},
+    {"name": "Firearms instructor", "kind": "TTP track"},
+    {"name": "Personal cloud", "kind": "data infra"},
+    {"name": "Pilgrim sequel", "kind": "novel"}
   ],
   "pt": {
-    "title": "Power + Carry",
-    "time": "45",
-    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
+    "title": "Long Ruck / Z2",
+    "time": "50",
+    "line": "45:00 incline walk · Core circuit",
     "blocks": [
-      [
-        "W",
-        "Warm-up",
-        "5:00 row · hip hinge drill ×10 · glute bridge ×10"
-      ],
-      [
-        "A",
-        "Barbell deadlift",
-        "5×3 at ~70%, perfect reps only"
-      ],
-      [
-        "B",
-        "EMOM 10",
-        "odd: 10 KB swing 40# · even: 5 box jump (step down)"
-      ],
-      [
-        "C",
-        "Farmer carry",
-        "4×40m heavy DBs"
-      ],
-      [
-        "D",
-        "McGill Big 3",
-        "standard sets"
-      ]
+      ["A", "Incline treadmill walk", "45:00 Z2 (add light pack if back allows)"],
+      ["B", "Core circuit ×3", "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"]
     ]
   },
   "dry": {
-    "title": "Movement",
-    "time": "20",
-    "line": "Step-off draws ×10 · Moving 9-grid ×3",
+    "title": "One-Handed",
+    "time": "15",
+    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
     "drills": [
-      [
-        "1",
-        "Lateral step + draw → 1",
-        "×10 each way"
-      ],
-      [
-        "2",
-        "Walk-and-shoot, heel-toe, small circle",
-        "×10"
-      ],
-      [
-        "3",
-        "9-grid while moving",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Slow-perfect finish",
-        "×5"
-      ]
+      ["1", "Strong-hand only on circle", "×10"],
+      ["2", "Weak-hand only on circle", "×10"],
+      ["3", "Hand transfer → WHO 1 shot", "×5"]
     ]
   },
-  "quote": "The plan rarely survives contact. Neither does the coffee. Bring both anyway.",
+  "quote": "Discipline is doing the boring thing right at 0300 when nobody's grading. Somebody is always grading.",
   "widget": {
-    "head": "FRI 16 OCT",
-    "next": "1730  Movie night / volunteer HH\n1900  Eat a snack",
-    "focus": "Pulse Survey · Pay card stmt · Clearance reinst",
-    "pt": "Power + Carry · Deadlift 5×3 · Swing/Box EMOM",
-    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
-    "comms": "Pulse Survey 3d left · Wk-19 schedule",
+    "head": "SAT 17 OCT",
+    "next": "1900  Eat a snack\n2300  Work (to SUN 0700)",
+    "focus": "Pulse Survey · Reschedule appt · Sales sprint",
+    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core",
+    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
+    "comms": "Pulse Survey ~2d left · Appt reschedule",
     "updated": "upd 1646"
   }
 }
