@@ -1,26 +1,26 @@
 {
   "v": 1,
-  "date": "2026-10-17",
-  "dow": "SAT",
-  "label": "SAT 17 OCT 2026",
-  "generated": "2026-10-17T16:46:00-05:00",
+  "date": "2026-10-18",
+  "dow": "SUN",
+  "label": "SUN 18 OCT 2026",
+  "generated": "2026-10-18T16:46:49-05:00",
   "wake": "1700",
   "board": [
     {"t": "1900", "what": "Eat a snack"},
-    {"t": "2300", "what": "Work (to SUN 0700)"},
+    {"t": "2300", "what": "Work (to MON 0700)"},
     {"t": "2330", "what": "Overnight food order"},
     {"t": "ONGOING", "what": "Inspect mycelium growth"}
   ],
   "comms": [
-    {"what": "Four Seasons Pulse Survey", "note": "~2 days left; window closes early next week"},
-    {"what": "Appointment", "note": "missed consult needs rescheduling; follow-up form also pending"},
+    {"what": "Account notice", "note": "payment method failed on a subscription; update it"},
+    {"what": "Appointment", "note": "missed consult still needs rescheduling; follow-up form pending"},
     {"what": "Bill due", "note": "card statements ready; next due 14 NOV, autopay on"},
-    {"what": "Inbox noise", "note": "~40 threads in 2 days, mostly job alerts, retail, course bundles. 10-min unsubscribe sweep"}
+    {"what": "Inbox noise", "note": "~24 of 28 threads in 2 days are job alerts, retail, course bundles. 10-min unsubscribe sweep"}
   ],
   "focus": [
-    "Complete Four Seasons Pulse Survey",
+    "Fix failed payment method",
     "Reschedule missed appointment",
-    "90-day sales sprint: one asset, one offer"
+    "TEEX UXO200: VA funding paperwork"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -40,32 +40,31 @@
     {"name": "Pilgrim sequel", "kind": "novel"}
   ],
   "pt": {
-    "title": "Long Ruck / Z2",
-    "time": "50",
-    "line": "45:00 incline walk · Core circuit",
+    "title": "Rest + Reset",
+    "time": "15",
+    "line": "Walk the dogs · 15 min mobility",
     "blocks": [
-      ["A", "Incline treadmill walk", "45:00 Z2 (add light pack if back allows)"],
-      ["B", "Core circuit ×3", "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"]
+      ["A", "Easy walk", "20-30 min, no watch"],
+      ["B", "Mobility", "15 min, whatever's tight"]
     ]
   },
   "dry": {
-    "title": "One-Handed",
-    "time": "15",
-    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
+    "title": "Mental Rehearsal",
+    "time": "10",
+    "line": "Visualize 10 perfect draws · Weekly AAR",
     "drills": [
-      ["1", "Strong-hand only on circle", "×10"],
-      ["2", "Weak-hand only on circle", "×10"],
-      ["3", "Hand transfer → WHO 1 shot", "×5"]
+      ["1", "Eyes-closed visualization, full draw stroke", "×10"],
+      ["2", "Review the week's par times, set next week's goal", "5 min"]
     ]
   },
-  "quote": "Discipline is doing the boring thing right at 0300 when nobody's grading. Somebody is always grading.",
+  "quote": "Rest day isn't a day off. It's maintenance on the only weapon system they won't reissue.",
   "widget": {
-    "head": "SAT 17 OCT",
-    "next": "1900  Eat a snack\n2300  Work (to SUN 0700)",
-    "focus": "Pulse Survey · Reschedule appt · Sales sprint",
-    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core",
-    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
-    "comms": "Pulse Survey ~2d left · Appt reschedule",
+    "head": "SUN 18 OCT",
+    "next": "1900  Eat a snack\n2300  Work (to MON 0700)",
+    "focus": "Fix payment · Reschedule appt · TEEX VA forms",
+    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
+    "dry": "Mental Rehearsal · Visualize 10 perfect draws",
+    "comms": "Update payment method · Appt reschedule",
     "updated": "upd 1646"
   }
 }
