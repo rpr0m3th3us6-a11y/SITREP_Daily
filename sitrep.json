@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-21",
-  "dow": "WED",
-  "label": "WED 21 OCT 2026",
-  "generated": "2026-10-21T16:46:28-05:00",
+  "date": "2026-10-22",
+  "dow": "THU",
+  "label": "THU 22 OCT 2026",
+  "generated": "2026-10-22T16:46:07-05:00",
   "wake": "1700",
   "board": [
     {"t": "ONGOING", "what": "Work rush (to 28 OCT)"},
@@ -11,18 +11,19 @@
     {"t": "ONGOING", "what": "Inspect mycelium growth (to 23 OCT)"},
     {"t": "ONGOING", "what": "Insurance EOB errand (to 27 OCT)"},
     {"t": "1900", "what": "Eat a snack"},
+    {"t": "2300", "what": "Work shift (to FRI 0700)"},
     {"t": "2330", "what": "Homework block"}
   ],
   "comms": [
-    {"what": "Neighborhood committee", "note": "agenda items requested for SAT 24 OCT call; banner vote already sent"},
-    {"what": "Benefits notice", "note": "action required: designate an account beneficiary online"},
-    {"what": "Homework block", "note": "new workbook shared in Drive; practice assigned, follow-up in ~2 wks"},
-    {"what": "Inbox noise", "note": "~22 of 30 threads in 2 days are job alerts, retail, course bundles, card promos. 10-min unsubscribe sweep"}
+    {"what": "Account security alert", "note": "password reset requested on a gov login account; if not you, secure it today"},
+    {"what": "Four Seasons dept schedule", "note": "week of 26 OCT posted; review for coverage changes"},
+    {"what": "Card account notice", "note": "near spending limit; future charges may decline. Pay down or adjust"},
+    {"what": "Inbox noise", "note": "~21 of 30 threads in 2 days are job alerts, retail, course bundles, card promos. 10-min unsubscribe sweep"}
   ],
   "focus": [
-    "Send committee agenda items before SAT",
-    "Complete benefits beneficiary form",
-    "SDVOSB / VetCert registration"
+    "Verify gov login reset request",
+    "Review dept schedule wk of 26 OCT",
+    "Clearance reinstatement"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -42,37 +43,33 @@
     {"name": "Pilgrim sequel", "kind": "novel"}
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
-      ["W", "Warm-up", "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"],
-      ["A", "DB bench press", "4×8"],
-      ["B", "1-arm DB row", "4×10/side, braced on bench"],
-      ["C", "Half-kneeling KB press", "3×8/side"],
-      ["D", "Suitcase carry 40#", "4×40m/side (anti-lean core)"],
-      ["E", "Dead bug + side plank", "3 rounds"]
+      ["A", "Zone 2 row", "30:00 conversational pace"],
+      ["B", "Mobility flow", "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"],
+      ["C", "McGill Big 3", "standard sets"]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
-      ["1", "Emergency reload with SIRT mag", "×10"],
-      ["2", "Tap-rack-assess (simulated)", "×10"],
-      ["3", "Draw → 1 → reload → 1", "×5"],
-      ["4", "Slow-perfect reloads, eyes on threat", "×5"]
+      ["1", "Wall drill, front sight focus", "×20"],
+      ["2", "Dot-on-dot press, no disturbance", "×10"],
+      ["3", "Slow fire on small circle", "×10"]
     ]
   },
-  "quote": "Nobody is coming to do your reps for you. That's not bleak; that's the job description.",
+  "quote": "The mission doesn't care how you feel. Neither does the rowing machine. Show up anyway; they're both keeping score.",
   "widget": {
-    "head": "WED 21 OCT",
-    "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Committee agenda · Benefits form · VetCert reg",
-    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
-    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack",
-    "comms": "Committee agenda · Benefits beneficiary form",
+    "head": "THU 22 OCT",
+    "next": "1900  Eat a snack\n2300  Work shift",
+    "focus": "Verify gov login · Review sched · Clearance",
+    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Gov login alert · Dept schedule wk 26 OCT",
     "updated": "upd 1646"
   }
 }
