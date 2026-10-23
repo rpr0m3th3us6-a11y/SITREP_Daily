@@ -1,29 +1,29 @@
 {
   "v": 1,
-  "date": "2026-10-22",
-  "dow": "THU",
-  "label": "THU 22 OCT 2026",
-  "generated": "2026-10-22T16:46:07-05:00",
+  "date": "2026-10-23",
+  "dow": "FRI",
+  "label": "FRI 23 OCT 2026",
+  "generated": "2026-10-23T16:46:39-05:00",
   "wake": "1700",
   "board": [
     {"t": "ONGOING", "what": "Work rush (to 28 OCT)"},
-    {"t": "ONGOING", "what": "Off work (to FRI 2300)"},
-    {"t": "ONGOING", "what": "Inspect mycelium growth (to 23 OCT)"},
     {"t": "ONGOING", "what": "Insurance EOB errand (to 27 OCT)"},
     {"t": "1900", "what": "Eat a snack"},
-    {"t": "2300", "what": "Work shift (to FRI 0700)"},
-    {"t": "2330", "what": "Homework block"}
+    {"t": "2300", "what": "Work shift (to SAT 0700)"},
+    {"t": "2330", "what": "Overnight food order"},
+    {"t": "2330", "what": "Homework block"},
+    {"t": "SAT 0930", "what": "Safety committee (biweekly)"}
   ],
   "comms": [
-    {"what": "Account security alert", "note": "password reset requested on a gov login account; if not you, secure it today"},
-    {"what": "Four Seasons dept schedule", "note": "week of 26 OCT posted; review for coverage changes"},
+    {"what": "Account security alert", "note": "gov login password reset requested 22 OCT; if not you, secure it today"},
+    {"what": "Four Seasons dept schedule", "note": "week of 26 OCT posted; review for coverage changes before Monday"},
     {"what": "Card account notice", "note": "near spending limit; future charges may decline. Pay down or adjust"},
-    {"what": "Inbox noise", "note": "~21 of 30 threads in 2 days are job alerts, retail, course bundles, card promos. 10-min unsubscribe sweep"}
+    {"what": "Inbox noise", "note": "~23 of 30 threads in 2 days are job alerts, retail, course bundles, wellness promos. 10-min unsubscribe sweep"}
   ],
   "focus": [
     "Verify gov login reset request",
     "Review dept schedule wk of 26 OCT",
-    "Clearance reinstatement"
+    "90-day sales sprint: one asset, one offer"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -43,32 +43,35 @@
     {"name": "Pilgrim sequel", "kind": "novel"}
   ],
   "pt": {
-    "title": "Recovery + Zone 2",
-    "time": "40",
-    "line": "30:00 Z2 row · Mobility flow · Big 3",
+    "title": "Power + Carry",
+    "time": "45",
+    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
     "blocks": [
-      ["A", "Zone 2 row", "30:00 conversational pace"],
-      ["B", "Mobility flow", "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"],
-      ["C", "McGill Big 3", "standard sets"]
+      ["W", "Warm-up", "5:00 row · hip hinge drill ×10 · glute bridge ×10"],
+      ["A", "Barbell deadlift", "5×3 at ~70%, perfect reps only"],
+      ["B", "EMOM 10", "odd: 10 KB swing 40# · even: 5 box jump (step down)"],
+      ["C", "Farmer carry", "4×40m heavy DBs"],
+      ["D", "McGill Big 3", "standard sets"]
     ]
   },
   "dry": {
-    "title": "Trigger Control",
-    "time": "15",
-    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
+    "title": "Movement",
+    "time": "20",
+    "line": "Step-off draws ×10 · Moving 9-grid ×3",
     "drills": [
-      ["1", "Wall drill, front sight focus", "×20"],
-      ["2", "Dot-on-dot press, no disturbance", "×10"],
-      ["3", "Slow fire on small circle", "×10"]
+      ["1", "Lateral step + draw → 1", "×10 each way"],
+      ["2", "Walk-and-shoot, heel-toe, small circle", "×10"],
+      ["3", "9-grid while moving", "3 strings of 5"],
+      ["4", "Slow-perfect finish", "×5"]
     ]
   },
-  "quote": "The mission doesn't care how you feel. Neither does the rowing machine. Show up anyway; they're both keeping score.",
+  "quote": "Discipline is doing the reps when nobody's watching. Night shift just makes that literal.",
   "widget": {
-    "head": "THU 22 OCT",
+    "head": "FRI 23 OCT",
     "next": "1900  Eat a snack\n2300  Work shift",
-    "focus": "Verify gov login · Review sched · Clearance",
-    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
-    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "focus": "Verify gov login · Review sched · Sales sprint",
+    "pt": "Power + Carry · Deadlift 5×3 · Swings/Box EMOM",
+    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
     "comms": "Gov login alert · Dept schedule wk 26 OCT",
     "updated": "upd 1646"
   }
