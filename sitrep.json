@@ -1,29 +1,54 @@
 {
   "v": 1,
-  "date": "2026-10-23",
-  "dow": "FRI",
-  "label": "FRI 23 OCT 2026",
-  "generated": "2026-10-23T16:46:39-05:00",
+  "date": "2026-10-24",
+  "dow": "SAT",
+  "label": "SAT 24 OCT 2026",
+  "generated": "2026-10-24T16:46:13-05:00",
   "wake": "1700",
   "board": [
-    {"t": "ONGOING", "what": "Work rush (to 28 OCT)"},
-    {"t": "ONGOING", "what": "Insurance EOB errand (to 27 OCT)"},
-    {"t": "1900", "what": "Eat a snack"},
-    {"t": "2300", "what": "Work shift (to SAT 0700)"},
-    {"t": "2330", "what": "Overnight food order"},
-    {"t": "2330", "what": "Homework block"},
-    {"t": "SAT 0930", "what": "Safety committee (biweekly)"}
+    {
+      "t": "ONGOING",
+      "what": "Work rush (to 28 OCT)"
+    },
+    {
+      "t": "ONGOING",
+      "what": "Insurance EOB errand (to 27 OCT)"
+    },
+    {
+      "t": "1900",
+      "what": "Eat a snack"
+    },
+    {
+      "t": "2300",
+      "what": "Work shift (to SUN 0700)"
+    },
+    {
+      "t": "2330",
+      "what": "Overnight food order"
+    }
   ],
   "comms": [
-    {"what": "Account security alert", "note": "gov login password reset requested 22 OCT; if not you, secure it today"},
-    {"what": "Four Seasons dept schedule", "note": "week of 26 OCT posted; review for coverage changes before Monday"},
-    {"what": "Card account notice", "note": "near spending limit; future charges may decline. Pay down or adjust"},
-    {"what": "Inbox noise", "note": "~23 of 30 threads in 2 days are job alerts, retail, course bundles, wellness promos. 10-min unsubscribe sweep"}
+    {
+      "what": "Neighborhood watch guidelines",
+      "note": "review updated guidelines; comments due before 07 NOV meeting"
+    },
+    {
+      "what": "Neighborhood watch meeting notes",
+      "note": "notes from today's meeting posted; review when able"
+    },
+    {
+      "what": "DAYBREAK brief build failed",
+      "note": "0435 run found no toolchain (mirror/drive paths); fix before next run"
+    },
+    {
+      "what": "Inbox noise",
+      "note": "~25 of 30 threads in 2 days are job alerts, retail, course bundles, wellness promos. 10-min unsubscribe sweep"
+    }
   ],
   "focus": [
-    "Verify gov login reset request",
-    "Review dept schedule wk of 26 OCT",
-    "90-day sales sprint: one asset, one offer"
+    "Review watch guidelines (due 07 NOV)",
+    "Fix DAYBREAK brief toolchain",
+    "TEEX UXO200: VA funding paperwork"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -34,45 +59,82 @@
     "Fiverr profile / gig listing"
   ],
   "projects": [
-    {"name": "DFT Dry Fire Trainer", "kind": "PWA"},
-    {"name": "FSA-DIB", "kind": "daily brief pipeline"},
-    {"name": "DRAGNET", "kind": "OSINT ingestion"},
-    {"name": "BLACKSITE", "kind": "tradecraft app"},
-    {"name": "Firearms instructor", "kind": "TTP track"},
-    {"name": "Personal cloud", "kind": "data infra"},
-    {"name": "Pilgrim sequel", "kind": "novel"}
+    {
+      "name": "DFT Dry Fire Trainer",
+      "kind": "PWA"
+    },
+    {
+      "name": "FSA-DIB",
+      "kind": "daily brief pipeline"
+    },
+    {
+      "name": "DRAGNET",
+      "kind": "OSINT ingestion"
+    },
+    {
+      "name": "BLACKSITE",
+      "kind": "tradecraft app"
+    },
+    {
+      "name": "Firearms instructor",
+      "kind": "TTP track"
+    },
+    {
+      "name": "Personal cloud",
+      "kind": "data infra"
+    },
+    {
+      "name": "Pilgrim sequel",
+      "kind": "novel"
+    }
   ],
   "pt": {
-    "title": "Power + Carry",
-    "time": "45",
-    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
+    "title": "Long Ruck / Z2",
+    "time": "50",
+    "line": "45:00 incline walk · Core circuit",
     "blocks": [
-      ["W", "Warm-up", "5:00 row · hip hinge drill ×10 · glute bridge ×10"],
-      ["A", "Barbell deadlift", "5×3 at ~70%, perfect reps only"],
-      ["B", "EMOM 10", "odd: 10 KB swing 40# · even: 5 box jump (step down)"],
-      ["C", "Farmer carry", "4×40m heavy DBs"],
-      ["D", "McGill Big 3", "standard sets"]
+      [
+        "A",
+        "Incline treadmill walk",
+        "45:00 Z2 (add light pack if back allows)"
+      ],
+      [
+        "B",
+        "Core circuit ×3",
+        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
+      ]
     ]
   },
   "dry": {
-    "title": "Movement",
-    "time": "20",
-    "line": "Step-off draws ×10 · Moving 9-grid ×3",
+    "title": "One-Handed",
+    "time": "15",
+    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
     "drills": [
-      ["1", "Lateral step + draw → 1", "×10 each way"],
-      ["2", "Walk-and-shoot, heel-toe, small circle", "×10"],
-      ["3", "9-grid while moving", "3 strings of 5"],
-      ["4", "Slow-perfect finish", "×5"]
+      [
+        "1",
+        "Strong-hand only on circle",
+        "×10"
+      ],
+      [
+        "2",
+        "Weak-hand only on circle",
+        "×10"
+      ],
+      [
+        "3",
+        "Hand transfer → WHO 1 shot",
+        "×5"
+      ]
     ]
   },
-  "quote": "Discipline is doing the reps when nobody's watching. Night shift just makes that literal.",
+  "quote": "Weekends are a civilian concept. The mission didn't get the memo, and neither did you.",
   "widget": {
-    "head": "FRI 23 OCT",
+    "head": "SAT 24 OCT",
     "next": "1900  Eat a snack\n2300  Work shift",
-    "focus": "Verify gov login · Review sched · Sales sprint",
-    "pt": "Power + Carry · Deadlift 5×3 · Swings/Box EMOM",
-    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
-    "comms": "Gov login alert · Dept schedule wk 26 OCT",
+    "focus": "Watch guidelines · Fix DAYBREAK · TEEX paperwork",
+    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core circuit",
+    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
+    "comms": "Watch guidelines due 07 NOV · DAYBREAK fail",
     "updated": "upd 1646"
   }
 }
