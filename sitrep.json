@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-25",
-  "dow": "SUN",
-  "label": "SUN 25 OCT 2026",
-  "generated": "2026-10-25T16:46:25-05:00",
+  "date": "2026-10-26",
+  "dow": "MON",
+  "label": "MON 26 OCT 2026",
+  "generated": "2026-10-26T16:46:32-05:00",
   "wake": "1700",
   "board": [
     {
@@ -20,25 +20,29 @@
     },
     {
       "t": "2300",
-      "what": "Work shift (to MON 0700)"
+      "what": "Work shift (to TUE 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
+    },
+    {
+      "t": "2330",
+      "what": "Homework block"
     }
   ],
   "comms": [
     {
-      "what": "Neighborhood watch guidelines",
-      "note": "review updated guidelines; comments due before 07 NOV meeting"
+      "what": "DAYBREAK draft did not build",
+      "note": "26 OCT 0059 run: draft stage failed (rc=2), nothing sent; fix before next run"
     },
     {
-      "what": "DAYBREAK brief build failed",
-      "note": "24 OCT 0435 run found no toolchain (mirror/drive paths); fix before next run"
+      "what": "Watch committee meeting",
+      "note": "initial meeting being scheduled; board approval required; guideline comments due before 07 NOV"
     },
     {
-      "what": "Account document posted",
-      "note": "new financial-account document in secure inbox; review when able"
+      "what": "Appointment",
+      "note": "confirmed WED 28 OCT 0900"
     },
     {
       "what": "Inbox noise",
@@ -46,9 +50,9 @@
     }
   ],
   "focus": [
+    "Fix DAYBREAK draft stage (rc=2)",
     "Review watch guidelines (due 07 NOV)",
-    "Fix DAYBREAK brief toolchain",
-    "Notion → Obsidian vault migration"
+    "Fiverr profile / gig listing"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -89,47 +93,72 @@
     }
   ],
   "pt": {
-    "title": "Rest + Reset",
-    "time": "15",
-    "line": "Walk the dogs · 15 min mobility",
+    "title": "Lower Strength",
+    "time": "45",
+    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+      ],
+      [
         "A",
-        "Easy walk",
-        "20-30 min, no watch"
+        "Barbell RDL",
+        "4×6 moderate, stop 2 reps shy, brace every rep"
       ],
       [
         "B",
-        "Mobility",
-        "15 min, whatever's tight"
+        "DB goblet squat",
+        "3×10, 3-sec lower"
+      ],
+      [
+        "C",
+        "DB split squat",
+        "3×8/side"
+      ],
+      [
+        "D",
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Mental Rehearsal",
-    "time": "10",
-    "line": "Visualize 10 perfect draws · Weekly AAR",
+    "title": "Draw Fundamentals",
+    "time": "20",
+    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
     "drills": [
       [
         "1",
-        "Eyes-closed visualization, full draw stroke",
+        "Grip + index from holster, no press",
         "×10"
       ],
       [
         "2",
-        "Review the week's par times, set next week's goal",
-        "5 min"
+        "Concealed draw → 1 on dual circle",
+        "×10"
+      ],
+      [
+        "3",
+        "Draw → 1, par 1.75s",
+        "×10"
+      ],
+      [
+        "4",
+        "Slow-perfect draws at 50%",
+        "×5"
       ]
     ]
   },
-  "quote": "Sunday is for rest. Rest is a skill. Practice it like you mean it, then go back to work before it notices.",
+  "quote": "Discipline is doing the boring thing right at 0300 when the only witness is the camera, and the camera is bored too.",
   "widget": {
-    "head": "SUN 25 OCT",
+    "head": "MON 26 OCT",
     "next": "1900  Eat a snack\n2300  Work shift",
-    "focus": "Watch guidelines · Fix DAYBREAK · Vault migration",
-    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
-    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
-    "comms": "Watch guidelines due 07 NOV · DAYBREAK fail",
+    "focus": "Fix DAYBREAK · Watch guidelines · Fiverr gig",
+    "pt": "Lower Strength · RDL 4×6 · Goblet 3×10 · Split 3×8",
+    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10 · Slow ×5",
+    "comms": "DAYBREAK fail · Watch comments due 07 NOV",
     "updated": "upd 1646"
   }
 }
