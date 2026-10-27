@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-10-26",
-  "dow": "MON",
-  "label": "MON 26 OCT 2026",
-  "generated": "2026-10-26T16:46:32-05:00",
+  "date": "2026-10-27",
+  "dow": "TUE",
+  "label": "TUE 27 OCT 2026",
+  "generated": "2026-10-27T16:47:07-05:00",
   "wake": "1700",
   "board": [
     {
@@ -11,8 +11,8 @@
       "what": "Work rush (to 28 OCT)"
     },
     {
-      "t": "ONGOING",
-      "what": "Insurance EOB errand (to 27 OCT)"
+      "t": "ALL DAY",
+      "what": "Insurance EOB errand (last day)"
     },
     {
       "t": "1900",
@@ -20,39 +20,43 @@
     },
     {
       "t": "2300",
-      "what": "Work shift (to TUE 0700)"
+      "what": "Work shift (to WED 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
     },
     {
-      "t": "2330",
+      "t": "WED 0000",
       "what": "Homework block"
+    },
+    {
+      "t": "WED 0900",
+      "what": "Appointment"
     }
   ],
   "comms": [
     {
-      "what": "DAYBREAK draft did not build",
-      "note": "26 OCT 0059 run: draft stage failed (rc=2), nothing sent; fix before next run"
+      "what": "Appointment paperwork",
+      "note": "2 forms flagged action-required; finish before WED 0900"
     },
     {
       "what": "Watch committee meeting",
-      "note": "initial meeting being scheduled; board approval required; guideline comments due before 07 NOV"
+      "note": "initial meeting being set up; board approval required; guideline comments due before 07 NOV"
     },
     {
-      "what": "Appointment",
-      "note": "confirmed WED 28 OCT 0900"
+      "what": "Account admin",
+      "note": "Bill due reminder (store card) · confirm payout preference · Benefits notice: name a beneficiary"
     },
     {
       "what": "Inbox noise",
-      "note": "~25 of 30 threads in 2 days are job alerts, retail, course bundles, newsletters. 10-min unsubscribe sweep"
+      "note": "~22 of 30 threads in 2 days are job alerts, retail, course bundles, newsletters. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Fix DAYBREAK draft stage (rc=2)",
-    "Review watch guidelines (due 07 NOV)",
-    "Fiverr profile / gig listing"
+    "Appointment forms (before WED 0900)",
+    "Insurance EOB errand (last day)",
+    "SDVOSB / VetCert registration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -93,72 +97,77 @@
     }
   ],
   "pt": {
-    "title": "Lower Strength",
-    "time": "45",
-    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
+    "title": "Engine + Trunk",
+    "time": "40",
+    "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
     "blocks": [
       [
         "W",
         "Warm-up",
-        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+        "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
       ],
       [
         "A",
         "Barbell RDL",
-        "4×6 moderate, stop 2 reps shy, brace every rep"
+        "4×6 moderate, crisp hinge"
       ],
       [
         "B",
-        "DB goblet squat",
-        "3×10, 3-sec lower"
+        "4 rounds",
+        "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
       ],
       [
         "C",
-        "DB split squat",
-        "3×8/side"
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ],
       [
         "D",
-        "McGill Big 3",
-        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+        "Cooldown",
+        "5 min walk · couch stretch 60s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Draw Fundamentals",
+    "title": "Draw & Transition",
     "time": "20",
-    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
+    "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
     "drills": [
       [
         "1",
-        "Grip + index from holster, no press",
-        "×10"
-      ],
-      [
-        "2",
         "Concealed draw → 1 on dual circle",
         "×10"
       ],
       [
+        "2",
+        "Draw → 2 shots on circle",
+        "×5"
+      ],
+      [
         "3",
-        "Draw → 1, par 1.75s",
-        "×10"
+        "9-grid: call 2 random numbers",
+        "3 strings of 5"
       ],
       [
         "4",
-        "Slow-perfect draws at 50%",
+        "Stress block: 10 air squats → draw → 2",
+        "×5"
+      ],
+      [
+        "5",
+        "Slow-perfect finish, 50% speed",
         "×5"
       ]
     ]
   },
-  "quote": "Discipline is doing the boring thing right at 0300 when the only witness is the camera, and the camera is bored too.",
+  "quote": "Motivation is a rumor. Discipline is the guy who shows up anyway, signs the logbook, and doesn't ask who started it.",
   "widget": {
-    "head": "MON 26 OCT",
+    "head": "TUE 27 OCT",
     "next": "1900  Eat a snack\n2300  Work shift",
-    "focus": "Fix DAYBREAK · Watch guidelines · Fiverr gig",
-    "pt": "Lower Strength · RDL 4×6 · Goblet 3×10 · Split 3×8",
-    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10 · Slow ×5",
-    "comms": "DAYBREAK fail · Watch comments due 07 NOV",
-    "updated": "upd 1646"
+    "focus": "Appt forms · EOB errand · VetCert reg",
+    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4 · Big 3",
+    "dry": "Draw & Trans · Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
+    "comms": "Appt forms by WED 0900 · Watch cmts 07 NOV",
+    "updated": "upd 1647"
   }
 }
