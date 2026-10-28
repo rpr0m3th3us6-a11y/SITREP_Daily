@@ -1,62 +1,46 @@
 {
   "v": 1,
-  "date": "2026-10-27",
-  "dow": "TUE",
-  "label": "TUE 27 OCT 2026",
-  "generated": "2026-10-27T16:47:07-05:00",
+  "date": "2026-10-28",
+  "dow": "WED",
+  "label": "WED 28 OCT 2026",
+  "generated": "2026-10-28T16:46:44-05:00",
   "wake": "1700",
   "board": [
     {
       "t": "ONGOING",
-      "what": "Work rush (to 28 OCT)"
-    },
-    {
-      "t": "ALL DAY",
-      "what": "Insurance EOB errand (last day)"
+      "what": "Days off (to FRI 2300)"
     },
     {
       "t": "1900",
       "what": "Eat a snack"
     },
     {
-      "t": "2300",
-      "what": "Work shift (to WED 0700)"
-    },
-    {
       "t": "2330",
-      "what": "Overnight food order"
-    },
-    {
-      "t": "WED 0000",
       "what": "Homework block"
-    },
-    {
-      "t": "WED 0900",
-      "what": "Appointment"
     }
   ],
   "comms": [
     {
-      "what": "Appointment paperwork",
-      "note": "2 forms flagged action-required; finish before WED 0900"
+      "what": "Pickup errand",
+      "note": "order ready today; pickup window closes 1800"
+    },
+    {
+      "what": "Appointment rescheduled",
+      "note": "today's 0900 canceled; next is WED 04 NOV 0900. Fix the calendar entry"
     },
     {
       "what": "Watch committee meeting",
-      "note": "initial meeting being set up; board approval required; guideline comments due before 07 NOV"
-    },
-    {
-      "what": "Account admin",
-      "note": "Bill due reminder (store card) · confirm payout preference · Benefits notice: name a beneficiary"
+      "note": "carried over: guideline comments due before 07 NOV"
     },
     {
       "what": "Inbox noise",
-      "note": "~22 of 30 threads in 2 days are job alerts, retail, course bundles, newsletters. 10-min unsubscribe sweep"
+      "note": "~24 of 30 threads in 2 days are job alerts, retail, bank offers, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Appointment forms (before WED 0900)",
-    "Insurance EOB errand (last day)",
-    "SDVOSB / VetCert registration"
+    "Pickup errand (window closes 1800)",
+    "Watch committee comments (due 07 NOV)",
+    "Clearance reinstatement"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -97,77 +81,77 @@
     }
   ],
   "pt": {
-    "title": "Engine + Trunk",
-    "time": "40",
-    "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
+    "title": "Upper Push/Pull",
+    "time": "45",
+    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
     "blocks": [
       [
         "W",
         "Warm-up",
-        "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
+        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
       ],
       [
         "A",
-        "Barbell RDL",
-        "4×6 moderate, crisp hinge"
+        "DB bench press",
+        "4×8"
       ],
       [
         "B",
-        "4 rounds",
-        "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
+        "1-arm DB row",
+        "4×10/side, braced on bench"
       ],
       [
         "C",
-        "McGill Big 3",
-        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+        "Half-kneeling KB press",
+        "3×8/side"
       ],
       [
         "D",
-        "Cooldown",
-        "5 min walk · couch stretch 60s/side"
+        "Suitcase carry 40#",
+        "4×40m/side (anti-lean core)"
+      ],
+      [
+        "E",
+        "Dead bug + side plank",
+        "3 rounds"
       ]
     ]
   },
   "dry": {
-    "title": "Draw & Transition",
+    "title": "Reloads & Malfunctions",
     "time": "20",
-    "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
+    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
     "drills": [
       [
         "1",
-        "Concealed draw → 1 on dual circle",
+        "Emergency reload with SIRT mag",
         "×10"
       ],
       [
         "2",
-        "Draw → 2 shots on circle",
-        "×5"
+        "Tap-rack-assess (simulated)",
+        "×10"
       ],
       [
         "3",
-        "9-grid: call 2 random numbers",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Stress block: 10 air squats → draw → 2",
+        "Draw → 1 → reload → 1",
         "×5"
       ],
       [
-        "5",
-        "Slow-perfect finish, 50% speed",
+        "4",
+        "Slow-perfect reloads, eyes on threat",
         "×5"
       ]
     ]
   },
-  "quote": "Motivation is a rumor. Discipline is the guy who shows up anyway, signs the logbook, and doesn't ask who started it.",
+  "quote": "The enemy gets a vote. So does the alarm clock. Neither one gets a veto.",
   "widget": {
-    "head": "TUE 27 OCT",
-    "next": "1900  Eat a snack\n2300  Work shift",
-    "focus": "Appt forms · EOB errand · VetCert reg",
-    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4 · Big 3",
-    "dry": "Draw & Trans · Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
-    "comms": "Appt forms by WED 0900 · Watch cmts 07 NOV",
-    "updated": "upd 1647"
+    "head": "WED 28 OCT",
+    "next": "1900  Eat a snack\n2330  Homework block",
+    "focus": "Pickup by 1800 · Watch cmts · Clearance",
+    "pt": "Upper Push/Pull · DB bench 4×8 · Row 4×10 · Carry",
+    "dry": "Reloads & Malfs · Reload ×10 · Tap-rack ×10",
+    "comms": "Pickup by 1800 · Appt moved to 04 NOV",
+    "updated": "upd 1646"
   }
 }
