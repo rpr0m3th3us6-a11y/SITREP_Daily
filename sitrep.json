@@ -1,14 +1,22 @@
 {
   "v": 1,
-  "date": "2026-10-28",
-  "dow": "WED",
-  "label": "WED 28 OCT 2026",
-  "generated": "2026-10-28T16:46:44-05:00",
+  "date": "2026-10-29",
+  "dow": "THU",
+  "label": "THU 29 OCT 2026",
+  "generated": "2026-10-29T16:46:42-05:00",
   "wake": "1700",
   "board": [
     {
       "t": "ONGOING",
       "what": "Days off (to FRI 2300)"
+    },
+    {
+      "t": "FRI ALL DAY",
+      "what": "Payday"
+    },
+    {
+      "t": "1800",
+      "what": "Appointment"
     },
     {
       "t": "1900",
@@ -21,26 +29,26 @@
   ],
   "comms": [
     {
-      "what": "Pickup errand",
-      "note": "order ready today; pickup window closes 1800"
-    },
-    {
-      "what": "Appointment rescheduled",
-      "note": "today's 0900 canceled; next is WED 04 NOV 0900. Fix the calendar entry"
+      "what": "Daybreak Brief build failed",
+      "note": "THU 0950 run: draft stage failed (rc=5), nothing sent. Fix before FRI run"
     },
     {
       "what": "Watch committee meeting",
       "note": "carried over: guideline comments due before 07 NOV"
     },
     {
+      "what": "Four Seasons P&C weekly update",
+      "note": "new 29 OCT edition; skim for schedule/benefits notices"
+    },
+    {
       "what": "Inbox noise",
-      "note": "~24 of 30 threads in 2 days are job alerts, retail, bank offers, course bundles. 10-min unsubscribe sweep"
+      "note": "~25 of 30 threads in 2 days are job alerts, retail, bank offers, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Pickup errand (window closes 1800)",
+    "Fix Daybreak draft stage (rc=5)",
     "Watch committee comments (due 07 NOV)",
-    "Clearance reinstatement"
+    "90-day sales sprint: one asset, one offer"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -81,77 +89,57 @@
     }
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
-      ],
-      [
         "A",
-        "DB bench press",
-        "4×8"
+        "Zone 2 row",
+        "30:00 conversational pace"
       ],
       [
         "B",
-        "1-arm DB row",
-        "4×10/side, braced on bench"
+        "Mobility flow",
+        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
       ],
       [
         "C",
-        "Half-kneeling KB press",
-        "3×8/side"
-      ],
-      [
-        "D",
-        "Suitcase carry 40#",
-        "4×40m/side (anti-lean core)"
-      ],
-      [
-        "E",
-        "Dead bug + side plank",
-        "3 rounds"
+        "McGill Big 3",
+        "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
       [
         "1",
-        "Emergency reload with SIRT mag",
-        "×10"
+        "Wall drill, front sight focus",
+        "×20"
       ],
       [
         "2",
-        "Tap-rack-assess (simulated)",
+        "Dot-on-dot press, no disturbance",
         "×10"
       ],
       [
         "3",
-        "Draw → 1 → reload → 1",
-        "×5"
-      ],
-      [
-        "4",
-        "Slow-perfect reloads, eyes on threat",
-        "×5"
+        "Slow fire on small circle",
+        "×10"
       ]
     ]
   },
-  "quote": "The enemy gets a vote. So does the alarm clock. Neither one gets a veto.",
+  "quote": "Night shift taught me the sun is optional. The standard never was.",
   "widget": {
-    "head": "WED 28 OCT",
-    "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Pickup by 1800 · Watch cmts · Clearance",
-    "pt": "Upper Push/Pull · DB bench 4×8 · Row 4×10 · Carry",
-    "dry": "Reloads & Malfs · Reload ×10 · Tap-rack ×10",
-    "comms": "Pickup by 1800 · Appt moved to 04 NOV",
+    "head": "THU 29 OCT",
+    "next": "1800  Appointment\n1900  Eat a snack",
+    "focus": "Fix Daybreak · Watch cmts · Sales sprint",
+    "pt": "Recovery + Z2 · 30:00 Z2 row · Mobility · Big 3",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Daybreak build failed · Watch cmts by 07 NOV",
     "updated": "upd 1646"
   }
 }
