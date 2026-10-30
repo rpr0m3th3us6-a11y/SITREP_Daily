@@ -1,26 +1,30 @@
 {
   "v": 1,
-  "date": "2026-10-29",
-  "dow": "THU",
-  "label": "THU 29 OCT 2026",
-  "generated": "2026-10-29T16:46:42-05:00",
+  "date": "2026-10-30",
+  "dow": "FRI",
+  "label": "FRI 30 OCT 2026",
+  "generated": "2026-10-30T16:46:21-05:00",
   "wake": "1700",
   "board": [
     {
       "t": "ONGOING",
-      "what": "Days off (to FRI 2300)"
+      "what": "Days off (to 2300)"
     },
     {
-      "t": "FRI ALL DAY",
+      "t": "ALL DAY",
       "what": "Payday"
-    },
-    {
-      "t": "1800",
-      "what": "Appointment"
     },
     {
       "t": "1900",
       "what": "Eat a snack"
+    },
+    {
+      "t": "2300",
+      "what": "Work"
+    },
+    {
+      "t": "2330",
+      "what": "Overnight food order"
     },
     {
       "t": "2330",
@@ -29,26 +33,26 @@
   ],
   "comms": [
     {
-      "what": "Daybreak Brief build failed",
-      "note": "THU 0950 run: draft stage failed (rc=5), nothing sent. Fix before FRI run"
-    },
-    {
       "what": "Watch committee meeting",
-      "note": "carried over: guideline comments due before 07 NOV"
+      "note": "reply re proposed move to WED 1800; update availability sheet. Guideline comments due before 07 NOV"
     },
     {
-      "what": "Four Seasons P&C weekly update",
-      "note": "new 29 OCT edition; skim for schedule/benefits notices"
+      "what": "Four Seasons schedule posted",
+      "note": "week of 02 NOV; review for coverage changes"
+    },
+    {
+      "what": "Daybreak Brief build failed",
+      "note": "THU 0950 run: draft stage failed (rc=5), nothing sent. Fix before next run"
     },
     {
       "what": "Inbox noise",
-      "note": "~25 of 30 threads in 2 days are job alerts, retail, bank offers, course bundles. 10-min unsubscribe sweep"
+      "note": "~30 of 38 threads in 2 days are job alerts, retail, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
+    "Watch committee: reply + availability sheet",
     "Fix Daybreak draft stage (rc=5)",
-    "Watch committee comments (due 07 NOV)",
-    "90-day sales sprint: one asset, one offer"
+    "TEEX UXO200: VA funding paperwork"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -89,57 +93,72 @@
     }
   ],
   "pt": {
-    "title": "Recovery + Zone 2",
-    "time": "40",
-    "line": "30:00 Z2 row · Mobility flow · Big 3",
+    "title": "Power + Carry",
+    "time": "45",
+    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row · hip hinge drill ×10 · glute bridge ×10"
+      ],
+      [
         "A",
-        "Zone 2 row",
-        "30:00 conversational pace"
+        "Barbell deadlift",
+        "5×3 at ~70%, perfect reps only"
       ],
       [
         "B",
-        "Mobility flow",
-        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
+        "EMOM 10",
+        "odd: 10 KB swing 40# · even: 5 box jump (step down)"
       ],
       [
         "C",
+        "Farmer carry",
+        "4×40m heavy DBs"
+      ],
+      [
+        "D",
         "McGill Big 3",
         "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Trigger Control",
-    "time": "15",
-    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
+    "title": "Movement",
+    "time": "20",
+    "line": "Step-off draws ×10 · Moving 9-grid ×3",
     "drills": [
       [
         "1",
-        "Wall drill, front sight focus",
-        "×20"
+        "Lateral step + draw → 1",
+        "×10 each way"
       ],
       [
         "2",
-        "Dot-on-dot press, no disturbance",
+        "Walk-and-shoot, heel-toe, small circle",
         "×10"
       ],
       [
         "3",
-        "Slow fire on small circle",
-        "×10"
+        "9-grid while moving",
+        "3 strings of 5"
+      ],
+      [
+        "4",
+        "Slow-perfect finish",
+        "×5"
       ]
     ]
   },
-  "quote": "Night shift taught me the sun is optional. The standard never was.",
+  "quote": "Discipline is doing the boring thing at 0300 when nobody's grading. Nobody is ever grading.",
   "widget": {
-    "head": "THU 29 OCT",
-    "next": "1800  Appointment\n1900  Eat a snack",
-    "focus": "Fix Daybreak · Watch cmts · Sales sprint",
-    "pt": "Recovery + Z2 · 30:00 Z2 row · Mobility · Big 3",
-    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
-    "comms": "Daybreak build failed · Watch cmts by 07 NOV",
+    "head": "FRI 30 OCT",
+    "next": "1900  Eat a snack\n2300  Work",
+    "focus": "Watch reply · Fix Daybreak · TEEX paperwork",
+    "pt": "Power + Carry · DL 5×3 · Swing/Box EMOM · Farmers",
+    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
+    "comms": "Watch cmte: reply re WED 1800 · FS sched 02 NOV",
     "updated": "upd 1646"
   }
 }
