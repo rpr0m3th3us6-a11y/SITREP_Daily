@@ -1,18 +1,14 @@
 {
   "v": 1,
-  "date": "2026-10-30",
-  "dow": "FRI",
-  "label": "FRI 30 OCT 2026",
-  "generated": "2026-10-30T16:46:21-05:00",
+  "date": "2026-10-31",
+  "dow": "SAT",
+  "label": "SAT 31 OCT 2026",
+  "generated": "2026-10-31T16:45:27-05:00",
   "wake": "1700",
   "board": [
     {
-      "t": "ONGOING",
-      "what": "Days off (to 2300)"
-    },
-    {
       "t": "ALL DAY",
-      "what": "Payday"
+      "what": "Bill due (SUN 01 NOV)"
     },
     {
       "t": "1900",
@@ -20,39 +16,39 @@
     },
     {
       "t": "2300",
-      "what": "Work"
+      "what": "Work (to 0600)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
     },
     {
-      "t": "2330",
-      "what": "Homework block"
+      "t": "SUN 0200",
+      "what": "DST ends: clocks back 1 hr"
     }
   ],
   "comms": [
     {
-      "what": "Watch committee meeting",
-      "note": "reply re proposed move to WED 1800; update availability sheet. Guideline comments due before 07 NOV"
+      "what": "Watch committee",
+      "note": "reply re proposed move to WED 1800 + availability sheet; FB group vetting thread active. Guideline comments due before 07 NOV"
     },
     {
-      "what": "Four Seasons schedule posted",
-      "note": "week of 02 NOV; review for coverage changes"
+      "what": "Bill due",
+      "note": "rent due SUN 01 NOV; insurance autopay scheduled"
     },
     {
-      "what": "Daybreak Brief build failed",
-      "note": "THU 0950 run: draft stage failed (rc=5), nothing sent. Fix before next run"
+      "what": "Federal application notice",
+      "note": "Notice of Results posted for USGS Program Analyst; check status in USA Staffing"
     },
     {
       "what": "Inbox noise",
-      "note": "~30 of 38 threads in 2 days are job alerts, retail, course bundles. 10-min unsubscribe sweep"
+      "note": "~24 of 31 threads in 2 days are job alerts, retail, course bundles. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
     "Watch committee: reply + availability sheet",
-    "Fix Daybreak draft stage (rc=5)",
-    "TEEX UXO200: VA funding paperwork"
+    "Pay rent before SUN",
+    "Notion → Obsidian vault migration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -93,72 +89,52 @@
     }
   ],
   "pt": {
-    "title": "Power + Carry",
-    "time": "45",
-    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
+    "title": "Long Ruck / Z2",
+    "time": "50",
+    "line": "45:00 incline walk · Core circuit",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "5:00 row · hip hinge drill ×10 · glute bridge ×10"
-      ],
-      [
         "A",
-        "Barbell deadlift",
-        "5×3 at ~70%, perfect reps only"
+        "Incline treadmill walk",
+        "45:00 Z2 (add light pack if back allows)"
       ],
       [
         "B",
-        "EMOM 10",
-        "odd: 10 KB swing 40# · even: 5 box jump (step down)"
-      ],
-      [
-        "C",
-        "Farmer carry",
-        "4×40m heavy DBs"
-      ],
-      [
-        "D",
-        "McGill Big 3",
-        "standard sets"
+        "Core circuit ×3",
+        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
       ]
     ]
   },
   "dry": {
-    "title": "Movement",
-    "time": "20",
-    "line": "Step-off draws ×10 · Moving 9-grid ×3",
+    "title": "One-Handed",
+    "time": "15",
+    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
     "drills": [
       [
         "1",
-        "Lateral step + draw → 1",
-        "×10 each way"
+        "Strong-hand only on circle",
+        "×10"
       ],
       [
         "2",
-        "Walk-and-shoot, heel-toe, small circle",
+        "Weak-hand only on circle",
         "×10"
       ],
       [
         "3",
-        "9-grid while moving",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Slow-perfect finish",
+        "Hand transfer → WHO 1 shot",
         "×5"
       ]
     ]
   },
-  "quote": "Discipline is doing the boring thing at 0300 when nobody's grading. Nobody is ever grading.",
+  "quote": "The clocks fall back tonight. You don't. Stand the extra hour like it was the plan all along.",
   "widget": {
-    "head": "FRI 30 OCT",
+    "head": "SAT 31 OCT",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Watch reply · Fix Daybreak · TEEX paperwork",
-    "pt": "Power + Carry · DL 5×3 · Swing/Box EMOM · Farmers",
-    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
-    "comms": "Watch cmte: reply re WED 1800 · FS sched 02 NOV",
-    "updated": "upd 1646"
+    "focus": "Watch reply · Rent SUN · Obsidian migration",
+    "pt": "Ruck/Z2 · 45:00 incline walk · Core circuit",
+    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
+    "comms": "Watch cmte reply · Rent due SUN",
+    "updated": "upd 1645"
   }
 }
