@@ -1,14 +1,14 @@
 {
   "v": 1,
-  "date": "2026-10-31",
-  "dow": "SAT",
-  "label": "SAT 31 OCT 2026",
-  "generated": "2026-10-31T16:45:27-05:00",
+  "date": "2026-11-01",
+  "dow": "SUN",
+  "label": "SUN 01 NOV 2026",
+  "generated": "2026-11-01T16:46:31-06:00",
   "wake": "1700",
   "board": [
     {
       "t": "ALL DAY",
-      "what": "Bill due (SUN 01 NOV)"
+      "what": "Bill due"
     },
     {
       "t": "1900",
@@ -16,39 +16,35 @@
     },
     {
       "t": "2300",
-      "what": "Work (to 0600)"
+      "what": "Work (to 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
-    },
-    {
-      "t": "SUN 0200",
-      "what": "DST ends: clocks back 1 hr"
     }
   ],
   "comms": [
     {
-      "what": "Watch committee",
-      "note": "reply re proposed move to WED 1800 + availability sheet; FB group vetting thread active. Guideline comments due before 07 NOV"
+      "what": "Daybreak Brief build failed",
+      "note": "draft (rc=5) and final (PDF missing) runs both failed SUN 01 NOV; nothing sent. Fix before tonight's run"
     },
     {
       "what": "Bill due",
-      "note": "rent due SUN 01 NOV; insurance autopay scheduled"
+      "note": "rent due today SUN 01 NOV; insurance payment confirmed"
     },
     {
-      "what": "Federal application notice",
-      "note": "Notice of Results posted for USGS Program Analyst; check status in USA Staffing"
+      "what": "Personal admin form",
+      "note": "action-required form pending; complete this week"
     },
     {
       "what": "Inbox noise",
-      "note": "~24 of 31 threads in 2 days are job alerts, retail, course bundles. 10-min unsubscribe sweep"
+      "note": "~24 of 30 threads in 2 days are job alerts, retail, course promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Watch committee: reply + availability sheet",
-    "Pay rent before SUN",
-    "Notion → Obsidian vault migration"
+    "Pay rent today",
+    "Fix Daybreak Brief build",
+    "Fiverr profile / gig listing"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -89,52 +85,47 @@
     }
   ],
   "pt": {
-    "title": "Long Ruck / Z2",
-    "time": "50",
-    "line": "45:00 incline walk · Core circuit",
+    "title": "Rest + Reset",
+    "time": "15",
+    "line": "Walk the dogs · 15 min mobility",
     "blocks": [
       [
         "A",
-        "Incline treadmill walk",
-        "45:00 Z2 (add light pack if back allows)"
+        "Easy walk",
+        "20-30 min, no watch"
       ],
       [
         "B",
-        "Core circuit ×3",
-        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
+        "Mobility",
+        "15 min, whatever's tight"
       ]
     ]
   },
   "dry": {
-    "title": "One-Handed",
-    "time": "15",
-    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
+    "title": "Mental Rehearsal",
+    "time": "10",
+    "line": "Visualize 10 perfect draws · Weekly AAR",
     "drills": [
       [
         "1",
-        "Strong-hand only on circle",
+        "Eyes-closed visualization, full draw stroke",
         "×10"
       ],
       [
         "2",
-        "Weak-hand only on circle",
-        "×10"
-      ],
-      [
-        "3",
-        "Hand transfer → WHO 1 shot",
-        "×5"
+        "Review the week's par times, set next week's goal",
+        "5 min"
       ]
     ]
   },
-  "quote": "The clocks fall back tonight. You don't. Stand the extra hour like it was the plan all along.",
+  "quote": "Rest day isn't a day off. It's maintenance on the only weapon they don't reissue.",
   "widget": {
-    "head": "SAT 31 OCT",
+    "head": "SUN 01 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Watch reply · Rent SUN · Obsidian migration",
-    "pt": "Ruck/Z2 · 45:00 incline walk · Core circuit",
-    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
-    "comms": "Watch cmte reply · Rent due SUN",
-    "updated": "upd 1645"
+    "focus": "Rent today · Fix Daybreak · Fiverr gig",
+    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
+    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
+    "comms": "Daybreak build failed · Rent due today",
+    "updated": "upd 1646"
   }
 }
