@@ -38,7 +38,7 @@ body.home .wrap{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
 
 /* HOME */
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 6px 7px;text-align:center}
+.stat{font:inherit;width:100%;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 6px 7px;text-align:center}
 .stat b{display:block;font:700 26px/1 'Barlow Condensed',sans-serif;color:var(--ink)}
 .stat b.ok{color:var(--gold)}
 .stat span{font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:var(--dim)}
@@ -159,6 +159,54 @@ details.more li{margin:4px 0}
 .toast{position:fixed;left:50%;bottom:calc(var(--bot) + 20px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:5px;font-weight:600;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30}
 .toast.show{opacity:1}
 .stale{color:var(--red)}
+
+/* v4: six-page layout + palace */
+.tiles6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.tiles6 .tile{min-height:100px;padding:10px}
+.tiles6 .tile .nm{font-size:19px}
+.tiles6 .tile .pg{font-size:11px}
+@media (min-width:720px){.tiles6 .tile{min-height:120px}}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.tabs button{min-height:48px;border-radius:6px;border:1px solid var(--line2);background:var(--panel);font:700 16px 'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.cardh{display:flex;align-items:center;gap:8px;margin:2px 0 6px}
+.cardh h3{margin:0}
+.cardh .r{margin-left:auto}
+details.fold{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:0 14px;margin-bottom:10px}
+details.fold > summary{cursor:pointer;min-height:52px;display:flex;align-items:center;gap:8px;font:600 11.5px 'IBM Plex Mono',monospace;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+details.fold > summary .r{margin-left:auto;color:var(--dim);text-transform:none}
+details.fold[open]{padding-bottom:12px}
+
+/* palace */
+.pal .drill{display:flex;align-items:baseline;gap:10px;margin:2px 0 4px}
+.pal .drill b{font:700 22px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.pal .how{color:var(--dim);font-size:14px;margin:4px 0 10px}
+.pal .ptimer{font:600 30px 'IBM Plex Mono',monospace;color:var(--gold)}
+.pal .bar2{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.pal .bar2 .btn{flex:1}
+.locus{display:grid;grid-template-columns:26px 1fr;gap:4px 10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+.locus:last-child{border-bottom:0}
+.locus .i{font:600 13px 'IBM Plex Mono',monospace;color:var(--gold)}
+.locus .l{color:var(--dim);font-size:13px}
+.locus .v{grid-column:2;font:700 20px/1.15 'Barlow Condensed',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.locus input{grid-column:2}
+.locus.ok .v,.locus.ok .res{color:var(--green)}
+.locus.no .res{color:var(--red)}
+.locus .res{grid-column:2;font:600 12.5px 'IBM Plex Mono',monospace}
+.digits{font:600 30px/1.5 'IBM Plex Mono',monospace;letter-spacing:.12em;word-break:break-all}
+.digits span{display:inline-block;margin-right:14px}
+.digits .ok{color:var(--green)} .digits .no{color:var(--red);text-decoration:underline}
+.score{font:700 44px/1 'Barlow Condensed',sans-serif;color:var(--gold)}
+.palstrip{display:flex;gap:6px;margin-top:8px}
+.palstrip div{flex:1;border:1px solid var(--line2);border-radius:5px;padding:5px 0;text-align:center;font:600 11px 'IBM Plex Mono',monospace;color:var(--dim)}
+.palstrip div b{display:block;font-size:13px;color:var(--ink)}
+.palstrip div.hit{border-color:#5a4a1c}.palstrip div.hit b{color:var(--gold)}
+.lociChips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px}
+.lociChips span{border:1px solid var(--line2);border-radius:14px;padding:4px 10px;font-size:13px}
+.lociChips span i{font-style:normal;color:var(--gold);font-family:'IBM Plex Mono',monospace;margin-right:5px}
+.major{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:6px;font:600 13px 'IBM Plex Mono',monospace;text-align:center}
+.major div{border:1px solid var(--line2);border-radius:4px;padding:4px 0}
+.major div b{color:var(--gold);display:block}
 </style>
 </head>
 <body>
@@ -175,7 +223,7 @@ details.more li{margin:4px 0}
   <div class="homegrid">
     <div>
       <div class="stats" id="stats"></div>
-      <button class="nextline" id="nextLine" data-go="board"></button>
+      <button class="nextline" id="nextLine" data-go="reveille"></button>
       <div class="quote">
         <p id="quote"></p>
         <button class="prov" id="prov" aria-label="Next question"><span class="k">ASK</span><span class="q" id="provQ"></span><span class="r">NEXT ›</span></button>
@@ -186,15 +234,19 @@ details.more li{margin:4px 0}
     </div>
     <div>
       <div class="h3">Sections<span class="r">swipe between pages</span></div>
-      <div class="tiles" id="tiles"></div>
+      <div class="tiles6" id="tiles"></div>
     </div>
   </div>
 </section>
 
-<!-- PAGES -->
+<!-- 1 REVEILLE -->
 <section class="view page" id="v-reveille" hidden>
-  <div class="phead"><div><span class="n">01</span><h2>Reveille</h2><span class="sub">WAKE +30 MIN</span></div><button class="btn ghost sm edit" data-edit="rev">Edit</button></div>
+  <div class="phead"><div><span class="n">01</span><h2>Reveille</h2><span class="sub">WAKE +30 · TONIGHT'S BOARD</span></div><button class="btn ghost sm edit" data-edit="rev">Edit</button></div>
   <div class="card"><div id="revList"></div></div>
+  <div class="card">
+    <h3>Tonight's board</h3><div class="board" id="boardList"></div>
+    <h3>Comms watch</h3><div id="commsList"></div>
+  </div>
   <div class="card">
     <div class="row2">
       <label class="field"><span>Slept (hrs)</span><input type="number" step="0.5" inputmode="decimal" data-k="slept"></label>
@@ -204,62 +256,99 @@ details.more li{margin:4px 0}
   </div>
 </section>
 
-<section class="view page" id="v-board" hidden>
-  <div class="phead"><div><span class="n">02</span><h2>Board</h2><span class="sub">CALENDAR · COMMS</span></div></div>
-  <div class="card"><h3>Calendar</h3><div class="board" id="boardList"></div></div>
-  <div class="card"><h3>Comms watch</h3><div id="commsList"></div></div>
-</section>
-
+<!-- 2 MISSION -->
 <section class="view page" id="v-mission" hidden>
-  <div class="phead"><div><span class="n">03</span><h2>Mission</h2><span class="sub">BIG 3 · OPEN ACTIONS</span></div><button class="btn ghost sm edit" data-edit="standing">Edit</button></div>
+  <div class="phead"><div><span class="n">02</span><h2>Mission</h2><span class="sub">BIG 3 · OPEN ACTIONS · PROJECTS</span></div></div>
   <div class="card"><h3>Big 3</h3><div class="big3" id="big3page"></div>
     <label class="field"><span>Revenue move</span><input type="text" data-k="revenue"></label></div>
-  <div class="card"><h3>Standing open actions</h3><div id="standingList"></div></div>
+  <div class="card"><div class="cardh"><h3>Standing open actions</h3><button class="btn ghost sm r" data-edit="standing">Edit</button></div><div id="standingList"></div></div>
+  <div class="card"><div class="cardh"><h3>Projects</h3><span class="dim mono" style="font-size:11px">pips = % to milestone</span><button class="btn ghost sm r" data-edit="proj">Edit</button></div><div id="projList"></div></div>
 </section>
 
-<section class="view page" id="v-projects" hidden>
-  <div class="phead"><div><span class="n">04</span><h2>Projects</h2><span class="sub">PIPS = % TO NEXT MILESTONE</span></div><button class="btn ghost sm edit" data-edit="proj">Edit</button></div>
-  <div class="card"><div id="projList"></div></div>
-</section>
-
-<section class="view page" id="v-pt" hidden>
-  <div class="phead"><div><span class="n">05</span><h2 id="ptTitle">PT</h2><span class="sub" id="ptTime"></span></div></div>
-  <div class="seg" id="ptMode" style="margin-bottom:10px">
-    <button data-mode="garage" aria-pressed="true">Garage</button>
-    <button data-mode="shift" aria-pressed="false">Work shift</button>
-  </div>
-  <div class="card" id="ptList"></div>
-  <div id="shiftBox" hidden>
-    <div class="seg" id="shiftDay" style="margin-bottom:8px"></div>
-    <div class="card"><div id="shiftWins"></div>
-      <details class="more"><summary>Always-on · every shift</summary><div id="shiftAlways"></div></details>
-      <details class="more"><summary>Rules of engagement · kit</summary><div id="shiftRules"></div></details>
+<!-- 3 TRAIN -->
+<section class="view page" id="v-train" hidden>
+  <div class="phead"><div><span class="n">03</span><h2 id="trainTitle">Train</h2><span class="sub" id="trainSub"></span></div></div>
+  <div class="tabs" id="trainTabs"><button data-ttab="pt">PT</button><button data-ttab="dry">Dry fire</button></div>
+  <div id="tab-pt">
+    <div class="seg" id="ptMode" style="margin-bottom:10px">
+      <button data-mode="garage" aria-pressed="true">Garage</button>
+      <button data-mode="shift" aria-pressed="false">Work shift</button>
+    </div>
+    <div class="card" id="ptList"></div>
+    <div id="shiftBox" hidden>
+      <div class="seg" id="shiftDay" style="margin-bottom:8px"></div>
+      <div class="card"><div id="shiftWins"></div>
+        <details class="more"><summary>Always-on · every shift</summary><div id="shiftAlways"></div></details>
+        <details class="more"><summary>Rules of engagement · kit</summary><div id="shiftRules"></div></details>
+      </div>
+    </div>
+    <div class="card row2">
+      <label class="field"><span>RPE 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="rpe"></label>
+      <label class="field"><span>Back check 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="back"></label>
     </div>
   </div>
-  <div class="card row2">
-    <label class="field"><span>RPE 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="rpe"></label>
-    <label class="field"><span>Back check 1–10</span><input type="number" min="1" max="10" inputmode="numeric" data-k="back"></label>
+  <div id="tab-dry" hidden>
+    <div class="safety"><label class="ck"><input type="checkbox" data-k="safety"><span><b>Safety:</b> no live ammo in the room. SIRT only. AIWB, cover garment on.</span></label></div>
+    <div class="card" id="dryList"></div>
+    <div class="card">
+      <h3>Par timer</h3>
+      <div class="timer">
+        <input type="number" id="par" step="0.05" value="1.75" inputmode="decimal" style="width:92px" aria-label="Par time in seconds">
+        <button class="btn" id="parGo">Start</button>
+        <span class="big" id="parOut">--</span>
+      </div>
+      <div class="dim" style="font-size:12.5px;margin-top:6px">Random 2–4s delay → beep → second beep at par.</div>
+      <label class="field"><span>Fix next session</span><input type="text" data-k="dryfix"></label>
+    </div>
   </div>
 </section>
 
-<section class="view page" id="v-dry" hidden>
-  <div class="phead"><div><span class="n">06</span><h2 id="dryTitle">Dry Fire</h2><span class="sub" id="dryTime"></span></div></div>
-  <div class="safety"><label class="ck"><input type="checkbox" data-k="safety"><span><b>Safety:</b> no live ammo in the room. SIRT only. AIWB, cover garment on.</span></label></div>
-  <div class="card" id="dryList"></div>
+<!-- 4 MIND -->
+<section class="view page" id="v-mind" hidden>
+  <div class="phead"><div><span class="n">04</span><h2>Mind</h2><span class="sub">PALACE · HABIT · DISCIPLINE · GRATITUDE</span></div></div>
+  <div class="card pal" id="palace"></div>
   <div class="card">
-    <h3>Par timer</h3>
-    <div class="timer">
-      <input type="number" id="par" step="0.05" value="1.75" inputmode="decimal" style="width:92px" aria-label="Par time in seconds">
-      <button class="btn" id="parGo">Start</button>
-      <span class="big" id="parOut">--</span>
+    <h3>Habit &amp; mastery</h3>
+    <label class="field"><span>Today's mastery task</span><input type="text" data-k="mtask"></label>
+    <label class="field"><span>Habit in build</span><input type="text" data-g="habit"></label>
+    <div class="field"><span>Streak · tap today when done</span><div class="streak" id="streak"></div></div>
+    <div class="row2">
+      <label class="field"><span>If…</span><input type="text" data-k="ifx"></label>
+      <label class="field"><span>…then I will</span><input type="text" data-k="theny"></label>
     </div>
-    <div class="dim" style="font-size:12.5px;margin-top:6px">Random 2–4s delay → beep → second beep at par.</div>
-    <label class="field"><span>Fix next session</span><input type="text" data-k="dryfix"></label>
+    <label class="field"><span>Identity vote: I'm the kind of man who…</span><input type="text" data-k="identity"></label>
   </div>
+  <div class="card">
+    <div class="cardh"><h3>Discipline rep</h3><button class="btn ghost sm r" data-edit="disc">Edit</button></div>
+    <label class="field"><span>Today's hard thing (chosen, not assigned)</span><input type="text" data-k="hard"></label>
+    <div id="discList"></div>
+  </div>
+  <div class="card">
+    <h3>Gratitude</h3>
+    <label class="field"><span>1 · A person</span><input type="text" data-k="g1"></label>
+    <label class="field"><span>2 · A thing</span><input type="text" data-k="g2"></label>
+    <label class="field"><span>3 · A small win</span><input type="text" data-k="g3"></label>
+    <label class="field"><span>Who gets a thank-you text</span><input type="text" data-k="thanks"></label>
+  </div>
+  <details class="fold" id="cbtFold"><summary>Thought record<span class="r">when something spikes</span></summary>
+    <label class="field"><span>Situation</span><input type="text" data-k="sit"></label>
+    <div class="row2" style="grid-template-columns:1fr 96px">
+      <label class="field"><span>Hot thought</span><input type="text" data-k="hot"></label>
+      <label class="field"><span>Intensity %</span><input type="number" inputmode="numeric" data-k="hotpct"></label>
+    </div>
+    <div class="field"><span>Distortions</span><div class="seg" id="dist"></div></div>
+    <label class="field"><span>Evidence for</span><textarea data-k="evfor"></textarea></label>
+    <label class="field"><span>Evidence against</span><textarea data-k="evagainst"></textarea></label>
+    <div class="row2" style="grid-template-columns:1fr 96px">
+      <label class="field"><span>Balanced thought</span><input type="text" data-k="balanced"></label>
+      <label class="field"><span>Now %</span><input type="number" inputmode="numeric" data-k="nowpct"></label>
+    </div>
+  </details>
 </section>
 
+<!-- 5 LEDGER -->
 <section class="view page" id="v-ledger" hidden>
-  <div class="phead"><div><span class="n">07</span><h2>Ledger</h2><span class="sub">STAYS ON THIS PHONE</span></div></div>
+  <div class="phead"><div><span class="n">05</span><h2>Ledger</h2><span class="sub">STAYS ON THIS PHONE</span></div></div>
   <div class="card">
     <div class="row2">
       <label class="field"><span>Available $</span><input type="number" inputmode="decimal" data-k="bal"></label>
@@ -273,62 +362,10 @@ details.more li{margin:4px 0}
   </div>
 </section>
 
-<section class="view page" id="v-mastery" hidden>
-  <div class="phead"><div><span class="n">08</span><h2>Self-Mastery</h2><span class="sub">TASK · HABIT · IDENTITY</span></div></div>
-  <div class="card">
-    <label class="field"><span>Today's mastery task</span><input type="text" data-k="mtask"></label>
-    <label class="field"><span>Habit in build</span><input type="text" data-g="habit"></label>
-    <div class="field"><span>Streak · tap today when done</span><div class="streak" id="streak"></div></div>
-  </div>
-  <div class="card">
-    <div class="row2">
-      <label class="field"><span>If…</span><input type="text" data-k="ifx"></label>
-      <label class="field"><span>…then I will</span><input type="text" data-k="theny"></label>
-    </div>
-    <label class="field"><span>Identity vote: I'm the kind of man who…</span><input type="text" data-k="identity"></label>
-  </div>
-</section>
-
-<section class="view page" id="v-gratitude" hidden>
-  <div class="phead"><div><span class="n">09</span><h2>Gratitude</h2><span class="sub">PERSON · THING · WIN</span></div></div>
-  <div class="card">
-    <label class="field"><span>1 · A person</span><input type="text" data-k="g1"></label>
-    <label class="field"><span>2 · A thing</span><input type="text" data-k="g2"></label>
-    <label class="field"><span>3 · A small win</span><input type="text" data-k="g3"></label>
-    <label class="field"><span>Who gets a thank-you text</span><input type="text" data-k="thanks"></label>
-  </div>
-</section>
-
-<section class="view page" id="v-cbt" hidden>
-  <div class="phead"><div><span class="n">10</span><h2>Thought Record</h2><span class="sub">WHEN SOMETHING SPIKES</span></div></div>
-  <div class="card">
-    <label class="field"><span>Situation</span><input type="text" data-k="sit"></label>
-    <div class="row2" style="grid-template-columns:1fr 96px">
-      <label class="field"><span>Hot thought</span><input type="text" data-k="hot"></label>
-      <label class="field"><span>Intensity %</span><input type="number" inputmode="numeric" data-k="hotpct"></label>
-    </div>
-    <div class="field"><span>Distortions</span><div class="seg" id="dist"></div></div>
-  </div>
-  <div class="card">
-    <label class="field"><span>Evidence for</span><textarea data-k="evfor"></textarea></label>
-    <label class="field"><span>Evidence against</span><textarea data-k="evagainst"></textarea></label>
-    <div class="row2" style="grid-template-columns:1fr 96px">
-      <label class="field"><span>Balanced thought</span><input type="text" data-k="balanced"></label>
-      <label class="field"><span>Now %</span><input type="number" inputmode="numeric" data-k="nowpct"></label>
-    </div>
-  </div>
-</section>
-
-<section class="view page" id="v-discipline" hidden>
-  <div class="phead"><div><span class="n">11</span><h2>Discipline</h2><span class="sub">CHOSEN, NOT ASSIGNED</span></div><button class="btn ghost sm edit" data-edit="disc">Edit</button></div>
-  <div class="card">
-    <label class="field"><span>Today's hard thing</span><input type="text" data-k="hard"></label>
-    <div id="discList"></div>
-  </div>
-</section>
-
+<!-- 6 AAR -->
 <section class="view page" id="v-aar" hidden>
-  <div class="phead"><div><span class="n">12</span><h2>AAR</h2><span class="sub">END OF SHIFT</span></div></div>
+  <div class="phead"><div><span class="n">06</span><h2>AAR</h2><span class="sub">END OF SHIFT</span></div></div>
+  <div class="card pal" id="aarPalace" hidden></div>
   <div class="card">
     <label class="field"><span>Sustain</span><input type="text" data-k="sustain"></label>
     <label class="field"><span>Improve</span><input type="text" data-k="improve"></label>
@@ -360,7 +397,8 @@ const save=()=>store.set(dayKey,day), saveG=()=>store.set('sitrep:global',glob);
 function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1600)}
 const uid=()=>'i'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
 
-const PAGES=[['reveille','Reveille'],['board','Board'],['mission','Mission'],['projects','Projects'],['pt','PT'],['dry','Dry Fire'],['ledger','Ledger'],['mastery','Mastery'],['gratitude','Gratitude'],['cbt','Thought Rec'],['discipline','Discipline'],['aar','AAR']];
+const PAGES=[['reveille','Reveille'],['mission','Mission'],['train','Train'],['mind','Mind'],['ledger','Ledger'],['aar','AAR']];
+const ALIAS={board:'reveille',projects:'mission',pt:'train',dry:'train',mastery:'mind',gratitude:'mind',cbt:'mind',discipline:'mind',palace:'mind'};
 const DIST=['All-or-nothing','Catastrophizing','Mind reading','Fortune telling','Should statements','Labeling','Discounting positives','Emotional reasoning'];
 const PROV=["What would make tonight a win even if nothing else goes right?","What am I avoiding, and what is the smallest first step?","Which commitment am I keeping only out of habit?","If a client saw how I spent yesterday, what would they buy from me?","What's one thing I'm tolerating that I could fix in 10 minutes?","What would the Marine I was at 22 say about today's plan?","Where am I busy instead of effective?","What story am I telling myself about money right now? Is it true?","Who deserves a call I keep putting off?","What did I learn last shift that I haven't written down?","What's the one decision that makes the next three easier?","Am I training for the threat I expect, or the one I enjoy?","What would I cut if I had half the hours?","What is fear quietly deciding for me?","What would 'done' look like for my oldest open project?","Whose standard am I living by today?","What did I promise someone this week, and where does it stand?","If I only shipped one thing this week, which one pays?","What's the cost of not starting today?","What would I tell a junior officer in my exact position?"];
 
@@ -369,39 +407,179 @@ const DEF={
   rev:()=>[['+00','Feet on floor. 500 ml water + electrolytes'],['+03','Outside 5 min, daylight before it\'s gone'],['+08','Box breathing 4-4-4-4 × 2 min'],['+10','Mobility: cat-cow ×10, 90/90 ×5/side, dead bug ×10'],['+18','Make the bed. Phone face-down'],['+20','Open SITREP. Set the Big 3']].map((r,i)=>({id:'r'+i,t:r[0],text:r[1]})),
   standing:()=>(feed.standing||[]).map((x,i)=>({id:'s'+i,text:x})),
   proj:()=>(feed.projects||[]).map(p=>({id:p.name,text:p.name,kind:p.kind})),
-  disc:()=>['First hour awake: no feeds, no news','Trained before screens','Did the avoided thing first, not last','Kept one promise to myself on time'].map((x,i)=>({id:'d'+i,text:x}))
+  disc:()=>['First hour awake: no feeds, no news','Trained before screens','Did the avoided thing first, not last','Kept one promise to myself on time'].map((x,i)=>({id:'d'+i,text:x})),
+  loci:()=>['Front door','Entry closet','Couch','TV','Kitchen counter','Fridge','Dining table','Hallway','Bathroom mirror','Bed'].map((x,i)=>({id:'p'+i,text:x}))
 };
 glob.lists=glob.lists||{};
 const getList=n=>glob.lists[n]||DEF[n]();
 function setList(n,arr){glob.lists[n]=arr;saveG()}
-
-function listView(n,body){ // body(item) returns html for normal mode
+function listView(n,body){
   const L=getList(n);
   if(!editing[n])return L.map(body).join('')||'<div class="dim" style="padding:8px 0">Empty. Tap Edit to add.</div>';
   return L.map(it=>`<div class="edrow">${n==='rev'?`<input type="text" class="t" data-le="${n}" data-id="${esc(it.id)}" data-f="t" value="${esc(it.t||'')}" aria-label="Time">`:''}<input type="text" data-le="${n}" data-id="${esc(it.id)}" data-f="text" value="${esc(it.text)}" aria-label="Item">${n==='proj'?`<input type="text" class="kd" data-le="${n}" data-id="${esc(it.id)}" data-f="kind" value="${esc(it.kind||'')}" placeholder="type" aria-label="Type">`:''}<button class="del" data-ldel="${n}" data-id="${esc(it.id)}" aria-label="Delete">×</button></div>`).join('')+
-    `<button class="add" data-ladd="${n}">+ ADD ITEM</button>`+(glob.lists[n]?`<button class="add" data-lreset="${n}" style="color:var(--dim)">RESET TO DEFAULT</button>`:'');
+    `<button class="add" data-ladd="${n}">+ ADD ${n==='loci'?'STOP':'ITEM'}</button>`+(glob.lists[n]?`<button class="add" data-lreset="${n}" style="color:var(--dim)">RESET TO DEFAULT</button>`:'');
 }
 const ck=(key,html,pre='')=>`<label class="ck"><input type="checkbox" data-k="${key}"${day[key]?' checked':''}><span>${pre}${html}</span></label>`;
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+const doy=()=>Math.floor((new Date(feed.date+'T12:00:00')-new Date(feed.date.slice(0,4)+'-01-01T12:00:00'))/864e5);
 
-// ---- renderers ----
+// =========================================================
+// MEMORY PALACE
+// =========================================================
+const DRILLS={loci:['Loci words','Walk your palace. Make each item do something loud and physical at its stop. Then recall in order.'],
+  obs:['Tradecraft','60 seconds to memorize the scene. Then a 30-second distractor, then recall from cues.'],
+  num:['Numbers','Turn digit pairs into images with the Major system and park them along your route. Length adapts to your score.'],
+  real:['Encode real life','Load what actually matters today into your palace. Recall it cold at end of shift on the AAR page.']};
+const DORDER=['loci','obs','num','real'];
+const NOUNS=['anvil','chainsaw','flamingo','tuba','cactus','harpoon','bowling ball','parachute','lobster','jackhammer','snowman','trombone','grenade','pineapple','rattlesnake','canoe','wrecking ball','beehive','tiara','fire hose','gorilla','kayak','hot sauce','lighthouse','saddle','octopus','crowbar','bagpipes','sombrero','typewriter','bulldozer','peacock','chandelier','pogo stick','lasso','meat cleaver','surfboard','volcano','hockey mask','ostrich','anchor','birthday cake','cannon','dynamite','jellyfish','motorcycle','pizza','scarecrow','telescope','umbrella','waffle','zebra','bonsai tree','buzzsaw','cowbell','disco ball','eagle','feather boa','gas mask','horseshoe','ice sculpture','jet ski','kettlebell','leaf blower','mailbox','nunchucks','oil drum','penguin','quarterback','rubber duck','slingshot','tank','unicycle','vacuum','walrus','yo-yo','accordion','barbed wire','cheese wheel','drone','fire ant','goldfish','helicopter','iguana','jukebox','koala','lawnmower','mannequin','narwhal','orangutan','piranha','raccoon','shopping cart','tarantula','unicorn','vulture','windmill'];
+const COLORS=['white','black','silver','gray','red','blue','green','tan'];
+const VEH=['F-150','Tacoma','Civic','Tahoe','Altima','Wrangler','Model 3','Ram 1500','Charger','Outback','Camry','Silverado'];
+const LOCS=['by the elevator','at the valet stand','in the lobby bar','at the loading dock','near the pool gate','in the parking garage','at the side entrance','by the ice machine'];
+const BUILD=['tall, thin','short, stocky','medium build','heavyset'];
+const WEAR=['olive jacket','red hoodie','navy blazer','gray ball cap','white sneakers','black backpack','tan work boots','green scrubs','denim vest','orange beanie'];
+const MARK=['neck tattoo','limp, left leg','gold watch','sling bag','handlebar mustache','wire glasses','scar over right eye','earpiece','cast on left arm','ponytail'];
+const NAMES=['Dana','Marcus','Priya','Tomas','Keisha','Grant','Lena','Hector','Nadia','Owen','Rosa','Cole','Imani','Viktor','June','Andre'];
+const FEAT=['red scarf','shaved head','big laugh','Yankees cap','nose ring','gray beard','pearl earrings','Aggie ring','bow tie','sleeve tattoo'];
+const MAJOR=[['0','s z'],['1','t d'],['2','n'],['3','m'],['4','r'],['5','l'],['6','j sh ch'],['7','k g'],['8','f v'],['9','p b']];
+
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function hseed(s){let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function pick(r,arr,n){const a=arr.slice(),o=[];while(o.length<n&&a.length)o.push(a.splice(Math.floor(r()*a.length),1)[0]);return o}
+function shuffle(r,a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function plate(r){const L='ABCDEFGHJKLMNPRSTVWXYZ';let s='';for(let i=0;i<3;i++)s+=L[Math.floor(r()*L.length)];s+='-';for(let i=0;i<4;i++)s+=Math.floor(r()*10);return s}
+const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,i)=>i);for(let i=1;i<=m;i++){let c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[n]}
+const STOP=new Set(['the','and','for','with','was','were','on','re','to','of','a','an','at','in']);
+function words(x){return String(x||'').toLowerCase().split(/[^a-z0-9]+/).filter(w=>w&&!STOP.has(w))}
+function match(g,a){const ng=norm(g),na=norm(a);if(!ng)return false;if(ng===na)return true;
+  if(/^[a-z]{0,4}\d[\d-]*$/i.test(String(a).replace(/[\s-]/g,'')))return false; // plates/codes: exact only
+  const dA=(String(a).match(/\d+/g)||[]).join(''),dG=(String(g).match(/\d+/g)||[]).join('');if(dA&&dA!==dG)return false;
+  const wa=words(a).filter(w=>!/\d/.test(w)),wg=words(g);if(!wa.length)return !!dA;
+  const hit=wa.filter(w=>wg.some(x=>x===w||(w.length>=4&&lev(x,w)<=1)||(w.length>=5&&x.length>=4&&(w.startsWith(x)||x.startsWith(w))))).length;
+  return hit/wa.length>=0.6}
+function palType(){return day.palType||DORDER[doy()%4]}
+function pal(){if(!day.pal||day.pal.type!==palType())day.pal={type:palType(),phase:'ready',run:0};return day.pal}
+function genItems(P){
+  const r=mulberry(hseed(feed.date+P.type+P.run)), loci=getList('loci');
+  if(P.type==='loci'){const w=pick(r,NOUNS,loci.length);return loci.map((l,i)=>({cue:l.text,ans:w[i]}))}
+  if(P.type==='num'){const n=glob.palNum||12;let s='';for(let i=0;i<n;i++)s+=Math.floor(r()*10);return [{cue:'digits',ans:s}]}
+  if(P.type==='obs'){const out=[];const cl=pick(r,COLORS,2),vh=pick(r,VEH,2);
+    for(let i=0;i<2;i++){const p=plate(r);out.push({show:`${cl[i]} ${vh[i]} · plate ${p}`,cue:`Plate on the ${cl[i]} ${vh[i]}?`,ans:p})}
+    const lc=pick(r,LOCS,2),bd=pick(r,BUILD,2),wr=pick(r,WEAR,2),mk=pick(r,MARK,2),g=['Man','Woman'];
+    for(let i=0;i<2;i++){const who=g[Math.floor(r()*2)];const askWear=i===0;
+      out.push({show:`${who} ${lc[i]}: ${bd[i]}, ${wr[i]}, ${mk[i]}`,cue:`${who} ${lc[i]}: ${askWear?'what were they wearing?':'distinguishing mark?'}`,ans:askWear?wr[i]:mk[i]})}
+    const nm=pick(r,NAMES,2),ft=pick(r,FEAT,2);
+    for(let i=0;i<2;i++)out.push({show:`${nm[i]}: ${ft[i]}`,cue:`Name of the person with the ${ft[i]}?`,ans:nm[i]});
+    P.order=shuffle(r,out.map((_,i)=>i));return out}
+  if(P.type==='real'){return (P.realIn||[]).map(s=>s.trim()).filter(Boolean).slice(0,loci.length).map((s,i)=>({cue:loci[i].text,ans:s}))}
+}
+function palStart(){const P=pal();P.items=genItems(P);P.answers={};P.t0=Date.now();
+  if(P.type==='real'){if(!P.items.length){toast('Add at least one item');return}P.phase='encode'}
+  else P.phase='encode';
+  if(P.type==='obs')P.deadline=Date.now()+60000;
+  save();rPalaceAll()}
+function palScore(){const P=pal();let s=0,t=0;
+  if(P.type==='num'){const a=P.items[0].ans,g=(P.answers[0]||'').replace(/\D/g,'');t=a.length;for(let i=0;i<t;i++)if(g[i]===a[i])s++;
+    const pct=s/t;glob.palNum=Math.max(8,Math.min(40,(glob.palNum||12)+(pct===1?2:pct<.6?-2:0)))}
+  else{P.items.forEach((it,i)=>{t++;if(match(P.answers[i],it.ans))s++})}
+  P.score=s;P.total=t;P.sec=Math.round((Date.now()-P.t0)/1000);P.phase='done';
+  glob.palLog=glob.palLog||{};const prev=glob.palLog[feed.date];
+  if(!prev||s/t>=prev.score/prev.total)glob.palLog[feed.date]={type:P.type,score:s,total:t};
+  save();saveG();rPalaceAll();rStats()}
+function fmt(sec){sec=Math.max(0,Math.round(sec));return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')}
+
+function palHTML(where){
+  const P=pal(),[nm,how]=DRILLS[P.type],L=getList('loci');
+  const head=`<div class="cardh"><h3>Memory palace</h3>${where==='mind'?`<button class="btn ghost sm r" data-edit="loci">${editing.loci?'Done':'Stops'}</button>`:''}</div>`;
+  if(where==='mind'&&editing.loci)return head+`<div class="how">Your palace route, in walking order. Pick stops you can see clearly with your eyes closed.</div>`+listView('loci',()=>'');
+  let h=head+`<div class="drill"><b>${nm}</b><span class="dim mono" style="font-size:11px">${P.phase==='done'?'DONE':P.phase.toUpperCase()}</span></div>`;
+  if(P.phase==='ready'){
+    h+=`<div class="seg" style="margin:6px 0 4px">${DORDER.map(t=>`<button data-ptype="${t}" aria-pressed="${t===P.type}">${DRILLS[t][0].split(' ')[0]}</button>`).join('')}</div>`;
+    h+=`<div class="how">${how}</div>`;
+    if(P.type==='num')h+=`<div class="dim mono" style="font-size:12px">Length today: ${glob.palNum||12} digits</div>`+majorHTML();
+    if(P.type==='real'){const b3=[0,1,2].map(i=>day['b3_'+i]||'').filter(Boolean);const pre=P.realIn||b3.concat(['','','']).slice(0,Math.max(5,b3.length));
+      P.realIn=pre;h+=pre.map((v,i)=>`<label class="field"><span>${i+1} · ${esc((L[i]||{}).text||'')}</span><input type="text" data-preal="${i}" value="${esc(v)}" placeholder="name, post order, task, code…"></label>`).join('')+
+      (pre.length<L.length?`<button class="add" data-preadd="1">+ ADD ITEM</button>`:'')}
+    if(P.type!=='real')h+=`<details class="more"><summary>Your palace · ${L.length} stops</summary><div class="lociChips">${L.map((l,i)=>`<span><i>${i+1}</i>${esc(l.text)}</span>`).join('')}</div></details>`;
+    h+=`<div class="bar2"><button class="btn" data-pact="start">${P.type==='real'?'Lock it in':'Start drill'}</button></div>`;
+    return h}
+  if(P.phase==='encode'){
+    if(P.type==='obs')h+=`<div class="bar2"><span class="ptimer" data-pt="down">1:00</span><span class="dim">memorize the scene</span></div>`+P.items.map((it,i)=>`<div class="locus"><span class="i">${i+1}</span><span class="v" style="font-size:18px">${esc(it.show)}</span></div>`).join('');
+    else if(P.type==='num')h+=`<div class="bar2"><span class="ptimer" data-pt="up">0:00</span></div><div class="digits">${P.items[0].ans.match(/.{1,4}/g).map(g=>`<span>${g}</span>`).join('')}</div>`+majorHTML();
+    else h+=`<div class="bar2"><span class="ptimer" data-pt="up">0:00</span><span class="dim">${P.type==='real'?'walk it twice':'see it, hear it, smell it'}</span></div>`+P.items.map((it,i)=>`<div class="locus"><span class="i">${i+1}</span><span class="l">${esc(it.cue)}</span><span class="v">${esc(it.ans)}</span></div>`).join('');
+    h+=`<div class="bar2">${P.type==='obs'?`<button class="btn ghost" data-pact="delay">Done early</button>`:`<button class="btn" data-pact="${P.type==='real'?'store':'recall'}">${P.type==='real'?'Stored':'Hide & recall'}</button>`}</div>`;
+    return h}
+  if(P.phase==='delay')return h+`<div class="how">Distractor: count backward from 100 by 7s out loud. Don't rehearse.</div><div class="bar2"><span class="ptimer" data-pt="delay">0:30</span><button class="btn ghost" data-pact="recall">Skip</button></div>`;
+  if(P.phase==='stored'){
+    if(where==='mind')return h+`<div class="how">${P.items.length} items stored along your route. Recall them cold on the <b>AAR</b> page at end of shift.</div><div class="bar2"><button class="btn ghost" data-go="aar">Go to AAR</button><button class="btn ghost" data-pact="reset">Redo</button></div>`;
+    return h+`<div class="how">Earlier tonight you stored ${P.items.length} items. Walk the route and pull them back.</div><div class="bar2"><button class="btn" data-pact="recall">Start recall</button></div>`}
+  if(P.phase==='recall'){
+    const ord=P.type==='obs'?P.order:P.items.map((_,i)=>i);
+    if(P.type==='num')h+=`<label class="field"><span>${P.items[0].ans.length} digits</span><input type="text" inputmode="numeric" data-pans="0" value="${esc(P.answers[0]||'')}" autocomplete="off"></label>`;
+    else h+=ord.map((i,n)=>`<div class="locus"><span class="i">${n+1}</span><span class="l">${esc(P.items[i].cue)}</span><input type="text" data-pans="${i}" value="${esc(P.answers[i]||'')}" autocomplete="off" autocapitalize="off"></div>`).join('');
+    return h+`<div class="bar2"><button class="btn" data-pact="score">Score it</button></div>`}
+  if(P.phase==='done'){
+    h+=`<div class="bar2"><span class="score">${P.score}/${P.total}</span><span class="dim mono">${fmt(P.sec)} total${P.type==='num'?` · next: ${glob.palNum} digits`:''}</span></div>`;
+    if(P.type==='num'){const a=P.items[0].ans,g=(P.answers[0]||'').replace(/\D/g,'');h+=`<div class="digits" style="font-size:22px">${a.split('').map((d,i)=>`<span style="margin-right:${i%4===3?14:0}px" class="${g[i]===d?'ok':'no'}">${d}</span>`).join('')}</div>`}
+    else{const ord=P.type==='obs'?P.order:P.items.map((_,i)=>i);
+      h+=ord.map((i,n)=>{const it=P.items[i],ok=match(P.answers[i],it.ans);return `<div class="locus ${ok?'ok':'no'}"><span class="i">${ok?'✓':'✗'}</span><span class="l">${esc(it.cue)}</span><span class="v">${esc(it.ans)}</span>${ok?'':`<span class="res">you: ${esc(P.answers[i]||'—')}</span>`}</div>`}).join('')}
+    h+=`<div class="bar2"><button class="btn ghost" data-pact="again">Run again</button>${where==='mind'?`<button class="btn ghost" data-pact="reset">Other drill</button>`:''}</div>`;
+    if(where==='mind')h+=palStrip();
+    return h}
+  return h;
+}
+function majorHTML(){return `<details class="more"><summary>Major system cheat sheet</summary><div class="major">${MAJOR.map(m=>`<div><b>${m[0]}</b>${m[1]}</div>`).join('')}</div><div class="dim" style="font-size:13px;margin-top:6px">Vowels are free. 47 = R+K = "rake". 91 = P+T = "pit". Two digits = one image per stop.</div></details>`}
+function palStrip(){const base=new Date(feed.date+'T12:00:00'),Lg=glob.palLog||{};let s='<div class="palstrip">';
+  for(let i=6;i>=0;i--){const d=new Date(base);d.setDate(d.getDate()-i);const e=Lg[iso(d)];s+=`<div class="${e?'hit':''}"><b>${e?Math.round(e.score/e.total*100)+'%':'—'}</b>${'SMTWTFS'[d.getDay()]}</div>`}
+  return s+'</div>'}
+function rPalaceAll(){
+  $('#palace').innerHTML=palHTML('mind');
+  const P=pal(),show=P.type==='real'&&['stored','recall','done'].includes(P.phase);
+  $('#aarPalace').hidden=!show; $('#aarPalace').innerHTML=show?palHTML('aar'):'';
+  palTick();
+}
+let tickIv=null;
+function palTick(){clearInterval(tickIv);const P=pal();if(!['encode','delay'].includes(P.phase))return;
+  const f=()=>{const now=Date.now();
+    $$('[data-pt]').forEach(el=>{const m=el.dataset.pt;
+      if(m==='up')el.textContent=fmt((now-P.t0)/1000);
+      if(m==='down'){const l=(P.deadline-now)/1000;el.textContent=fmt(l);if(l<=0){P.phase='delay';P.deadline=Date.now()+30000;save();rPalaceAll()}}
+      if(m==='delay'){const l=(P.deadline-now)/1000;el.textContent=fmt(l);if(l<=0){P.phase='recall';save();rPalaceAll();if(navigator.vibrate)navigator.vibrate(120)}}})};
+  f();tickIv=setInterval(f,250)}
+
+// =========================================================
+// RENDERERS
+// =========================================================
+function prog2(id){
+  const c=keys=>keys.filter(k=>day[k]).length;
+  switch(id){
+    case 'reveille':{const L=getList('rev');const ks=L.map(x=>'L_rev_'+x.id).concat(feed.comms.map((_,i)=>'c'+i));return [c(ks),ks.length]}
+    case 'mission':{const L=getList('standing');return [c(['b3d0','b3d1','b3d2']),3,`Big 3 ${c(['b3d0','b3d1','b3d2'])}/3 · ${L.length} open`]}
+    case 'train':{const p=ptProg(),d=[c(feed.dry.drills.map((_,i)=>'dr'+i)),feed.dry.drills.length];return [p[0]+d[0],p[1]+d[1],`PT ${p[0]}/${p[1]} · DRY ${d[0]}/${d[1]}`]}
+    case 'mind':{const L=getList('disc');const pd=pal().phase==='done'?1:0,hb=(glob.streak||{})[feed.date]?1:0;
+      const ks=L.map(x=>'L_disc_'+x.id).concat(['g1','g2','g3']);return [pd+hb+c(ks),2+ks.length,`palace ${pd?'✓':'—'} · habit ${hb?'✓':'—'}`]}
+    case 'ledger':return [c(['bal','spent','bills','disc','moneymove']),5];
+    case 'aar':return [day.grade?1:0,1,day.grade?'grade '+day.grade:'end of shift'];
+  }
+}
+function ptProg(){const c=keys=>keys.filter(k=>day[k]).length;
+  if(day.ptmode==='shift'&&prog&&prog.SHIFT){const Ls=shiftLetter(),D=prog.SHIFT[Ls];const ks=[];D.windows.forEach((w,wi)=>w.items.forEach((_,ii)=>ks.push(`sh${Ls}_${wi}_${ii}`)));return [c(ks),ks.length]}
+  return [c(feed.pt.blocks.map((_,i)=>'pt'+i)),feed.pt.blocks.length]}
 function rStats(){
   const b3=[0,1,2].filter(i=>day['b3d'+i]).length;
-  const S=glob.streak||{}; let n=0; const d=new Date(feed.date+'T12:00:00'); if(!S[feed.date])d.setDate(d.getDate()-1);
-  while(S[iso(d)]){n++;d.setDate(d.getDate()-1)}
-  const pt=prog2('pt'), all=PAGES.map(p=>prog2(p[0])).filter(x=>x&&x[1]), tot=all.reduce((a,x)=>a+x[1],0), dn=all.reduce((a,x)=>a+Math.min(x[0],x[1]),0);
-  const pct=tot?Math.round(dn/tot*100):0;
-  const cells=[[`${b3}/3`,'BIG 3',b3===3],[n,'STREAK',n>0],[pt&&pt[1]?`${pt[0]}/${pt[1]}`:'—','PT',pt&&pt[0]>=pt[1]],[pct+'%','DAY',pct>=80]];
-  $('#stats').innerHTML=cells.map(c=>`<div class="stat"><b class="${c[2]?'ok':''}">${c[0]}</b><span>${c[1]}</span></div>`).join('');
+  const tr=prog2('train'), P=pal(), lg=(glob.palLog||{})[feed.date];
+  const all=PAGES.map(p=>prog2(p[0])), tot=all.reduce((a,x)=>a+x[1],0), dn=all.reduce((a,x)=>a+Math.min(x[0],x[1]),0), pct=tot?Math.round(dn/tot*100):0;
+  const cells=[[`${b3}/3`,'BIG 3',b3===3],[`${tr[0]}/${tr[1]}`,'TRAIN',tr[0]>=tr[1]],[lg?`${lg.score}/${lg.total}`:(P.phase==='stored'?'HELD':'—'),'PALACE',!!lg&&lg.score===lg.total],[pct+'%','DAY',pct>=80]];
+  $('#stats').innerHTML=cells.map(c=>`<button class="stat" data-go="${{BIG:'mission',TRAIN:'train',PALACE:'mind',DAY:'aar'}[c[1].split(' ')[0]]}" style="cursor:pointer;color:inherit"><b class="${c[2]?'ok':''}">${c[0]}</b><span>${c[1]}</span></button>`).join('');
   $('#b3count').textContent=`${b3}/3 done`;
 }
 function rNext(){
-  const nb=(feed.board||[]).find(b=>/^\d{4}$/.test(b.t))||feed.board[0];
+  const nb=(feed.board||[]).find(b=>/^\d{4}$/.test(b.t))||(feed.board||[])[0];
   $('#nextLine').innerHTML=nb?`<span class="k">NEXT</span><span class="t">${esc(nb.t)}</span><span>${esc(nb.what)}</span><span class="dim" style="margin-left:auto">›</span>`:`<span class="k">BOARD</span><span>Clear</span>`;
 }
 function rQuote(){
   $('#quote').textContent=feed.quote||'';
-  const doy=Math.floor((new Date(feed.date)-new Date(feed.date.slice(0,4)+'-01-01'))/864e5);
-  const i=((day.provI??doy)%PROV.length+PROV.length)%PROV.length; $('#provQ').textContent=PROV[i];
+  const i=(((day.provI??doy()))%PROV.length+PROV.length)%PROV.length; $('#provQ').textContent=PROV[i];
 }
 function rBig3(){
   const row=i=>`<div class="row${day['b3d'+i]?' done':''}"><input type="checkbox" class="bigck" data-k="b3d${i}"${day['b3d'+i]?' checked':''} aria-label="Big 3 item ${i+1} done"><input type="text" data-k="b3_${i}" placeholder="${['Main effort','Second','Third'][i]}" value="${esc(day['b3_'+i]||'')}"></div>`;
@@ -414,44 +592,26 @@ function rTiles(){
   $('#tiles').innerHTML=PAGES.map(([id,nm],i)=>{const p=prog2(id);const txt=p?(p[2]||`${p[0]}/${p[1]}`):'';const full=p&&p[1]&&p[0]>=p[1];
     return `<button class="tile${full?' full':''}" data-go="${id}"><span class="n">${String(i+1).padStart(2,'0')}</span><span class="nm">${nm}</span><span class="pg">${esc(txt)}</span>${p&&p[1]?`<span class="bar" style="width:${Math.min(100,p[0]/p[1]*100)}%"></span>`:''}</button>`}).join('');
 }
-// progress: [done,total,label?]
-function prog2(id){
-  const c=keys=>keys.filter(k=>day[k]).length;
-  switch(id){
-    case 'reveille':{const L=getList('rev');return [c(L.map(x=>'L_rev_'+x.id)),L.length]}
-    case 'board':return [c(feed.comms.map((_,i)=>'c'+i)),feed.comms.length,`${feed.comms.length} comms`];
-    case 'mission':return [c(['b3d0','b3d1','b3d2']),3];
-    case 'projects':{const L=getList('proj');const P=glob.proj||{};const n=L.filter(x=>(P[x.id]||{}).next).length;return [0,0,`${n}/${L.length} set`]}
-    case 'pt':{if(day.ptmode==='shift'&&prog&&prog.SHIFT){const Ls=shiftLetter(),D=prog.SHIFT[Ls];const ks=[];D.windows.forEach((w,wi)=>w.items.forEach((_,ii)=>ks.push(`sh${Ls}_${wi}_${ii}`)));return [c(ks),ks.length,`Shift ${Ls} · ${c(ks)}/${ks.length}`]}
-      return [c(feed.pt.blocks.map((_,i)=>'pt'+i)),feed.pt.blocks.length]}
-    case 'dry':return [c(feed.dry.drills.map((_,i)=>'dr'+i)),feed.dry.drills.length];
-    case 'ledger':{const n=c(['bal','spent','bills','disc','moneymove']);return [n,5]}
-    case 'mastery':{const on=!!(glob.streak||{})[feed.date];return [on?1:0,1,on?'habit ✓':'habit open']}
-    case 'gratitude':return [c(['g1','g2','g3']),3];
-    case 'cbt':return [0,0,day.hot?'logged':'as needed'];
-    case 'discipline':{const L=getList('disc');return [c(L.map(x=>'L_disc_'+x.id)),L.length]}
-    case 'aar':return [day.grade?1:0,1,day.grade?'grade '+day.grade:'end of shift'];
-  }
-}
 function rPages(){
   const f=feed;
   $('#revList').innerHTML=listView('rev',it=>ck('L_rev_'+it.id,esc(it.text),`<span class="tm">${esc(it.t||'')}</span>`));
-  $('#boardList').innerHTML=f.board.map(b=>`<span class="tm">${esc(b.t)}</span><span>${esc(b.what)}</span>`).join('');
-  $('#commsList').innerHTML=f.comms.map((c,i)=>ck('c'+i,`<b>${esc(c.what)}</b><span class="dose">${esc(c.note)}</span>`)).join('');
+  $('#boardList').innerHTML=(f.board||[]).map(b=>`<span class="tm">${esc(b.t)}</span><span>${esc(b.what)}</span>`).join('')||'<span class="dim">Clear</span>';
+  $('#commsList').innerHTML=(f.comms||[]).map((c,i)=>ck('c'+i,`<b>${esc(c.what)}</b><span class="dose">${esc(c.note)}</span>`)).join('');
+  rBig3();
   $('#standingList').innerHTML=listView('standing',it=>ck('L_standing_'+it.id,esc(it.text)));
   const P=glob.proj||{};
   $('#projList').innerHTML=listView('proj',p=>{const st=P[p.id]||{};const lv=st.lv||0;
     return `<div class="proj"><div class="top"><span><b>${esc(p.text)}</b> <span class="dim" style="font-size:12px">${esc(p.kind||'')}</span></span><span class="pips" data-proj="${esc(p.id)}">${[1,2,3,4,5].map(n=>`<button aria-label="${n*20}%" class="${n<=lv?'on':''}" data-lv="${n}"></button>`).join('')}</span></div><input type="text" data-pn="${esc(p.id)}" placeholder="Next action" value="${esc(st.next||'')}"></div>`});
   $('#ptList').innerHTML=f.pt.blocks.map((b,i)=>`<div class="wk"><span class="k">${esc(b[0])}</span><span><b>${esc(b[1])}</b><span class="dim">${esc(b[2])}</span></span><input type="text" data-k="pt${i}" placeholder="log" aria-label="Log for ${esc(b[1])}"></div>`).join('');
-  renderPT();
-  $('#dryTitle').textContent=f.dry.title; $('#dryTime').textContent='~'+f.dry.time+' MIN · SIRT 107';
   $('#dryList').innerHTML=f.dry.drills.map((d,i)=>`<div class="wk"><span class="k">${esc(d[0])}</span><span><b>${esc(d[1])}</b><span class="dim">${esc(d[2])}</span></span><input type="text" data-k="dr${i}" placeholder="par/hits" aria-label="Par and hits for drill ${esc(d[0])}"></div>`).join('');
+  rTrain();
   $('#discList').innerHTML=listView('disc',it=>ck('L_disc_'+it.id,esc(it.text)));
   $('#dist').innerHTML=DIST.map((x,i)=>`<button class="dchip" data-dist="${i}" aria-pressed="${(day.dist||[]).includes(i)}">${x}</button>`).join('');
+  if(day.hot||day.sit)$('#cbtFold').open=true;
   $$('[data-seg]').forEach(el=>{const k=el.dataset.seg;const opts=k==='energy'?['1','2','3','4','5']:['A','B','C','D','F'];
     el.innerHTML=opts.map(o=>`<button aria-pressed="${day[k]===o}" data-v="${o}">${o}</button>`).join('')});
-  $$('[data-edit]').forEach(b=>{b.textContent=editing[b.dataset.edit]?'Done':'Edit';b.setAttribute('aria-pressed',!!editing[b.dataset.edit])});
-  renderStreak();
+  $$('[data-edit]').forEach(b=>{if(b.dataset.edit==='loci')return;b.textContent=editing[b.dataset.edit]?'Done':'Edit';b.setAttribute('aria-pressed',!!editing[b.dataset.edit])});
+  renderStreak(); rPalaceAll();
 }
 function syncInputs(){
   $$('input[data-k],textarea[data-k]').forEach(el=>{if(document.activeElement===el)return;if(el.type==='checkbox')el.checked=!!day[el.dataset.k];else el.value=day[el.dataset.k]??''});
@@ -465,7 +625,7 @@ function renderAll(){
   rHome(); rPages(); syncInputs();
 }
 
-// ---- PT mode ----
+// ---- Train ----
 const TAGTXT={GHOST:'GHOST',STAIRWELL:'STAIRWELL',BOH:'BACK OF HOUSE'};
 function shiftLetter(){
   if(day.shiftDay)return day.shiftDay;
@@ -473,14 +633,18 @@ function shiftLetter(){
   if(L.date===feed.date)return L.letter;
   return 'ABCD'[('ABCD'.indexOf(L.letter)+1)%4];
 }
-function renderPT(){
+function rTrain(){
+  const tab=day.trainTab||'pt';
+  $$('#trainTabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.ttab===tab));
+  $('#tab-pt').hidden=tab!=='pt'; $('#tab-dry').hidden=tab!=='dry';
+  if(tab==='dry'){$('#trainTitle').textContent=feed.dry.title;$('#trainSub').textContent='DRY FIRE · ~'+feed.dry.time+' MIN · SIRT 107';return}
   const f=feed, S=prog&&prog.SHIFT, mode=(day.ptmode==='shift'&&S)?'shift':'garage';
   $$('#ptMode button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
   $('#ptMode [data-mode=shift]').disabled=!S;
   $('#ptList').hidden=mode!=='garage'; $('#shiftBox').hidden=mode!=='shift';
-  if(mode==='garage'){$('#ptTitle').textContent=f.pt.title;$('#ptTime').textContent='~'+f.pt.time+' MIN · GARAGE';return}
+  if(mode==='garage'){$('#trainTitle').textContent=f.pt.title;$('#trainSub').textContent='PT · ~'+f.pt.time+' MIN · GARAGE';return}
   const L=shiftLetter(), D=S[L];
-  $('#ptTitle').textContent=D.title; $('#ptTime').textContent=`WORK SHIFT ${L} · ${D.time} MIN · SPLIT`;
+  $('#trainTitle').textContent=D.title; $('#trainSub').textContent=`PT · WORK SHIFT ${L} · ${D.time} MIN · SPLIT`;
   $('#shiftDay').innerHTML='ABCD'.split('').map(x=>`<button data-sday="${x}" aria-pressed="${x===L}">${x}</button>`).join('')+`<span class="dim" style="font-size:12px;align-self:center;margin-left:6px">rotates on work days</span>`;
   $('#shiftWins').innerHTML=D.windows.map((w,wi)=>`<div class="win"><span class="slot">${esc(w.slot)}</span>${esc(w.label)}</div>`+
     w.items.map((it,ii)=>`<label class="ck"><input type="checkbox" data-k="sh${L}_${wi}_${ii}"${day[`sh${L}_${wi}_${ii}`]?' checked':''}><span>${esc(it[0])}<span class="dose">${esc(it[1])}</span></span><span class="tag ${it[2]}">${TAGTXT[it[2]]||it[2]}</span></label>`).join('')).join('');
@@ -488,7 +652,6 @@ function renderPT(){
   $('#shiftRules').innerHTML=`<ul>${S.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ul><h3>Kit</h3><ul>${S.kit.map(k=>`<li>${esc(k)}</li>`).join('')}</ul>`;
 }
 function markShiftUsed(){if(day.ptmode==='shift'){glob.lastShift={date:feed.date,letter:shiftLetter()};saveG()}}
-function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 function renderStreak(){
   const base=new Date(feed.date+'T12:00:00'); const S=glob.streak||{}; let html='';
   for(let i=6;i>=0;i--){const d=new Date(base);d.setDate(d.getDate()-i);const k=iso(d);
@@ -498,15 +661,15 @@ function renderStreak(){
 
 // ---- router ----
 let cur='home';
-function go(id,replace){const h=id==='home'?'#home':'#'+id;if(replace)history.replaceState(null,'',h);else if(location.hash!==h)history.pushState(null,'',h);show(id)}
+function resolve(id){if(id==='dry'||id==='pt'){day.trainTab=id;save()}return ALIAS[id]||id}
+function go(id){id=resolve(id);const h=id==='home'?'#home':'#'+id;if(location.hash!==h)history.pushState(null,'',h);show(id)}
 function show(id){
-  if(!PAGES.some(p=>p[0]===id))id='home';
+  id=resolve(id); if(!PAGES.some(p=>p[0]===id))id='home';
   cur=id;
   $$('.view').forEach(v=>v.hidden=v.id!=='v-'+id);
   const i=PAGES.findIndex(p=>p[0]===id);
   $('#botnav').hidden=id==='home'; document.body.classList.toggle('home',id==='home');
-  if(i>=0){const pv=PAGES[(i+PAGES.length-1)%PAGES.length],nx=PAGES[(i+1)%PAGES.length];
-    $('#prevLbl').textContent=pv[1];$('#nextLbl').textContent=nx[1];}
+  if(i>=0){const pv=PAGES[(i+PAGES.length-1)%PAGES.length],nx=PAGES[(i+1)%PAGES.length];$('#prevLbl').textContent=pv[1];$('#nextLbl').textContent=nx[1];}
   if(id==='home')rHome(); else rPages();
   syncInputs(); window.scrollTo(0,0);
 }
@@ -514,10 +677,9 @@ function step(d){const i=PAGES.findIndex(p=>p[0]===cur);if(i<0)return;go(PAGES[(
 window.addEventListener('popstate',()=>show((location.hash||'#home').slice(1)));
 $('#navHome').onclick=$('#goHome').onclick=()=>go('home');
 $('#navPrev').onclick=()=>step(-1); $('#navNext').onclick=()=>step(1);
-// swipe
 let sx=0,sy=0,st=0;
 document.addEventListener('touchstart',e=>{if(e.touches.length!==1)return;sx=e.touches[0].clientX;sy=e.touches[0].clientY;st=Date.now()},{passive:true});
-document.addEventListener('touchend',e=>{if(cur==='home'||!sx)return;const t=e.target;if(t.closest('input,textarea,.seg,.pips,.streak,.timer'))return;
+document.addEventListener('touchend',e=>{if(cur==='home'||!sx)return;const t=e.target;if(t.closest('input,textarea,.seg,.pips,.streak,.timer,.tabs,.chips'))return;
   const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;sx=0;
   if(Date.now()-st<600&&Math.abs(dx)>70&&Math.abs(dy)<50)step(dx<0?1:-1)},{passive:true});
 
@@ -529,24 +691,41 @@ document.addEventListener('change',e=>{const t=e.target;
   else if(t.dataset.pn){glob.proj=glob.proj||{};(glob.proj[t.dataset.pn]=glob.proj[t.dataset.pn]||{}).next=t.value;saveG()}
   else if(t.dataset.le){const n=t.dataset.le,L=getList(n).map(x=>({...x}));const it=L.find(x=>x.id===t.dataset.id);if(it){it[t.dataset.f]=t.value;setList(n,L)}}
 });
-document.addEventListener('input',e=>{const t=e.target;if(t.dataset.k&&t.type!=='checkbox'){day[t.dataset.k]=t.value;save()}});
+document.addEventListener('input',e=>{const t=e.target;
+  if(t.dataset.k&&t.type!=='checkbox'){day[t.dataset.k]=t.value;save()}
+  if(t.dataset.pans!==undefined){pal().answers[t.dataset.pans]=t.value;save()}
+  if(t.dataset.preal!==undefined){pal().realIn[+t.dataset.preal]=t.value;save()}
+});
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
   if(b.dataset.go){go(b.dataset.go);return}
-  if(b.id==='prov'){const doy=Math.floor((new Date(feed.date)-new Date(feed.date.slice(0,4)+'-01-01'))/864e5);day.provI=(day.provI??doy)+1;save();rQuote();return}
+  if(b.id==='prov'){day.provI=(day.provI??doy())+1;save();rQuote();return}
   if(b.dataset.fill){const i=[0,1,2].find(i=>!(day['b3_'+i]||'').trim());if(i!==undefined){day['b3_'+i]=b.dataset.fill;save();rBig3()}return}
   if(b.dataset.edit){const n=b.dataset.edit;editing[n]=!editing[n];rPages();syncInputs();return}
   if(b.dataset.ladd){const n=b.dataset.ladd,L=getList(n).map(x=>({...x}));L.push(n==='rev'?{id:uid(),t:'',text:''}:n==='proj'?{id:uid(),text:'',kind:''}:{id:uid(),text:''});setList(n,L);rPages();syncInputs();
     const ins=$$(`[data-le="${n}"][data-f="text"]`);ins[ins.length-1]&&ins[ins.length-1].focus();return}
   if(b.dataset.ldel){const n=b.dataset.ldel;setList(n,getList(n).filter(x=>x.id!==b.dataset.id));rPages();syncInputs();return}
   if(b.dataset.lreset){delete glob.lists[b.dataset.lreset];saveG();rPages();syncInputs();toast('Reset');return}
+  // palace
+  if(b.dataset.ptype){day.palType=b.dataset.ptype;save();rPalaceAll();return}
+  if(b.dataset.preadd){pal().realIn.push('');save();rPalaceAll();return}
+  if(b.dataset.pact){const P=pal(),a=b.dataset.pact;
+    if(a==='start')palStart();
+    else if(a==='delay'){P.phase='delay';P.deadline=Date.now()+30000;save();rPalaceAll()}
+    else if(a==='recall'){P.phase='recall';P.answers={};save();rPalaceAll();const f=$(`#${cur==='aar'?'aarPalace':'palace'} [data-pans]`);f&&f.focus()}
+    else if(a==='store'){P.phase='stored';save();rPalaceAll();rStats();toast('Stored. Recall it in AAR')}
+    else if(a==='score')palScore();
+    else if(a==='again'){P.run=(P.run||0)+1;P.phase='ready';if(P.type!=='real')palStart();else{save();rPalaceAll()}}
+    else if(a==='reset'){day.pal={type:P.type,phase:'ready',run:(P.run||0)+1,realIn:P.realIn};save();rPalaceAll()}
+    return}
   const seg=b.closest('[data-seg]');
   if(seg){const k=seg.dataset.seg;day[k]=day[k]===b.dataset.v?'':b.dataset.v;save();seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.v===day[k]));return}
   if(b.dataset.dist!==undefined){const i=+b.dataset.dist;day.dist=day.dist||[];const j=day.dist.indexOf(i);j<0?day.dist.push(i):day.dist.splice(j,1);save();b.setAttribute('aria-pressed',j<0);return}
   if(b.dataset.lv){const pn=b.parentElement.dataset.proj;glob.proj=glob.proj||{};const st=glob.proj[pn]=glob.proj[pn]||{};const n=+b.dataset.lv;st.lv=st.lv===n?n-1:n;saveG();
     b.parentElement.querySelectorAll('button').forEach(x=>x.classList.toggle('on',+x.dataset.lv<=st.lv));return}
   if(b.dataset.sd){glob.streak=glob.streak||{};glob.streak[b.dataset.sd]=!glob.streak[b.dataset.sd];saveG();renderStreak();return}
-  if(b.dataset.mode){day.ptmode=b.dataset.mode;save();markShiftUsed();renderPT();syncInputs();return}
-  if(b.dataset.sday){day.shiftDay=b.dataset.sday;save();markShiftUsed();renderPT();syncInputs();return}
+  if(b.dataset.ttab){day.trainTab=b.dataset.ttab;save();history.replaceState(null,'','#train');rTrain();syncInputs();return}
+  if(b.dataset.mode){day.ptmode=b.dataset.mode;save();markShiftUsed();rTrain();syncInputs();return}
+  if(b.dataset.sday){day.shiftDay=b.dataset.sday;save();markShiftUsed();rTrain();syncInputs();return}
 });
 
 // ---- par timer ----
@@ -569,6 +748,7 @@ $('#copyMd').addEventListener('click',async()=>{const f=feed,d=day,L=[];const x=
   else{L.push('',`## PT: ${f.pt.title}`);f.pt.blocks.forEach((b,i)=>L.push(`- ${b[1]}: ${d['pt'+i]||'-'}`));}
   L.push(`- RPE ${d.rpe||'-'} · Back ${d.back||'-'}`);
   L.push('',`## Dry fire: ${f.dry.title}`);f.dry.drills.forEach((q,i)=>L.push(`- ${q[1]}: ${d['dr'+i]||'-'}`));if(d.dryfix)L.push(`- Fix: ${d.dryfix}`);
+  const lg=(glob.palLog||{})[f.date];L.push('','## Memory palace',lg?`- ${DRILLS[lg.type][0]}: ${lg.score}/${lg.total}`:'- not run');
   L.push('','## Self-mastery',`- Task: ${d.mtask||'-'}`,`- Habit: ${glob.habit||'-'} (${glob.streak&&glob.streak[f.date]?'done':'not done'})`,`- If ${d.ifx||'…'} then ${d.theny||'…'}`,`- Identity: ${d.identity||'-'}`);
   L.push('','## Gratitude',`1. ${d.g1||''}`,`2. ${d.g2||''}`,`3. ${d.g3||''}`);
   if(d.sit||d.hot){L.push('','## Thought record',`- Situation: ${d.sit||''}`,`- Hot thought: ${d.hot||''} (${d.hotpct||'?'}%)`,`- Distortions: ${(d.dist||[]).map(i=>DIST[i]).join(', ')||'-'}`,`- For: ${d.evfor||''}`,`- Against: ${d.evagainst||''}`,`- Balanced: ${d.balanced||''} (${d.nowpct||'?'}%)`)}
@@ -585,7 +765,6 @@ async function load(){
   try{const r=await fetch('program.json?ts='+Date.now(),{cache:'no-store'});prog=await r.json();store.set('sitrep:prog',prog)}
   catch(e){prog=store.get('sitrep:prog',null)}
   dayKey='sitrep:day:'+feed.date;day=store.get(dayKey,{});
-  // migrate v1 checkbox keys (rev0.., s0.., d0..) to list keys once
   ['rev','s','d'].forEach((p,ix)=>{const n=['rev','standing','disc'][ix];for(let i=0;i<10;i++){const ok=p+i;if(day[ok]!==undefined){day[`L_${n}_${(n==='rev'?'r':p)+i}`]=day[ok];delete day[ok]}}});save();
   renderAll(); show((location.hash||'#home').slice(1));
 }
