@@ -1,15 +1,11 @@
 {
   "v": 1,
-  "date": "2026-11-01",
-  "dow": "SUN",
-  "label": "SUN 01 NOV 2026",
-  "generated": "2026-11-01T16:46:31-06:00",
+  "date": "2026-11-02",
+  "dow": "MON",
+  "label": "MON 02 NOV 2026",
+  "generated": "2026-11-02T16:46:03-06:00",
   "wake": "1700",
   "board": [
-    {
-      "t": "ALL DAY",
-      "what": "Bill due"
-    },
     {
       "t": "1900",
       "what": "Eat a snack"
@@ -21,20 +17,24 @@
     {
       "t": "2330",
       "what": "Overnight food order"
+    },
+    {
+      "t": "2330",
+      "what": "Homework block"
     }
   ],
   "comms": [
     {
-      "what": "Daybreak Brief build failed",
-      "note": "draft (rc=5) and final (PDF missing) runs both failed SUN 01 NOV; nothing sent. Fix before tonight's run"
+      "what": "Appointment",
+      "note": "confirmed WED 04 NOV 0900; plan sleep around it"
     },
     {
-      "what": "Bill due",
-      "note": "rent due today SUN 01 NOV; insurance payment confirmed"
+      "what": "Insurance EOB",
+      "note": "claims processed; log in and review EOB this week"
     },
     {
-      "what": "Personal admin form",
-      "note": "action-required form pending; complete this week"
+      "what": "Benefits notice",
+      "note": "post-process survey requested; complete when convenient"
     },
     {
       "what": "Inbox noise",
@@ -42,9 +42,9 @@
     }
   ],
   "focus": [
-    "Pay rent today",
-    "Fix Daybreak Brief build",
-    "Fiverr profile / gig listing"
+    "Confirm WED 0900 appointment",
+    "Review insurance EOB",
+    "SDVOSB / VetCert registration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -85,47 +85,72 @@
     }
   ],
   "pt": {
-    "title": "Rest + Reset",
-    "time": "15",
-    "line": "Walk the dogs · 15 min mobility",
+    "title": "Lower Strength",
+    "time": "45",
+    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+      ],
+      [
         "A",
-        "Easy walk",
-        "20-30 min, no watch"
+        "Barbell RDL",
+        "4×6 moderate, stop 2 reps shy, brace every rep"
       ],
       [
         "B",
-        "Mobility",
-        "15 min, whatever's tight"
+        "DB goblet squat",
+        "3×10, 3-sec lower"
+      ],
+      [
+        "C",
+        "DB split squat",
+        "3×8/side"
+      ],
+      [
+        "D",
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Mental Rehearsal",
-    "time": "10",
-    "line": "Visualize 10 perfect draws · Weekly AAR",
+    "title": "Draw Fundamentals",
+    "time": "20",
+    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
     "drills": [
       [
         "1",
-        "Eyes-closed visualization, full draw stroke",
+        "Grip + index from holster, no press",
         "×10"
       ],
       [
         "2",
-        "Review the week's par times, set next week's goal",
-        "5 min"
+        "Concealed draw → 1 on dual circle",
+        "×10"
+      ],
+      [
+        "3",
+        "Draw → 1, par 1.75s",
+        "×10"
+      ],
+      [
+        "4",
+        "Slow-perfect draws at 50%",
+        "×5"
       ]
     ]
   },
-  "quote": "Rest day isn't a day off. It's maintenance on the only weapon they don't reissue.",
+  "quote": "Monday doesn't care how you feel. Neither did your drill instructor, and you turned out fine. Mostly.",
   "widget": {
-    "head": "SUN 01 NOV",
+    "head": "MON 02 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Rent today · Fix Daybreak · Fiverr gig",
-    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
-    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
-    "comms": "Daybreak build failed · Rent due today",
+    "focus": "Appt WED 0900 · Check EOB · VetCert reg",
+    "pt": "Lower Strength · RDL 4×6 · Goblet · Split squat",
+    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10",
+    "comms": "Appt WED 0900 · Insurance EOB",
     "updated": "upd 1646"
   }
 }
