@@ -177,6 +177,14 @@ details.fold > summary{cursor:pointer;min-height:52px;display:flex;align-items:c
 details.fold > summary .r{margin-left:auto;color:var(--dim);text-transform:none}
 details.fold[open]{padding-bottom:12px}
 
+/* mantra */
+.mantra{white-space:pre-line;font:600 20px/1.35 'Barlow Condensed',sans-serif;letter-spacing:.01em;margin:4px 0 8px;padding-left:12px;border-left:3px solid var(--gold)}
+.mantra .close{display:block;margin-top:6px;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}
+.wmeter{display:flex;align-items:center;gap:10px;margin-top:6px;font:600 12px 'IBM Plex Mono',monospace;color:var(--dim)}
+.wmeter .trk{flex:1;height:6px;border-radius:3px;background:var(--line2);overflow:hidden}
+.wmeter .trk i{display:block;height:100%;background:var(--gold);width:0;transition:width .2s}
+.wmeter.full{color:var(--gold)}
+.apply .field > span b{color:var(--gold);margin-right:6px}
 /* palace */
 .pal .drill{display:flex;align-items:baseline;gap:10px;margin:2px 0 4px}
 .pal .drill b{font:700 22px/1 'Barlow Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase}
@@ -241,8 +249,9 @@ details.fold[open]{padding-bottom:12px}
 
 <!-- 1 REVEILLE -->
 <section class="view page" id="v-reveille" hidden>
-  <div class="phead"><div><span class="n">01</span><h2>Reveille</h2><span class="sub">WAKE +30 · TONIGHT'S BOARD</span></div><button class="btn ghost sm edit" data-edit="rev">Edit</button></div>
-  <div class="card"><div id="revList"></div></div>
+  <div class="phead"><div><span class="n">01</span><h2>Reveille</h2><span class="sub">MANTRA · WAKE +30 · TONIGHT'S BOARD</span></div></div>
+  <div class="card" id="mantraCard"></div>
+  <div class="card"><div class="cardh"><h3>Wake checklist</h3><button class="btn ghost sm r" data-edit="rev">Edit</button></div><div id="revList"></div></div>
   <div class="card">
     <h3>Tonight's board</h3><div class="board" id="boardList"></div>
     <h3>Comms watch</h3><div id="commsList"></div>
@@ -370,6 +379,7 @@ details.fold[open]{padding-bottom:12px}
     <label class="field"><span>Sustain</span><input type="text" data-k="sustain"></label>
     <label class="field"><span>Improve</span><input type="text" data-k="improve"></label>
     <label class="field"><span>Tomorrow's first move</span><input type="text" data-k="firstmove"></label>
+    <label class="field"><span>Mantra check: where I lived it · where I missed it</span><input type="text" data-k="mcheck"></label>
     <div class="field"><span>Day grade · no inflation</span><div class="seg" data-seg="grade"></div></div>
   </div>
   <button class="btn" id="copyMd" style="width:100%">Copy day to Obsidian</button>
@@ -422,6 +432,32 @@ function listView(n,body){
 const ck=(key,html,pre='')=>`<label class="ck"><input type="checkbox" data-k="${key}"${day[key]?' checked':''}><span>${pre}${html}</span></label>`;
 function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
 const doy=()=>Math.floor((new Date(feed.date+'T12:00:00')-new Date(feed.date.slice(0,4)+'-01-01T12:00:00'))/864e5);
+
+// =========================================================
+// MANTRA
+// =========================================================
+const MANTRA_DEF=`I keep my word to myself. That's where my strength starts.
+I give my partner my patience, my presence and my best, not my leftovers.
+Whatever tonight brings, I look for what's working and build on it.
+I stay curious: every person, problem and setback has something to teach me.
+Steady. Present. Curious. Forward.`;
+const APPLY=[['SELF','One promise I keep to myself tonight'],['PARTNER','How I show up for my partner today'],['OUTLOOK','Where I\'ll look for what\'s working'],['CURIOSITY','One question I\'ll ask or one thing I\'ll learn']];
+const mantraText=()=>glob.mantra||MANTRA_DEF;
+function mwords(t){return String(t||'').toLowerCase().replace(/[’']/g,'').split(/[^a-z0-9]+/).filter(Boolean)}
+function lcs(a,b){const m=a.length,n=b.length;let p=new Array(n+1).fill(0);for(let i=1;i<=m;i++){const c=[0];for(let j=1;j<=n;j++)c[j]=a[i-1]===b[j-1]?p[j-1]+1:Math.max(p[j],c[j-1]);p=c}return p[n]}
+function mScore(){const a=mwords(mantraText()),g=mwords(day.mwrite);if(!g.length)return 0;return Math.round(lcs(a,g)/Math.max(a.length,g.length)*100)}
+function rMantra(){
+  const t=mantraText(),lines=t.split('\n'),last=lines[lines.length-1],body=lines.length>1&&last.split(' ').length<=6?lines.slice(0,-1):lines;
+  const closer=body.length<lines.length?last:'';
+  let h=`<div class="cardh"><h3>Mantra</h3><button class="btn ghost sm r" data-medit="1">${editing.mantra?'Done':'Edit'}</button></div>`;
+  if(editing.mantra){h+=`<label class="field"><span>Your mantra · one line per idea · a short last line becomes the closer</span><textarea data-g="mantra" rows="6">${esc(t)}</textarea></label>`+(glob.mantra?`<button class="add" data-mreset="1" style="color:var(--dim)">RESET TO DEFAULT</button>`:'');$('#mantraCard').innerHTML=h;return}
+  h+=`<div class="mantra">${esc(body.join('\n'))}${closer?`<span class="close">${esc(closer)}</span>`:''}</div>`;
+  h+=ck('mread','Read it out loud, slowly, once');
+  h+=`<label class="field"><span>Write it from memory</span><textarea data-k="mwrite" rows="4" placeholder="No peeking. Close enough counts.">${esc(day.mwrite||'')}</textarea></label>`;
+  const sc=mScore();h+=`<div class="wmeter${sc>=90?' full':''}" id="wmeter"><span class="trk"><i style="width:${sc}%"></i></span><span>${sc}% word-perfect</span></div>`;
+  h+=`<div class="apply"><h3>Apply tonight</h3>${APPLY.map((a,i)=>`<label class="field"><span><b>${a[0]}</b>${a[1]}</span><input type="text" data-k="map${i}"></label>`).join('')}</div>`;
+  $('#mantraCard').innerHTML=h;
+}
 
 // =========================================================
 // MEMORY PALACE
@@ -553,7 +589,7 @@ function palTick(){clearInterval(tickIv);const P=pal();if(!['encode','delay'].in
 function prog2(id){
   const c=keys=>keys.filter(k=>day[k]).length;
   switch(id){
-    case 'reveille':{const L=getList('rev');const ks=L.map(x=>'L_rev_'+x.id).concat(feed.comms.map((_,i)=>'c'+i));return [c(ks),ks.length]}
+    case 'reveille':{const L=getList('rev');const ks=['mread','mwrite','map0','map1','map2','map3'].concat(L.map(x=>'L_rev_'+x.id)).concat(feed.comms.map((_,i)=>'c'+i));return [c(ks),ks.length]}
     case 'mission':{const L=getList('standing');return [c(['b3d0','b3d1','b3d2']),3,`Big 3 ${c(['b3d0','b3d1','b3d2'])}/3 · ${L.length} open`]}
     case 'train':{const p=ptProg(),d=[c(feed.dry.drills.map((_,i)=>'dr'+i)),feed.dry.drills.length];return [p[0]+d[0],p[1]+d[1],`PT ${p[0]}/${p[1]} · DRY ${d[0]}/${d[1]}`]}
     case 'mind':{const L=getList('disc');const pd=pal().phase==='done'?1:0,hb=(glob.streak||{})[feed.date]?1:0;
@@ -594,6 +630,7 @@ function rTiles(){
 }
 function rPages(){
   const f=feed;
+  rMantra();
   $('#revList').innerHTML=listView('rev',it=>ck('L_rev_'+it.id,esc(it.text),`<span class="tm">${esc(it.t||'')}</span>`));
   $('#boardList').innerHTML=(f.board||[]).map(b=>`<span class="tm">${esc(b.t)}</span><span>${esc(b.what)}</span>`).join('')||'<span class="dim">Clear</span>';
   $('#commsList').innerHTML=(f.comms||[]).map((c,i)=>ck('c'+i,`<b>${esc(c.what)}</b><span class="dose">${esc(c.note)}</span>`)).join('');
@@ -615,7 +652,7 @@ function rPages(){
 }
 function syncInputs(){
   $$('input[data-k],textarea[data-k]').forEach(el=>{if(document.activeElement===el)return;if(el.type==='checkbox')el.checked=!!day[el.dataset.k];else el.value=day[el.dataset.k]??''});
-  $$('[data-g]').forEach(el=>{if(document.activeElement!==el)el.value=glob[el.dataset.g]??''});
+  $$('[data-g]').forEach(el=>{if(el.dataset.g==='mantra')return;if(document.activeElement!==el)el.value=glob[el.dataset.g]??''});
 }
 function rHome(){rStats();rNext();rQuote();rBig3();rTiles()}
 function renderAll(){
@@ -692,7 +729,9 @@ document.addEventListener('change',e=>{const t=e.target;
   else if(t.dataset.le){const n=t.dataset.le,L=getList(n).map(x=>({...x}));const it=L.find(x=>x.id===t.dataset.id);if(it){it[t.dataset.f]=t.value;setList(n,L)}}
 });
 document.addEventListener('input',e=>{const t=e.target;
-  if(t.dataset.k&&t.type!=='checkbox'){day[t.dataset.k]=t.value;save()}
+  if(t.dataset.k&&t.type!=='checkbox'){day[t.dataset.k]=t.value;save();
+    if(t.dataset.k==='mwrite'){const sc=mScore(),m=$('#wmeter');if(m){m.classList.toggle('full',sc>=90);m.querySelector('i').style.width=sc+'%';m.lastChild.textContent=sc+'% word-perfect';if(sc>=90&&!day.mread){}}}}
+  if(t.dataset.g==='mantra'){glob.mantra=t.value;saveG()}
   if(t.dataset.pans!==undefined){pal().answers[t.dataset.pans]=t.value;save()}
   if(t.dataset.preal!==undefined){pal().realIn[+t.dataset.preal]=t.value;save()}
 });
@@ -700,6 +739,8 @@ document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)r
   if(b.dataset.go){go(b.dataset.go);return}
   if(b.id==='prov'){day.provI=(day.provI??doy())+1;save();rQuote();return}
   if(b.dataset.fill){const i=[0,1,2].find(i=>!(day['b3_'+i]||'').trim());if(i!==undefined){day['b3_'+i]=b.dataset.fill;save();rBig3()}return}
+  if(b.dataset.medit){editing.mantra=!editing.mantra;if(!editing.mantra&&glob.mantra!==undefined&&!glob.mantra.trim())delete glob.mantra,saveG();rMantra();syncInputs();return}
+  if(b.dataset.mreset){delete glob.mantra;saveG();rMantra();toast('Reset');return}
   if(b.dataset.edit){const n=b.dataset.edit;editing[n]=!editing[n];rPages();syncInputs();return}
   if(b.dataset.ladd){const n=b.dataset.ladd,L=getList(n).map(x=>({...x}));L.push(n==='rev'?{id:uid(),t:'',text:''}:n==='proj'?{id:uid(),text:'',kind:''}:{id:uid(),text:''});setList(n,L);rPages();syncInputs();
     const ins=$$(`[data-le="${n}"][data-f="text"]`);ins[ins.length-1]&&ins[ins.length-1].focus();return}
@@ -753,6 +794,7 @@ $('#copyMd').addEventListener('click',async()=>{const f=feed,d=day,L=[];const x=
   L.push('','## Gratitude',`1. ${d.g1||''}`,`2. ${d.g2||''}`,`3. ${d.g3||''}`);
   if(d.sit||d.hot){L.push('','## Thought record',`- Situation: ${d.sit||''}`,`- Hot thought: ${d.hot||''} (${d.hotpct||'?'}%)`,`- Distortions: ${(d.dist||[]).map(i=>DIST[i]).join(', ')||'-'}`,`- For: ${d.evfor||''}`,`- Against: ${d.evagainst||''}`,`- Balanced: ${d.balanced||''} (${d.nowpct||'?'}%)`)}
   L.push('','## Discipline',`- Hard thing: ${d.hard||'-'}`);getList('disc').forEach(it=>L.push(`- [${x('L_disc_'+it.id)}] ${it.text}`));
+  L.push('','## Mantra',`- Read: ${d.mread?'yes':'no'} · Written: ${mScore()}%`);APPLY.forEach((a,i)=>{if(d['map'+i])L.push(`- ${a[0]}: ${d['map'+i]}`)});if(d.mcheck)L.push(`- Check: ${d.mcheck}`);
   L.push('','## AAR',`- Sustain: ${d.sustain||''}`,`- Improve: ${d.improve||''}`,`- Tomorrow first move: ${d.firstmove||''}`,`- Grade: ${d.grade||'-'}`);
   const md=L.join('\n');
   try{await navigator.clipboard.writeText(md);toast('Copied. Paste into today\'s note')}catch(e){const ta=document.createElement('textarea');ta.value=md;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Copied')}
