@@ -1,41 +1,25 @@
 {
   "v": 1,
-  "date": "2026-11-03",
-  "dow": "TUE",
-  "label": "TUE 03 NOV 2026",
-  "generated": "2026-11-03T16:47:02-06:00",
+  "date": "2026-11-04",
+  "dow": "WED",
+  "label": "WED 04 NOV 2026",
+  "generated": "2026-11-04T16:46:05-06:00",
   "wake": "1700",
   "board": [
+    {
+      "t": "ONGOING",
+      "what": "Weekend block (to FRI 2300)"
+    },
     {
       "t": "1900",
       "what": "Eat a snack"
     },
     {
-      "t": "2300",
-      "what": "Work (to 0700)"
-    },
-    {
       "t": "2330",
-      "what": "Overnight food order"
-    },
-    {
-      "t": "WED 0000",
-      "what": "Homework block"
-    },
-    {
-      "t": "WED 0700",
-      "what": "Weekend block (to FRI 2300)"
-    },
-    {
-      "t": "WED 0900",
-      "what": "Appointment"
+      "what": "Homework block (to 0030)"
     }
   ],
   "comms": [
-    {
-      "what": "Appointment",
-      "note": "check-in forms requested; complete before WED 0900"
-    },
     {
       "what": "Watch committee guidelines",
       "note": "review + comment before SAT 07 NOV 0930 meeting"
@@ -45,14 +29,18 @@
       "note": "2027 benefits window NOV 09–20; review options"
     },
     {
+      "what": "Bill due",
+      "note": "card autopay scheduled SUN 08 NOV; confirm funds"
+    },
+    {
       "what": "Inbox noise",
       "note": "~15 of 30 threads in 2 days are job alerts, retail, course promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Complete appointment forms before WED 0900",
     "Review watch committee guidelines before SAT",
-    "Clearance reinstatement"
+    "Prep for Open Enrollment (opens MON 09 NOV)",
+    "90-day sales sprint: one asset, one offer"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -93,77 +81,77 @@
     }
   ],
   "pt": {
-    "title": "Engine + Trunk",
-    "time": "40",
-    "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
+    "title": "Upper Push/Pull",
+    "time": "45",
+    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
     "blocks": [
       [
         "W",
         "Warm-up",
-        "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
+        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
       ],
       [
         "A",
-        "Barbell RDL",
-        "4×6 moderate, crisp hinge"
+        "DB bench press",
+        "4×8"
       ],
       [
         "B",
-        "4 rounds",
-        "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
+        "1-arm DB row",
+        "4×10/side, braced on bench"
       ],
       [
         "C",
-        "McGill Big 3",
-        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+        "Half-kneeling KB press",
+        "3×8/side"
       ],
       [
         "D",
-        "Cooldown",
-        "5 min walk · couch stretch 60s/side"
+        "Suitcase carry 40#",
+        "4×40m/side (anti-lean core)"
+      ],
+      [
+        "E",
+        "Dead bug + side plank",
+        "3 rounds"
       ]
     ]
   },
   "dry": {
-    "title": "Draw & Transition",
+    "title": "Reloads & Malfunctions",
     "time": "20",
-    "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
+    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
     "drills": [
       [
         "1",
-        "Concealed draw → 1 on dual circle",
+        "Emergency reload with SIRT mag",
         "×10"
       ],
       [
         "2",
-        "Draw → 2 shots on circle",
-        "×5"
+        "Tap-rack-assess (simulated)",
+        "×10"
       ],
       [
         "3",
-        "9-grid: call 2 random numbers",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Stress block: 10 air squats → draw → 2",
+        "Draw → 1 → reload → 1",
         "×5"
       ],
       [
-        "5",
-        "Slow-perfect finish, 50% speed",
+        "4",
+        "Slow-perfect reloads, eyes on threat",
         "×5"
       ]
     ]
   },
-  "quote": "Discipline is voting for the man you'll be at 0300. Every day. No recount, no absentee ballot.",
+  "quote": "Motivation is a rumor. The alarm, the bar, and the reload drill don't care whether you believe it.",
   "widget": {
-    "head": "TUE 03 NOV",
-    "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Appt forms · Watch guidelines · Clearance",
-    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4",
-    "dry": "Draw & Transition · Draw→1 ×10 · Draw→2 ×5",
-    "comms": "Appt forms by WED 0900 · Watch review SAT",
-    "updated": "upd 1647"
+    "head": "WED 04 NOV",
+    "next": "1900  Eat a snack\n2330  Homework block",
+    "focus": "Watch review · Open Enrollment · Sales sprint",
+    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
+    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack ×10",
+    "comms": "Watch review by SAT 0930 · OE opens NOV 09",
+    "updated": "upd 1646"
   }
 }
