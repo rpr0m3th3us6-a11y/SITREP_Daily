@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-11-04",
-  "dow": "WED",
-  "label": "WED 04 NOV 2026",
-  "generated": "2026-11-04T16:46:05-06:00",
+  "date": "2026-11-05",
+  "dow": "THU",
+  "label": "THU 05 NOV 2026",
+  "generated": "2026-11-05T16:46:04-06:00",
   "wake": "1700",
   "board": [
     {
@@ -17,30 +17,34 @@
     {
       "t": "2330",
       "what": "Homework block (to 0030)"
+    },
+    {
+      "t": "FRI 0630",
+      "what": "Booking: Four Seasons Boston for 12/21"
     }
   ],
   "comms": [
     {
-      "what": "Watch committee guidelines",
-      "note": "review + comment before SAT 07 NOV 0930 meeting"
+      "what": "Watch committee meeting",
+      "note": "reply with date pick: NOV 18, NOV 30 or DEC 03 (1730/1800); questions due 3 days prior"
     },
     {
-      "what": "Four Seasons Open Enrollment",
-      "note": "2027 benefits window NOV 09–20; review options"
+      "what": "Retail order on hold",
+      "note": "vendor needs ID verification (billing ≠ shipping); reply to release"
     },
     {
-      "what": "Bill due",
-      "note": "card autopay scheduled SUN 08 NOV; confirm funds"
+      "what": "Four Seasons security schedule",
+      "note": "week of NOV 09 posted; review for coverage changes"
     },
     {
       "what": "Inbox noise",
-      "note": "~15 of 30 threads in 2 days are job alerts, retail, course promos. 10-min unsubscribe sweep"
+      "note": "~35 of 49 threads in 2 days are job alerts, retail, course promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Review watch committee guidelines before SAT",
-    "Prep for Open Enrollment (opens MON 09 NOV)",
-    "90-day sales sprint: one asset, one offer"
+    "Reply to watch committee with a meeting date",
+    "Verify ID on held retail order",
+    "TEEX UXO200: VA funding paperwork"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -81,77 +85,57 @@
     }
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
-      ],
-      [
         "A",
-        "DB bench press",
-        "4×8"
+        "Zone 2 row",
+        "30:00 conversational pace"
       ],
       [
         "B",
-        "1-arm DB row",
-        "4×10/side, braced on bench"
+        "Mobility flow",
+        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
       ],
       [
         "C",
-        "Half-kneeling KB press",
-        "3×8/side"
-      ],
-      [
-        "D",
-        "Suitcase carry 40#",
-        "4×40m/side (anti-lean core)"
-      ],
-      [
-        "E",
-        "Dead bug + side plank",
-        "3 rounds"
+        "McGill Big 3",
+        "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
       [
         "1",
-        "Emergency reload with SIRT mag",
-        "×10"
+        "Wall drill, front sight focus",
+        "×20"
       ],
       [
         "2",
-        "Tap-rack-assess (simulated)",
+        "Dot-on-dot press, no disturbance",
         "×10"
       ],
       [
         "3",
-        "Draw → 1 → reload → 1",
-        "×5"
-      ],
-      [
-        "4",
-        "Slow-perfect reloads, eyes on threat",
-        "×5"
+        "Slow fire on small circle",
+        "×10"
       ]
     ]
   },
-  "quote": "Motivation is a rumor. The alarm, the bar, and the reload drill don't care whether you believe it.",
+  "quote": "Recovery day isn't a day off. It's the one day the orders don't involve suffering, and you still have to follow them.",
   "widget": {
-    "head": "WED 04 NOV",
+    "head": "THU 05 NOV",
     "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Watch review · Open Enrollment · Sales sprint",
-    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
-    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack ×10",
-    "comms": "Watch review by SAT 0930 · OE opens NOV 09",
+    "focus": "Watch mtg date · Order verify · UXO200 paperwork",
+    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Watch mtg: pick date · Order held: verify ID",
     "updated": "upd 1646"
   }
 }
