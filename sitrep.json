@@ -1,14 +1,14 @@
 {
   "v": 1,
-  "date": "2026-11-06",
-  "dow": "FRI",
-  "label": "FRI 06 NOV 2026",
-  "generated": "2026-11-06T16:46:15-06:00",
+  "date": "2026-11-07",
+  "dow": "SAT",
+  "label": "SAT 07 NOV 2026",
+  "generated": "2026-11-07T16:46:21-06:00",
   "wake": "1700",
   "board": [
     {
-      "t": "ONGOING",
-      "what": "Weekend block (to 2300)"
+      "t": "ALL DAY",
+      "what": "Mana (SUN)"
     },
     {
       "t": "1900",
@@ -16,43 +16,31 @@
     },
     {
       "t": "2300",
-      "what": "Work (to SAT 0700)"
+      "what": "Work (to SUN 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
-    },
-    {
-      "t": "2330",
-      "what": "Homework block (to 0030)"
-    },
-    {
-      "t": "SAT 0930",
-      "what": "Safety Committee (biweekly)"
     }
   ],
   "comms": [
     {
-      "what": "Retail order on hold",
-      "note": "vendor needs ID verification (billing ≠ shipping); reply to release"
+      "what": "Neighborhood safety committee",
+      "note": "meeting notes posted + volunteer dinner invite (RSVP); mgr meeting set DEC 03 1800, questions due 30 NOV"
     },
     {
-      "what": "Pending online form",
-      "note": "action-required form in inbox; complete today"
-    },
-    {
-      "what": "Daybreak Brief build failed",
-      "note": "THU draft run failed date guard; check FSA-DIB pipeline"
+      "what": "Recruiter outreach (federal security)",
+      "note": "Indeed reminder: confirm interest or pass"
     },
     {
       "what": "Inbox noise",
-      "note": "~24 of 30 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
+      "note": "~25 of 30 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Verify ID on held retail order",
-    "Complete pending online form",
-    "Notion → Obsidian vault migration"
+    "Confirm shift-change request for 11/10",
+    "Committee notes + volunteer dinner RSVP",
+    "Fiverr profile / gig listing"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -93,72 +81,52 @@
     }
   ],
   "pt": {
-    "title": "Power + Carry",
-    "time": "45",
-    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
+    "title": "Long Ruck / Z2",
+    "time": "50",
+    "line": "45:00 incline walk · Core circuit",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "5:00 row · hip hinge drill ×10 · glute bridge ×10"
-      ],
-      [
         "A",
-        "Barbell deadlift",
-        "5×3 at ~70%, perfect reps only"
+        "Incline treadmill walk",
+        "45:00 Z2 (add light pack if back allows)"
       ],
       [
         "B",
-        "EMOM 10",
-        "odd: 10 KB swing 40# · even: 5 box jump (step down)"
-      ],
-      [
-        "C",
-        "Farmer carry",
-        "4×40m heavy DBs"
-      ],
-      [
-        "D",
-        "McGill Big 3",
-        "standard sets"
+        "Core circuit ×3",
+        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
       ]
     ]
   },
   "dry": {
-    "title": "Movement",
-    "time": "20",
-    "line": "Step-off draws ×10 · Moving 9-grid ×3",
+    "title": "One-Handed",
+    "time": "15",
+    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
     "drills": [
       [
         "1",
-        "Lateral step + draw → 1",
-        "×10 each way"
+        "Strong-hand only on circle",
+        "×10"
       ],
       [
         "2",
-        "Walk-and-shoot, heel-toe, small circle",
+        "Weak-hand only on circle",
         "×10"
       ],
       [
         "3",
-        "9-grid while moving",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Slow-perfect finish",
+        "Hand transfer → WHO 1 shot",
         "×5"
       ]
     ]
   },
-  "quote": "Your excuses have seniority, not rank. Lift anyway.",
+  "quote": "Motivation called in sick. Discipline covered the shift and didn't put in for OT.",
   "widget": {
-    "head": "FRI 06 NOV",
+    "head": "SAT 07 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Order verify · Pending form · Obsidian migration",
-    "pt": "Power + Carry · Deadlift 5×3 · Swings/Box EMOM",
-    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
-    "comms": "Order held: verify ID · Pending form due",
+    "focus": "Shift chg 11/10 · Cmte RSVP · Fiverr gig",
+    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core circuit",
+    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
+    "comms": "Cmte notes + RSVP · Recruiter: confirm interest",
     "updated": "upd 1646"
   }
 }
