@@ -1,14 +1,14 @@
 {
   "v": 1,
-  "date": "2026-11-07",
-  "dow": "SAT",
-  "label": "SAT 07 NOV 2026",
-  "generated": "2026-11-07T16:46:21-06:00",
+  "date": "2026-11-08",
+  "dow": "SUN",
+  "label": "SUN 08 NOV 2026",
+  "generated": "2026-11-08T16:46:37-06:00",
   "wake": "1700",
   "board": [
     {
       "t": "ALL DAY",
-      "what": "Mana (SUN)"
+      "what": "Mana"
     },
     {
       "t": "1900",
@@ -16,7 +16,7 @@
     },
     {
       "t": "2300",
-      "what": "Work (to SUN 0700)"
+      "what": "Work (to MON 0700)"
     },
     {
       "t": "2330",
@@ -25,8 +25,12 @@
   ],
   "comms": [
     {
+      "what": "Bill due",
+      "note": "course payment due WED 11 NOV"
+    },
+    {
       "what": "Neighborhood safety committee",
-      "note": "meeting notes posted + volunteer dinner invite (RSVP); mgr meeting set DEC 03 1800, questions due 30 NOV"
+      "note": "mgr meeting set DEC 03 1800 (questions due 30 NOV); volunteer dinner invite needs RSVP"
     },
     {
       "what": "Recruiter outreach (federal security)",
@@ -34,13 +38,13 @@
     },
     {
       "what": "Inbox noise",
-      "note": "~25 of 30 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
+      "note": "~23 of 30 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Confirm shift-change request for 11/10",
-    "Committee notes + volunteer dinner RSVP",
-    "Fiverr profile / gig listing"
+    "Pay course bill by WED 11 NOV",
+    "Volunteer dinner RSVP + committee questions",
+    "SDVOSB / VetCert registration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -81,52 +85,47 @@
     }
   ],
   "pt": {
-    "title": "Long Ruck / Z2",
-    "time": "50",
-    "line": "45:00 incline walk · Core circuit",
+    "title": "Rest + Reset",
+    "time": "15",
+    "line": "Walk the dogs · 15 min mobility",
     "blocks": [
       [
         "A",
-        "Incline treadmill walk",
-        "45:00 Z2 (add light pack if back allows)"
+        "Easy walk",
+        "20-30 min, no watch"
       ],
       [
         "B",
-        "Core circuit ×3",
-        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
+        "Mobility",
+        "15 min, whatever's tight"
       ]
     ]
   },
   "dry": {
-    "title": "One-Handed",
-    "time": "15",
-    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
+    "title": "Mental Rehearsal",
+    "time": "10",
+    "line": "Visualize 10 perfect draws · Weekly AAR",
     "drills": [
       [
         "1",
-        "Strong-hand only on circle",
+        "Eyes-closed visualization, full draw stroke",
         "×10"
       ],
       [
         "2",
-        "Weak-hand only on circle",
-        "×10"
-      ],
-      [
-        "3",
-        "Hand transfer → WHO 1 shot",
-        "×5"
+        "Review the week's par times, set next week's goal",
+        "5 min"
       ]
     ]
   },
-  "quote": "Motivation called in sick. Discipline covered the shift and didn't put in for OT.",
+  "quote": "Rest day isn't a day off. It's PMCS on the one piece of gear supply won't reissue.",
   "widget": {
-    "head": "SAT 07 NOV",
+    "head": "SUN 08 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Shift chg 11/10 · Cmte RSVP · Fiverr gig",
-    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core circuit",
-    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
-    "comms": "Cmte notes + RSVP · Recruiter: confirm interest",
+    "focus": "Bill by 11/11 · Cmte RSVP · VetCert reg",
+    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
+    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
+    "comms": "Bill due WED · Cmte dinner RSVP",
     "updated": "upd 1646"
   }
 }
