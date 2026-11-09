@@ -1,50 +1,54 @@
 {
   "v": 1,
-  "date": "2026-11-08",
-  "dow": "SUN",
-  "label": "SUN 08 NOV 2026",
-  "generated": "2026-11-08T16:46:37-06:00",
+  "date": "2026-11-09",
+  "dow": "MON",
+  "label": "MON 09 NOV 2026",
+  "generated": "2026-11-09T16:46:31-06:00",
   "wake": "1700",
   "board": [
-    {
-      "t": "ALL DAY",
-      "what": "Mana"
-    },
     {
       "t": "1900",
       "what": "Eat a snack"
     },
     {
       "t": "2300",
-      "what": "Work (to MON 0700)"
+      "what": "Work (to TUE 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
+    },
+    {
+      "t": "2330",
+      "what": "Homework block"
+    },
+    {
+      "t": "TUE 0600",
+      "what": "Admin reminder"
     }
   ],
   "comms": [
     {
-      "what": "Bill due",
-      "note": "course payment due WED 11 NOV"
+      "what": "Card alert",
+      "note": "Foreign debit charge flagged overnight. Verify with bank today; lock card if not yours"
     },
     {
-      "what": "Neighborhood safety committee",
-      "note": "mgr meeting set DEC 03 1800 (questions due 30 NOV); volunteer dinner invite needs RSVP"
+      "what": "Recruiter packet (armed transport role)",
+      "note": "Packet received + e-sign form requested. Review and sign"
     },
     {
-      "what": "Recruiter outreach (federal security)",
-      "note": "Indeed reminder: confirm interest or pass"
+      "what": "Four Seasons open enrollment",
+      "note": "Benefits enrollment window closes FRI 20 NOV"
     },
     {
       "what": "Inbox noise",
-      "note": "~23 of 30 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
+      "note": "~23 of 29 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Pay course bill by WED 11 NOV",
-    "Volunteer dinner RSVP + committee questions",
-    "SDVOSB / VetCert registration"
+    "Verify flagged card charge with bank",
+    "Recruiter packet: review + e-sign",
+    "Clearance reinstatement"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -85,47 +89,72 @@
     }
   ],
   "pt": {
-    "title": "Rest + Reset",
-    "time": "15",
-    "line": "Walk the dogs · 15 min mobility",
+    "title": "Lower Strength",
+    "time": "45",
+    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+      ],
+      [
         "A",
-        "Easy walk",
-        "20-30 min, no watch"
+        "Barbell RDL",
+        "4×6 moderate, stop 2 reps shy, brace every rep"
       ],
       [
         "B",
-        "Mobility",
-        "15 min, whatever's tight"
+        "DB goblet squat",
+        "3×10, 3-sec lower"
+      ],
+      [
+        "C",
+        "DB split squat",
+        "3×8/side"
+      ],
+      [
+        "D",
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Mental Rehearsal",
-    "time": "10",
-    "line": "Visualize 10 perfect draws · Weekly AAR",
+    "title": "Draw Fundamentals",
+    "time": "20",
+    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
     "drills": [
       [
         "1",
-        "Eyes-closed visualization, full draw stroke",
+        "Grip + index from holster, no press",
         "×10"
       ],
       [
         "2",
-        "Review the week's par times, set next week's goal",
-        "5 min"
+        "Concealed draw → 1 on dual circle",
+        "×10"
+      ],
+      [
+        "3",
+        "Draw → 1, par 1.75s",
+        "×10"
+      ],
+      [
+        "4",
+        "Slow-perfect draws at 50%",
+        "×5"
       ]
     ]
   },
-  "quote": "Rest day isn't a day off. It's PMCS on the one piece of gear supply won't reissue.",
+  "quote": "Monday doesn't care how you feel. Neither does the barbell. That's why they get along.",
   "widget": {
-    "head": "SUN 08 NOV",
+    "head": "MON 09 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Bill by 11/11 · Cmte RSVP · VetCert reg",
-    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
-    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
-    "comms": "Bill due WED · Cmte dinner RSVP",
+    "focus": "Verify card chg · Recruiter pkt · Clearance",
+    "pt": "Lower Strength · RDL 4×6 · Goblet · Split sq",
+    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10",
+    "comms": "Card alert: verify chg · Recruiter e-sign",
     "updated": "upd 1646"
   }
 }
