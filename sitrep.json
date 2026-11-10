@@ -1,54 +1,62 @@
 {
   "v": 1,
-  "date": "2026-11-09",
-  "dow": "MON",
-  "label": "MON 09 NOV 2026",
-  "generated": "2026-11-09T16:46:31-06:00",
+  "date": "2026-11-10",
+  "dow": "TUE",
+  "label": "TUE 10 NOV 2026",
+  "generated": "2026-11-10T16:47:00-06:00",
   "wake": "1700",
   "board": [
+    {
+      "t": "ALL DAY",
+      "what": "Order watch for pickup + gather trade-in"
+    },
     {
       "t": "1900",
       "what": "Eat a snack"
     },
     {
       "t": "2300",
-      "what": "Work (to TUE 0700)"
+      "what": "Work (to WED 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
     },
     {
-      "t": "2330",
+      "t": "WED 0000",
       "what": "Homework block"
     },
     {
-      "t": "TUE 0600",
-      "what": "Admin reminder"
+      "t": "WED 0700",
+      "what": "Weekend off (to FRI 2300)"
+    },
+    {
+      "t": "WED 0900",
+      "what": "Appointment"
     }
   ],
   "comms": [
     {
-      "what": "Card alert",
-      "note": "Foreign debit charge flagged overnight. Verify with bank today; lock card if not yours"
+      "what": "Security course access restored",
+      "note": "Access reactivated. Confirm platform email, log out/in, resume coursework"
     },
     {
-      "what": "Recruiter packet (armed transport role)",
-      "note": "Packet received + e-sign form requested. Review and sign"
+      "what": "Neighborhood watch committee",
+      "note": "Send agenda topics + procedural questions by MON 30 NOV"
     },
     {
-      "what": "Four Seasons open enrollment",
-      "note": "Benefits enrollment window closes FRI 20 NOV"
+      "what": "Armed transport application",
+      "note": "Declaration form signed, application received. Watch for next step"
     },
     {
       "what": "Inbox noise",
-      "note": "~23 of 29 recent threads are job alerts, retail, course promos. 10-min unsubscribe sweep"
+      "note": "~21 of 30 recent threads are job alerts, retail, promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Verify flagged card charge with bank",
-    "Recruiter packet: review + e-sign",
-    "Clearance reinstatement"
+    "Order watch for pickup + gather trade-in",
+    "Course access: log in + resume",
+    "90-day sales sprint: one asset, one offer"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -89,72 +97,77 @@
     }
   ],
   "pt": {
-    "title": "Lower Strength",
-    "time": "45",
-    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
+    "title": "Engine + Trunk",
+    "time": "40",
+    "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
     "blocks": [
       [
         "W",
         "Warm-up",
-        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+        "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
       ],
       [
         "A",
         "Barbell RDL",
-        "4×6 moderate, stop 2 reps shy, brace every rep"
+        "4×6 moderate, crisp hinge"
       ],
       [
         "B",
-        "DB goblet squat",
-        "3×10, 3-sec lower"
+        "4 rounds",
+        "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
       ],
       [
         "C",
-        "DB split squat",
-        "3×8/side"
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ],
       [
         "D",
-        "McGill Big 3",
-        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+        "Cooldown",
+        "5 min walk · couch stretch 60s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Draw Fundamentals",
+    "title": "Draw & Transition",
     "time": "20",
-    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
+    "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
     "drills": [
       [
         "1",
-        "Grip + index from holster, no press",
-        "×10"
-      ],
-      [
-        "2",
         "Concealed draw → 1 on dual circle",
         "×10"
       ],
       [
+        "2",
+        "Draw → 2 shots on circle",
+        "×5"
+      ],
+      [
         "3",
-        "Draw → 1, par 1.75s",
-        "×10"
+        "9-grid: call 2 random numbers",
+        "3 strings of 5"
       ],
       [
         "4",
-        "Slow-perfect draws at 50%",
+        "Stress block: 10 air squats → draw → 2",
+        "×5"
+      ],
+      [
+        "5",
+        "Slow-perfect finish, 50% speed",
         "×5"
       ]
     ]
   },
-  "quote": "Monday doesn't care how you feel. Neither does the barbell. That's why they get along.",
+  "quote": "Motivation is a rumor. The alarm at 1645 is a fact. Plan accordingly.",
   "widget": {
-    "head": "MON 09 NOV",
+    "head": "TUE 10 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Verify card chg · Recruiter pkt · Clearance",
-    "pt": "Lower Strength · RDL 4×6 · Goblet · Split sq",
-    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10",
-    "comms": "Card alert: verify chg · Recruiter e-sign",
-    "updated": "upd 1646"
+    "focus": "Watch order · Course re-login · Sales sprint",
+    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4",
+    "dry": "Draw & Transition · Draw→1 ×10 · Draw→2 ×5",
+    "comms": "Course re-login · Watch cmte topics by 30 NOV",
+    "updated": "upd 1647"
   }
 }
