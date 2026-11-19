@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-11-18",
-  "dow": "WED",
-  "label": "WED 18 NOV 2026",
-  "generated": "2026-11-18T16:46:12-06:00",
+  "date": "2026-11-19",
+  "dow": "THU",
+  "label": "THU 19 NOV 2026",
+  "generated": "2026-11-19T16:46:11-06:00",
   "wake": "1700",
   "board": [
     {
@@ -21,21 +21,21 @@
   ],
   "comms": [
     {
-      "what": "Auto service",
-      "note": "Vehicle inspection report in. Shop is reviewing; expect a quote/call. Review before approving work"
+      "what": "Four Seasons open enrollment",
+      "note": "Final reminder: confirm 2027 benefit elections. Deadline FRI 20 NOV"
     },
     {
-      "what": "Bill due",
-      "note": "Card statement ready, due 14 DEC. Autopay on; confirm it covers what you intend"
+      "what": "Account security alert",
+      "note": "New sign-in on a linked Google account. Confirm it was you; if not, secure it"
     },
     {
       "what": "Inbox noise",
-      "note": "~22 of 30 recent threads are promos, job alerts, retail. 10-min unsubscribe sweep"
+      "note": "~24 of 30 recent threads are promos, job alerts, retail. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Review vehicle inspection report",
-    "Notion → Obsidian vault migration",
+    "Confirm 2027 benefit elections (due FRI)",
+    "Verify Google sign-in alert",
     "Fiverr profile / gig listing"
   ],
   "standing": [
@@ -77,77 +77,57 @@
     }
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
-      ],
-      [
         "A",
-        "DB bench press",
-        "4×8"
+        "Zone 2 row",
+        "30:00 conversational pace"
       ],
       [
         "B",
-        "1-arm DB row",
-        "4×10/side, braced on bench"
+        "Mobility flow",
+        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
       ],
       [
         "C",
-        "Half-kneeling KB press",
-        "3×8/side"
-      ],
-      [
-        "D",
-        "Suitcase carry 40#",
-        "4×40m/side (anti-lean core)"
-      ],
-      [
-        "E",
-        "Dead bug + side plank",
-        "3 rounds"
+        "McGill Big 3",
+        "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
       [
         "1",
-        "Emergency reload with SIRT mag",
-        "×10"
+        "Wall drill, front sight focus",
+        "×20"
       ],
       [
         "2",
-        "Tap-rack-assess (simulated)",
+        "Dot-on-dot press, no disturbance",
         "×10"
       ],
       [
         "3",
-        "Draw → 1 → reload → 1",
-        "×5"
-      ],
-      [
-        "4",
-        "Slow-perfect reloads, eyes on threat",
-        "×5"
+        "Slow fire on small circle",
+        "×10"
       ]
     ]
   },
-  "quote": "Motivation is a rumor. The checklist is a fact. Run the checklist.",
+  "quote": "Recovery day is still a duty day. The mission is just smaller and harder to brag about.",
   "widget": {
-    "head": "WED 18 NOV",
+    "head": "THU 19 NOV",
     "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Vehicle report · Obsidian migration · Fiverr gig",
-    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
-    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack ×10",
-    "comms": "Inspection report · Card stmt due 14 DEC",
+    "focus": "Benefits by FRI · Check sign-in · Fiverr gig",
+    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Open enrollment due FRI · Sign-in alert",
     "updated": "upd 1646"
   }
 }
