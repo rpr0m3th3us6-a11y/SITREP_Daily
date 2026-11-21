@@ -1,54 +1,46 @@
 {
   "v": 1,
-  "date": "2026-11-20",
-  "dow": "FRI",
-  "label": "FRI 20 NOV 2026",
-  "generated": "2026-11-20T16:48:00-06:00",
+  "date": "2026-11-21",
+  "dow": "SAT",
+  "label": "SAT 21 NOV 2026",
+  "generated": "2026-11-21T16:46:00-06:00",
   "wake": "1700",
   "board": [
-    {
-      "t": "ONGOING",
-      "what": "Weekend off (to FRI 2300)"
-    },
     {
       "t": "1900",
       "what": "Eat a snack"
     },
     {
       "t": "2300",
-      "what": "Work (to SAT 0700)"
+      "what": "Work (to SUN 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
-    },
-    {
-      "t": "2330",
-      "what": "Homework block"
-    },
-    {
-      "t": "SAT 0930",
-      "what": "Safety Committee (Google Meet)"
     }
   ],
   "comms": [
     {
-      "what": "Four Seasons dept schedule",
-      "note": "Week of 23 NOV posted. Review for changes to days off"
+      "what": "Account security alert",
+      "note": "New sign-in from a Mac on your Google account. Verify it was you; if not, secure the account"
     },
     {
-      "what": "Card account notice",
-      "note": "Near spending limit; future charges may decline. Check before autopay WED 25 NOV"
+      "what": "Health admin form",
+      "note": "Action required: online form pending. Knock it out early in the shift"
+    },
+    {
+      "what": "Insurance renewal notice",
+      "note": "Auto policy renewing; new ID card issued. Review terms and swap the card in the vehicle"
     },
     {
       "what": "Inbox noise",
-      "note": "~25 of 30 recent threads are promos, job alerts, retail. 10-min unsubscribe sweep"
+      "note": "~25 of 30 recent threads are job alerts, retail, Black Friday promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Confirm 2027 benefit elections (due TODAY)",
-    "Review schedule for week of 23 NOV",
-    "SDVOSB / VetCert registration"
+    "Verify new Google sign-in alert",
+    "Complete health admin form",
+    "Clearance reinstatement"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -89,72 +81,52 @@
     }
   ],
   "pt": {
-    "title": "Power + Carry",
-    "time": "45",
-    "line": "Deadlift 5×3 · Swings/Box jump EMOM · Farmers",
+    "title": "Long Ruck / Z2",
+    "time": "50",
+    "line": "45:00 incline walk · Core circuit",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "5:00 row · hip hinge drill ×10 · glute bridge ×10"
-      ],
-      [
         "A",
-        "Barbell deadlift",
-        "5×3 at ~70%, perfect reps only"
+        "Incline treadmill walk",
+        "45:00 Z2 (add light pack if back allows)"
       ],
       [
         "B",
-        "EMOM 10",
-        "odd: 10 KB swing 40# · even: 5 box jump (step down)"
-      ],
-      [
-        "C",
-        "Farmer carry",
-        "4×40m heavy DBs"
-      ],
-      [
-        "D",
-        "McGill Big 3",
-        "standard sets"
+        "Core circuit ×3",
+        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
       ]
     ]
   },
   "dry": {
-    "title": "Movement",
-    "time": "20",
-    "line": "Step-off draws ×10 · Moving 9-grid ×3",
+    "title": "One-Handed",
+    "time": "15",
+    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
     "drills": [
       [
         "1",
-        "Lateral step + draw → 1",
-        "×10 each way"
+        "Strong-hand only on circle",
+        "×10"
       ],
       [
         "2",
-        "Walk-and-shoot, heel-toe, small circle",
+        "Weak-hand only on circle",
         "×10"
       ],
       [
         "3",
-        "9-grid while moving",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Slow-perfect finish",
+        "Hand transfer → WHO 1 shot",
         "×5"
       ]
     ]
   },
-  "quote": "Nobody remembers the reps you skipped. Your lower back does, and it holds a grudge.",
+  "quote": "Motivation is a rumor. Discipline is the guy who shows up anyway, unpaid, and still files the report.",
   "widget": {
-    "head": "FRI 20 NOV",
+    "head": "SAT 21 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Benefits TODAY · Wk 23 schedule · VetCert",
-    "pt": "Power + Carry · Deadlift 5×3 · Swings/Box EMOM",
-    "dry": "Movement · Step-off draws ×10 · Moving 9-grid ×3",
-    "comms": "Wk 23 NOV schedule · Card limit notice",
-    "updated": "upd 1648"
+    "focus": "Verify sign-in · Health form · Clearance",
+    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core",
+    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
+    "comms": "Verify new sign-in · Health admin form",
+    "updated": "upd 1646"
   }
 }
