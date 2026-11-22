@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-11-21",
-  "dow": "SAT",
-  "label": "SAT 21 NOV 2026",
-  "generated": "2026-11-21T16:46:00-06:00",
+  "date": "2026-11-22",
+  "dow": "SUN",
+  "label": "SUN 22 NOV 2026",
+  "generated": "2026-11-22T16:46:00-06:00",
   "wake": "1700",
   "board": [
     {
@@ -12,7 +12,7 @@
     },
     {
       "t": "2300",
-      "what": "Work (to SUN 0700)"
+      "what": "Work (to MON 0700)"
     },
     {
       "t": "2330",
@@ -21,26 +21,22 @@
   ],
   "comms": [
     {
-      "what": "Account security alert",
-      "note": "New sign-in from a Mac on your Google account. Verify it was you; if not, secure the account"
-    },
-    {
-      "what": "Health admin form",
-      "note": "Action required: online form pending. Knock it out early in the shift"
-    },
-    {
       "what": "Insurance renewal notice",
-      "note": "Auto policy renewing; new ID card issued. Review terms and swap the card in the vehicle"
+      "note": "Auto policy renewing; new ID card issued. Swap the card in the vehicle"
+    },
+    {
+      "what": "Auto service survey",
+      "note": "Feedback request on recent shop visit. Optional, 2 min"
     },
     {
       "what": "Inbox noise",
-      "note": "~25 of 30 recent threads are job alerts, retail, Black Friday promos. 10-min unsubscribe sweep"
+      "note": "~27 of 30 recent threads are job alerts, retail, holiday promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Verify new Google sign-in alert",
-    "Complete health admin form",
-    "Clearance reinstatement"
+    "Swap new auto insurance ID card",
+    "90-day sales sprint: one asset, one offer",
+    "TEEX UXO200: VA funding paperwork"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -81,52 +77,47 @@
     }
   ],
   "pt": {
-    "title": "Long Ruck / Z2",
-    "time": "50",
-    "line": "45:00 incline walk · Core circuit",
+    "title": "Rest + Reset",
+    "time": "15",
+    "line": "Walk the dogs · 15 min mobility",
     "blocks": [
       [
         "A",
-        "Incline treadmill walk",
-        "45:00 Z2 (add light pack if back allows)"
+        "Easy walk",
+        "20-30 min, no watch"
       ],
       [
         "B",
-        "Core circuit ×3",
-        "dead bug ×10 · Pallof/side plank 30s/side · glute bridge ×15"
+        "Mobility",
+        "15 min, whatever's tight"
       ]
     ]
   },
   "dry": {
-    "title": "One-Handed",
-    "time": "15",
-    "line": "SHO ×10 · WHO ×10 · Transfer ×5",
+    "title": "Mental Rehearsal",
+    "time": "10",
+    "line": "Visualize 10 perfect draws · Weekly AAR",
     "drills": [
       [
         "1",
-        "Strong-hand only on circle",
+        "Eyes-closed visualization, full draw stroke",
         "×10"
       ],
       [
         "2",
-        "Weak-hand only on circle",
-        "×10"
-      ],
-      [
-        "3",
-        "Hand transfer → WHO 1 shot",
-        "×5"
+        "Review the week's par times, set next week's goal",
+        "5 min"
       ]
     ]
   },
-  "quote": "Motivation is a rumor. Discipline is the guy who shows up anyway, unpaid, and still files the report.",
+  "quote": "Rest day is not a day off. It's maintenance. Even the rifle gets cleaned before it gets used again.",
   "widget": {
-    "head": "SAT 21 NOV",
+    "head": "SUN 22 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Verify sign-in · Health form · Clearance",
-    "pt": "Long Ruck / Z2 · 45:00 incline walk · Core",
-    "dry": "One-Handed · SHO ×10 · WHO ×10 · Transfer ×5",
-    "comms": "Verify new sign-in · Health admin form",
+    "focus": "Swap ins card · Sales sprint · TEEX paperwork",
+    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
+    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
+    "comms": "Swap insurance ID card · Auto service survey",
     "updated": "upd 1646"
   }
 }
