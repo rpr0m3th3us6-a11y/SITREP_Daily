@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-11-22",
-  "dow": "SUN",
-  "label": "SUN 22 NOV 2026",
-  "generated": "2026-11-22T16:46:00-06:00",
+  "date": "2026-11-23",
+  "dow": "MON",
+  "label": "MON 23 NOV 2026",
+  "generated": "2026-11-23T16:46:23-06:00",
   "wake": "1700",
   "board": [
     {
@@ -12,31 +12,39 @@
     },
     {
       "t": "2300",
-      "what": "Work (to MON 0700)"
+      "what": "Work (to TUE 0700)"
     },
     {
       "t": "2330",
       "what": "Overnight food order"
+    },
+    {
+      "t": "2330",
+      "what": "Homework block"
     }
   ],
   "comms": [
     {
-      "what": "Insurance renewal notice",
-      "note": "Auto policy renewing; new ID card issued. Swap the card in the vehicle"
+      "what": "Appointment",
+      "note": "WED 25 NOV 0900, two hours after shift ends. Already confirmed"
     },
     {
-      "what": "Auto service survey",
-      "note": "Feedback request on recent shop visit. Optional, 2 min"
+      "what": "Order pickup",
+      "note": "Ready WED 25 NOV 1000-1800. Not prepaid; bring ID"
+    },
+    {
+      "what": "Account notice",
+      "note": "New document posted to a secure account inbox. Log in and review"
     },
     {
       "what": "Inbox noise",
-      "note": "~27 of 30 recent threads are job alerts, retail, holiday promos. 10-min unsubscribe sweep"
+      "note": "~22 of 30 recent threads are Black Friday promos and job alerts. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Swap new auto insurance ID card",
-    "90-day sales sprint: one asset, one offer",
-    "TEEX UXO200: VA funding paperwork"
+    "Appointment WED 0900, right off shift",
+    "TEEX UXO200: VA funding paperwork",
+    "Notion → Obsidian vault migration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -77,47 +85,72 @@
     }
   ],
   "pt": {
-    "title": "Rest + Reset",
-    "time": "15",
-    "line": "Walk the dogs · 15 min mobility",
+    "title": "Lower Strength",
+    "time": "45",
+    "line": "RDL 4×6 · Goblet 3×10 · Split squat 3×8",
     "blocks": [
       [
+        "W",
+        "Warm-up",
+        "5:00 row easy · glute bridge ×10 · bird dog ×6/side"
+      ],
+      [
         "A",
-        "Easy walk",
-        "20-30 min, no watch"
+        "Barbell RDL",
+        "4×6 moderate, stop 2 reps shy, brace every rep"
       ],
       [
         "B",
-        "Mobility",
-        "15 min, whatever's tight"
+        "DB goblet squat",
+        "3×10, 3-sec lower"
+      ],
+      [
+        "C",
+        "DB split squat",
+        "3×8/side"
+      ],
+      [
+        "D",
+        "McGill Big 3",
+        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
       ]
     ]
   },
   "dry": {
-    "title": "Mental Rehearsal",
-    "time": "10",
-    "line": "Visualize 10 perfect draws · Weekly AAR",
+    "title": "Draw Fundamentals",
+    "time": "20",
+    "line": "Grip/index ×10 · Draw→1 ×10 · Slow-perfect ×5",
     "drills": [
       [
         "1",
-        "Eyes-closed visualization, full draw stroke",
+        "Grip + index from holster, no press",
         "×10"
       ],
       [
         "2",
-        "Review the week's par times, set next week's goal",
-        "5 min"
+        "Concealed draw → 1 on dual circle",
+        "×10"
+      ],
+      [
+        "3",
+        "Draw → 1, par 1.75s",
+        "×10"
+      ],
+      [
+        "4",
+        "Slow-perfect draws at 50%",
+        "×5"
       ]
     ]
   },
-  "quote": "Rest day is not a day off. It's maintenance. Even the rifle gets cleaned before it gets used again.",
+  "quote": "Discipline is doing it right at 0300 when the only witness is a security camera, and nobody's watching the feed.",
   "widget": {
-    "head": "SUN 22 NOV",
+    "head": "MON 23 NOV",
     "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Swap ins card · Sales sprint · TEEX paperwork",
-    "pt": "Rest + Reset · Walk the dogs · 15 min mobility",
-    "dry": "Mental Rehearsal · Visualize 10 draws · AAR",
-    "comms": "Swap insurance ID card · Auto service survey",
+    "focus": "Appt WED 0900 · TEEX paperwork · Vault migration",
+    "pt": "Lower Strength · RDL 4×6 · Goblet · Split squat",
+    "dry": "Draw Fundamentals · Grip ×10 · Draw→1 ×10",
+    "comms": "Appt WED 0900 · Pickup WED 1000-1800",
     "updated": "upd 1646"
   }
 }
