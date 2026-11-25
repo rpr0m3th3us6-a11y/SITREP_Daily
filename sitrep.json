@@ -1,58 +1,46 @@
 {
   "v": 1,
-  "date": "2026-11-24",
-  "dow": "TUE",
-  "label": "TUE 24 NOV 2026",
-  "generated": "2026-11-24T16:46:23-06:00",
+  "date": "2026-11-25",
+  "dow": "WED",
+  "label": "WED 25 NOV 2026",
+  "generated": "2026-11-25T16:45:59-06:00",
   "wake": "1700",
   "board": [
+    {
+      "t": "ONGOING",
+      "what": "Days off (to FRI 2300)"
+    },
     {
       "t": "1900",
       "what": "Eat a snack"
     },
     {
-      "t": "2300",
-      "what": "Work (to WED 0700)"
-    },
-    {
       "t": "2330",
-      "what": "Overnight food order"
-    },
-    {
-      "t": "WED 0000",
       "what": "Homework block"
-    },
-    {
-      "t": "WED 0700",
-      "what": "Days off begin (to FRI 2300)"
-    },
-    {
-      "t": "WED 0900",
-      "what": "Appointment"
     }
   ],
   "comms": [
     {
-      "what": "Order pickup",
-      "note": "Ready WED 25 NOV 1000-1800. Not prepaid; bring ID"
+      "what": "Daybreak Brief failed",
+      "note": "WED 0319 final run: 0 of 2 docs delivered, nothing sent. Fix pipeline before next run"
     },
     {
-      "what": "Account notice",
-      "note": "Low-balance alert on a checking account. Log in and check before anything else posts"
+      "what": "Four Seasons position description",
+      "note": "Updated job description in (use-of-force ref revised). Review; your target FRI 27 NOV"
     },
     {
-      "what": "Four Seasons HR follow-up",
-      "note": "Replies in on your position-docs request. Confirm SOP access; your own deadline was FRI 27 NOV"
+      "what": "Neighborhood watch thread",
+      "note": "Meeting day still TBD (weekday eve vs weekend AM). Reply if you have a preference"
     },
     {
       "what": "Inbox noise",
-      "note": "~20 of 28 recent threads are job alerts and Black Friday promos. 10-min unsubscribe sweep"
+      "note": "~18 of 30 recent threads are job alerts, LinkedIn and Black Friday promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Appointment WED 0900, right off shift",
-    "Order pickup WED 1000-1800, bring ID",
-    "Notion → Obsidian vault migration"
+    "Fix Daybreak Brief pipeline (final run failed)",
+    "Review updated Four Seasons job description",
+    "Fiverr profile / gig listing"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -93,77 +81,77 @@
     }
   ],
   "pt": {
-    "title": "Engine + Trunk",
-    "time": "40",
-    "line": "RDL 4×6 · Row/KB/Goblet ×4 · McGill Big 3",
+    "title": "Upper Push/Pull",
+    "time": "45",
+    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
     "blocks": [
       [
         "W",
         "Warm-up",
-        "5:00 easy row · glute bridge ×10 · bird dog ×6/side"
+        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
       ],
       [
         "A",
-        "Barbell RDL",
-        "4×6 moderate, crisp hinge"
+        "DB bench press",
+        "4×8"
       ],
       [
         "B",
-        "4 rounds",
-        "250m row · 12 KB swing 40# · 10 goblet squat · 10 box step-up · rest 60s"
+        "1-arm DB row",
+        "4×10/side, braced on bench"
       ],
       [
         "C",
-        "McGill Big 3",
-        "curl-up 5×10s · side plank 3×10s/side · bird dog 6×10s/side"
+        "Half-kneeling KB press",
+        "3×8/side"
       ],
       [
         "D",
-        "Cooldown",
-        "5 min walk · couch stretch 60s/side"
+        "Suitcase carry 40#",
+        "4×40m/side (anti-lean core)"
+      ],
+      [
+        "E",
+        "Dead bug + side plank",
+        "3 rounds"
       ]
     ]
   },
   "dry": {
-    "title": "Draw & Transition",
+    "title": "Reloads & Malfunctions",
     "time": "20",
-    "line": "Draw→1 ×10 · Draw→2 ×5 · 9-grid ×3",
+    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
     "drills": [
       [
         "1",
-        "Concealed draw → 1 on dual circle",
+        "Emergency reload with SIRT mag",
         "×10"
       ],
       [
         "2",
-        "Draw → 2 shots on circle",
-        "×5"
+        "Tap-rack-assess (simulated)",
+        "×10"
       ],
       [
         "3",
-        "9-grid: call 2 random numbers",
-        "3 strings of 5"
-      ],
-      [
-        "4",
-        "Stress block: 10 air squats → draw → 2",
+        "Draw → 1 → reload → 1",
         "×5"
       ],
       [
-        "5",
-        "Slow-perfect finish, 50% speed",
+        "4",
+        "Slow-perfect reloads, eyes on threat",
         "×5"
       ]
     ]
   },
-  "quote": "Motivation is a rumor. Discipline is the guy who shows up at 2300 with cold coffee and no opinions.",
+  "quote": "Days off are not a ceasefire. The bench doesn't know it's a holiday, and neither does your gut.",
   "widget": {
-    "head": "TUE 24 NOV",
-    "next": "1900  Eat a snack\n2300  Work",
-    "focus": "Appt WED 0900 · Pickup WED · Vault migration",
-    "pt": "Engine + Trunk · RDL 4×6 · Row/KB/Goblet ×4",
-    "dry": "Draw & Transition · Draw→1 ×10 · Draw→2 ×5",
-    "comms": "Pickup WED 1000-1800 · Account alert",
-    "updated": "upd 1646"
+    "head": "WED 25 NOV",
+    "next": "1900  Eat a snack\n2330  Homework block",
+    "focus": "Fix Daybreak · FS job desc · Fiverr gig",
+    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
+    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack ×10",
+    "comms": "Daybreak failed · Review FS job desc",
+    "updated": "upd 1645"
   }
 }
