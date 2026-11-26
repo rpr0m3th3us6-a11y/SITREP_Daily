@@ -1,9 +1,9 @@
 {
   "v": 1,
-  "date": "2026-11-25",
-  "dow": "WED",
-  "label": "WED 25 NOV 2026",
-  "generated": "2026-11-25T16:45:59-06:00",
+  "date": "2026-11-26",
+  "dow": "THU",
+  "label": "THU 26 NOV 2026",
+  "generated": "2026-11-26T16:45:56-06:00",
   "wake": "1700",
   "board": [
     {
@@ -17,30 +17,34 @@
     {
       "t": "2330",
       "what": "Homework block"
+    },
+    {
+      "t": "FRI ALL DAY",
+      "what": "Payday"
     }
   ],
   "comms": [
     {
-      "what": "Daybreak Brief failed",
-      "note": "WED 0319 final run: 0 of 2 docs delivered, nothing sent. Fix pipeline before next run"
+      "what": "Daybreak Brief failed again",
+      "note": "THU draft (1134) and final (1225) both failed: missing PDF, draft stage rc=1. Nothing sent. Fix before next run"
     },
     {
-      "what": "Four Seasons position description",
-      "note": "Updated job description in (use-of-force ref revised). Review; your target FRI 27 NOV"
+      "what": "Security dept schedule, wk of 30 NOV",
+      "note": "Posted at Security Base. Check for day-off changes before Monday"
     },
     {
-      "what": "Neighborhood watch thread",
-      "note": "Meeting day still TBD (weekday eve vs weekend AM). Reply if you have a preference"
+      "what": "Personal admin form",
+      "note": "Action-required form flagged THU. Complete it soon"
     },
     {
       "what": "Inbox noise",
-      "note": "~18 of 30 recent threads are job alerts, LinkedIn and Black Friday promos. 10-min unsubscribe sweep"
+      "note": "~20 of 30 recent threads are job alerts, LinkedIn and Black Friday promos. 10-min unsubscribe sweep"
     }
   ],
   "focus": [
-    "Fix Daybreak Brief pipeline (final run failed)",
-    "Review updated Four Seasons job description",
-    "Fiverr profile / gig listing"
+    "Fix Daybreak Brief pipeline (failed again THU)",
+    "Review schedule for week of 30 NOV",
+    "SDVOSB / VetCert registration"
   ],
   "standing": [
     "SDVOSB / VetCert registration",
@@ -81,77 +85,57 @@
     }
   ],
   "pt": {
-    "title": "Upper Push/Pull",
-    "time": "45",
-    "line": "DB bench 4×8 · 1-arm row 4×10 · Carries",
+    "title": "Recovery + Zone 2",
+    "time": "40",
+    "line": "30:00 Z2 row · Mobility flow · Big 3",
     "blocks": [
       [
-        "W",
-        "Warm-up",
-        "3:00 row · band/PVC pass-through ×15 · scap push-up ×10"
-      ],
-      [
         "A",
-        "DB bench press",
-        "4×8"
+        "Zone 2 row",
+        "30:00 conversational pace"
       ],
       [
         "B",
-        "1-arm DB row",
-        "4×10/side, braced on bench"
+        "Mobility flow",
+        "90/90 ×5/side · cat-cow ×10 · couch stretch 60s/side · thoracic open-book ×8"
       ],
       [
         "C",
-        "Half-kneeling KB press",
-        "3×8/side"
-      ],
-      [
-        "D",
-        "Suitcase carry 40#",
-        "4×40m/side (anti-lean core)"
-      ],
-      [
-        "E",
-        "Dead bug + side plank",
-        "3 rounds"
+        "McGill Big 3",
+        "standard sets"
       ]
     ]
   },
   "dry": {
-    "title": "Reloads & Malfunctions",
-    "time": "20",
-    "line": "Reload ×10 · Tap-rack ×10 · Draw→reload→1 ×5",
+    "title": "Trigger Control",
+    "time": "15",
+    "line": "Wall drill ×20 · Dot-on-dot ×10 · Slow fire ×10",
     "drills": [
       [
         "1",
-        "Emergency reload with SIRT mag",
-        "×10"
+        "Wall drill, front sight focus",
+        "×20"
       ],
       [
         "2",
-        "Tap-rack-assess (simulated)",
+        "Dot-on-dot press, no disturbance",
         "×10"
       ],
       [
         "3",
-        "Draw → 1 → reload → 1",
-        "×5"
-      ],
-      [
-        "4",
-        "Slow-perfect reloads, eyes on threat",
-        "×5"
+        "Slow fire on small circle",
+        "×10"
       ]
     ]
   },
-  "quote": "Days off are not a ceasefire. The bench doesn't know it's a holiday, and neither does your gut.",
+  "quote": "Give thanks for the reps nobody saw. The turkey skipped his conditioning too, and look how his Thursday went.",
   "widget": {
-    "head": "WED 25 NOV",
+    "head": "THU 26 NOV",
     "next": "1900  Eat a snack\n2330  Homework block",
-    "focus": "Fix Daybreak · FS job desc · Fiverr gig",
-    "pt": "Upper Push/Pull · DB bench 4×8 · 1-arm row 4×10",
-    "dry": "Reloads & Malfunctions · Reload ×10 · Tap-rack ×10",
-    "comms": "Daybreak failed · Review FS job desc",
+    "focus": "Fix Daybreak · Check sched · SDVOSB cert",
+    "pt": "Recovery + Zone 2 · 30:00 Z2 row · Mobility flow",
+    "dry": "Trigger Control · Wall drill ×20 · Dot-on-dot ×10",
+    "comms": "Daybreak failed again · Sched wk 30 NOV",
     "updated": "upd 1645"
   }
 }
